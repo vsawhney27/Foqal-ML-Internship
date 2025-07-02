@@ -1,0 +1,65 @@
+{
+  "total_jobs_processed": 5,
+  "processing_date": "2025-07-02T18:30:17.685620",
+  "technology_stats": {
+    "total_unique_technologies": 18,
+    "most_common_technologies": {
+      "Python": 3,
+      "React": 3,
+      "AWS": 3,
+      "Docker": 3,
+      "Django": 2,
+      "Node.js": 2,
+      "Kubernetes": 2,
+      "PostgreSQL": 2,
+      "Flask": 1,
+      "Redis": 1
+    },
+    "total_technology_mentions": 30
+  },
+  "urgent_hiring_stats": {
+    "jobs_with_urgent_language": 4,
+    "percentage_urgent": 80.0
+  },
+  "budget_stats": {
+    "jobs_with_salary_info": 5,
+    "jobs_with_hourly_rates": 1,
+    "jobs_with_equity": 2,
+    "percentage_with_budget_info": 120.0
+  },
+  "pain_point_stats": {
+    "jobs_with_pain_points": 5,
+    "percentage_with_pain_points": 100.0,
+    "most_common_pain_points": {
+      "legacy": 4,
+      "modernize": 2,
+      "technical debt": 1,
+      "performance issues": 1,
+      "migration": 1
+    }
+  },
+  "hiring_volume_by_company": {
+    "TechCorp": 1,
+    "StartupInc": 1,
+    "CloudCorp": 1,
+    "AIStartup": 1,
+    "Enterprise Corp": 1
+  },
+  "top_skills": {
+    "React": 3,
+    "Docker": 3,
+    "AWS": 3,
+    "Python": 3,
+    "Kubernetes": 2,
+    "Node.js": 2,
+    "Django": 2,
+    "PostgreSQL": 2,
+    "Redis": 1,
+    "Flask": 1,
+    "TypeScript": 1,
+    "GraphQL": 1,
+    "Scalability": 1,
+    "Prometheus": 1,
+    "Jenkins": 1
+  }
+}
