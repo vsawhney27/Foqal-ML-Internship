@@ -1,0 +1,37 @@
+{
+  "total_jobs_processed": 8,
+  "processing_date": "2025-07-09T16:15:15.912714",
+  "top_technologies": {
+    "Python": 5,
+    "AWS": 4,
+    "React": 3,
+    "Docker": 3,
+    "Django": 2,
+    "Node.js": 2,
+    "Kubernetes": 2,
+    "PostgreSQL": 2,
+    "TensorFlow": 2,
+    "Flask": 1
+  },
+  "urgent_jobs_count": 8,
+  "urgent_percentage": 100.0,
+  "jobs_with_salary": 8,
+  "jobs_with_equity": 4,
+  "top_pain_points": {
+    "modernize": 5,
+    "legacy": 5,
+    "technical debt": 2,
+    "scalability issues": 2,
+    "performance issues": 1
+  },
+  "company_hiring_volume": {
+    "TechCorp": 1,
+    "StartupInc": 1,
+    "CloudCorp": 1,
+    "AIStartup": 1,
+    "Enterprise Corp": 1,
+    "DataCorp": 1,
+    "FinTech Solutions": 1,
+    "SecureTech": 1
+  }
+}

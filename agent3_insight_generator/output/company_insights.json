@@ -1,0 +1,47 @@
+[
+  {
+    "company": "TechCorp",
+    "insights": [
+      "TechCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "TechCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles)"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-09T17:52:28.409286",
+    "analysis_metadata": {
+      "total_technologies": 2,
+      "urgent_jobs": 1,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1
+    }
+  },
+  {
+    "company": "StartupInc",
+    "insights": [
+      "StartupInc is building diverse technical capabilities across TypeScript (1 roles), React (1 roles), Node.js (1 roles)",
+      "StartupInc is undergoing technical modernization, with roles focused on legacy system updates and technical debt reduction"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-09T17:52:28.409286",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1
+    }
+  },
+  {
+    "company": "CloudCorp",
+    "insights": [
+      "CloudCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "CloudCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Docker (1 roles), Kubernetes (1 roles), Jenkins (1 roles)"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-09T17:52:28.409286",
+    "analysis_metadata": {
+      "total_technologies": 4,
+      "urgent_jobs": 1,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0
+    }
+  }
+]

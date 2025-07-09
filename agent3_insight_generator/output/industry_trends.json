@@ -1,0 +1,65 @@
+{
+  "top_technologies": [
+    [
+      "Python",
+      1
+    ],
+    [
+      "AWS",
+      1
+    ],
+    [
+      "TypeScript",
+      1
+    ],
+    [
+      "React",
+      1
+    ],
+    [
+      "Node.js",
+      1
+    ],
+    [
+      "Docker",
+      1
+    ],
+    [
+      "Kubernetes",
+      1
+    ],
+    [
+      "Jenkins",
+      1
+    ],
+    [
+      "Grafana",
+      1
+    ]
+  ],
+  "urgent_hiring_companies_count": 2,
+  "total_companies": 3,
+  "top_pain_points": [
+    [
+      "legacy system",
+      1
+    ],
+    [
+      "migration",
+      1
+    ],
+    [
+      "legacy",
+      1
+    ],
+    [
+      "technical debt",
+      1
+    ],
+    [
+      "modernize",
+      1
+    ]
+  ],
+  "analysis_date": "2025-07-09T17:52:28.410364"
+}

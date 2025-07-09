@@ -1,0 +1,276 @@
+[
+  {
+    "title": "Senior Python Developer",
+    "company": "TechCorp",
+    "location": "Remote",
+    "description": "We are urgently seeking a Senior Python Developer with 5+ years experience. \n            Must have AWS, Docker, Kubernetes experience. Salary: $120,000-$150,000. \n            You'll help modernize our legacy systems and reduce technical debt. \n            Tech stack: Python, Django, Flask, PostgreSQL, Redis, React, Node.js.\n            Start ASAP - this is a high priority hire!",
+    "detail_url": "https://example.com/job1",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Python",
+      "React",
+      "Django",
+      "Flask",
+      "Node.js",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "urgent_hiring_language": [
+      "high priority",
+      "start asap",
+      "asap"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "$120,000-$150,000"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "technical debt",
+      "modernize",
+      "legacy"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.907751"
+  },
+  {
+    "title": "React Frontend Engineer",
+    "company": "StartupInc",
+    "location": "San Francisco",
+    "description": "Immediate opening for React developer! €80,000-100,000 salary + equity.\n            Work with TypeScript, Node.js, GraphQL. Help us scale our platform and fix performance issues.\n            Legacy codebase migration project. Must start this week!",
+    "detail_url": "https://example.com/job2",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "GraphQL"
+    ],
+    "urgent_hiring_language": [
+      "must start",
+      "start this week",
+      "immediate"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "€80,000-100,000"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [
+        "equity"
+      ],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "performance issues",
+      "legacy",
+      "migration"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.908580"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "CloudCorp",
+    "location": "New York",
+    "description": "Kubernetes expert needed! $85/hour + $140k base salary.\n            Docker, Jenkins, Grafana, Prometheus experience required.\n            Help us solve scalability issues and modernize infrastructure.\n            Urgent hire for growing team.",
+    "detail_url": "https://example.com/job3",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Grafana",
+      "Prometheus"
+    ],
+    "urgent_hiring_language": [
+      "urgent"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "$85",
+        "$140k"
+      ],
+      "hourly_rates": [
+        "$85/hour"
+      ],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "modernize",
+      "scalability issues"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.909157"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "AIStartup",
+    "location": "Austin",
+    "description": "TensorFlow and PyTorch expert wanted. $160k-200k + equity.\n            Python, AWS, MLOps experience. Work on cutting-edge AI products.\n            Help migrate from legacy ML infrastructure to modern stack.\n            Immediate start needed.",
+    "detail_url": "https://example.com/job4",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Python",
+      "AWS",
+      "TensorFlow",
+      "PyTorch",
+      "MLOps"
+    ],
+    "urgent_hiring_language": [
+      "immediate"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "$160k"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [
+        "equity"
+      ],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "migrate",
+      "legacy"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.909705"
+  },
+  {
+    "title": "Full Stack Developer",
+    "company": "Enterprise Corp",
+    "location": "Remote",
+    "description": "Full stack role: React + Python/Django. £75,000 salary.\n            PostgreSQL, AWS, Docker required. Legacy system integration work.\n            Immediate start needed for critical project. Help us modernize our technical debt.",
+    "detail_url": "https://example.com/job5",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Python",
+      "React",
+      "Django",
+      "AWS",
+      "Docker",
+      "PostgreSQL"
+    ],
+    "urgent_hiring_language": [
+      "immediate"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "£75,000"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "technical debt",
+      "modernize",
+      "legacy system",
+      "legacy"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.910242"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "DataCorp",
+    "location": "Boston",
+    "description": "Senior Data Scientist position. $140k-180k + stock options.\n            Python, R, Scikit-learn, TensorFlow experience. Work with big data pipelines.\n            Help us modernize our analytics infrastructure and solve scalability issues.\n            Rushing to fill this role - start ASAP!",
+    "detail_url": "https://example.com/job6",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Python",
+      "TensorFlow",
+      "Scikit-learn"
+    ],
+    "urgent_hiring_language": [
+      "rushing",
+      "start asap",
+      "asap"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "$140k"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [
+        "stock options",
+        "stock"
+      ],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "modernize",
+      "scalability issues"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.911010"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "FinTech Solutions",
+    "location": "London",
+    "description": "Backend developer needed urgently! Java, Spring Boot, Microservices.\n            £60k-80k salary + equity. Work on financial systems and payment processing.\n            Help replace legacy monolith with modern architecture.\n            Must start immediately - high priority project.",
+    "detail_url": "https://example.com/job7",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Java",
+      "Spring",
+      "Microservices"
+    ],
+    "urgent_hiring_language": [
+      "must start",
+      "start immediately",
+      "high priority"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "£60k"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [
+        "equity"
+      ],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "monolith",
+      "replace",
+      "legacy"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.911757"
+  },
+  {
+    "title": "Security Engineer",
+    "company": "SecureTech",
+    "location": "Seattle",
+    "description": "Cybersecurity specialist wanted. $130k-160k + benefits.\n            Python, Linux, AWS security experience. Help us modernize security infrastructure.\n            Work on vulnerability assessment and penetration testing.\n            Urgent need - start this week!",
+    "detail_url": "https://example.com/job8",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Python",
+      "AWS",
+      "Linux"
+    ],
+    "urgent_hiring_language": [
+      "start this week",
+      "urgent"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "$130k"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "vulnerability",
+      "security",
+      "modernize"
+    ],
+    "signal_processing_date": "2025-07-09T16:15:15.912505"
+  }
+]

@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 from typing import List, Dict, Optional
 import logging
+import ssl
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -17,14 +18,18 @@ class MongoDBHandler:
         self.db = None
         
     def connect(self):
-        """Establish connection to MongoDB."""
+        """Establish connection to MongoDB using Agent 1's simple approach."""
         try:
+            # Use the same simple connection approach as Agent 1
+            logger.info("🔄 Connecting to MongoDB using Agent 1's method...")
             self.client = MongoClient(self.db_url)
             self.db = self.client[self.db_name]
+            
             # Test connection
             self.client.admin.command('ping')
             logger.info(f"✅ Connected to MongoDB database: {self.db_name}")
             return True
+            
         except Exception as e:
             logger.error(f"❌ Failed to connect to MongoDB: {e}")
             return False

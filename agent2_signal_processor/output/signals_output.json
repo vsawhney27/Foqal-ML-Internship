@@ -3,193 +3,19 @@
     "title": "Senior Python Developer",
     "company": "TechCorp",
     "location": "Remote",
-    "description": "We are urgently seeking a Senior Python Developer with 5+ years experience. \n                Must have AWS, Docker, Kubernetes experience. Salary: $120,000-$150,000. \n                You'll help modernize our legacy systems and reduce technical debt. \n                Tech stack: Python, Django, Flask, PostgreSQL, Redis, React, Node.js.\n                Start ASAP - this is a high priority hire!",
+    "description": "Looking for Python developer with AWS experience. Must start ASAP! Salary: $120k-150k. Legacy system migration required.",
     "detail_url": "https://example.com/job1",
     "scraped_date": "2024-01-15",
     "technology_adoption": [
       "Python",
-      "React",
-      "Django",
-      "Flask",
-      "Node.js",
-      "AWS",
-      "Docker",
-      "Kubernetes",
-      "PostgreSQL",
-      "Redis"
+      "AWS"
     ],
     "urgent_hiring_language": [
-      "high priority",
       "asap"
     ],
     "budget_signals": {
       "salary_ranges": [
-        "$120,000-$150,000"
-      ],
-      "hourly_rates": [],
-      "equity_mentions": [],
-      "budget_phrases": []
-    },
-    "pain_points": [
-      "legacy",
-      "modernize",
-      "technical debt"
-    ],
-    "skills_mentioned": [
-      "React",
-      "Redis",
-      "Kubernetes",
-      "Node.js",
-      "Flask",
-      "Django",
-      "Docker",
-      "PostgreSQL",
-      "AWS",
-      "Python"
-    ],
-    "signal_processing_date": "2025-07-02T18:30:17.677191"
-  },
-  {
-    "title": "React Frontend Engineer",
-    "company": "StartupInc",
-    "location": "San Francisco",
-    "description": "Immediate opening for React developer! €80,000-100,000 salary + equity.\n                Work with TypeScript, Node.js, GraphQL. Help us scale our platform and fix performance issues.\n                Legacy codebase migration project. Must start this week!",
-    "detail_url": "https://example.com/job2",
-    "scraped_date": "2024-01-15",
-    "technology_adoption": [
-      "TypeScript",
-      "React",
-      "Node.js",
-      "GraphQL"
-    ],
-    "urgent_hiring_language": [
-      "start this week",
-      "immediate"
-    ],
-    "budget_signals": {
-      "salary_ranges": [
-        "€80,000-100,000"
-      ],
-      "hourly_rates": [],
-      "equity_mentions": [
-        "equity"
-      ],
-      "budget_phrases": []
-    },
-    "pain_points": [
-      "performance issues",
-      "legacy",
-      "migration"
-    ],
-    "skills_mentioned": [
-      "React",
-      "TypeScript",
-      "GraphQL",
-      "Node.js"
-    ],
-    "signal_processing_date": "2025-07-02T18:30:17.677191"
-  },
-  {
-    "title": "DevOps Engineer",
-    "company": "CloudCorp",
-    "location": "New York",
-    "description": "Kubernetes expert needed! $85/hour + $140k base salary.\n                Docker, Jenkins, Grafana, Prometheus experience required.\n                Help us solve scalability issues and modernize infrastructure.\n                Urgent hire for growing team.",
-    "detail_url": "https://example.com/job3",
-    "scraped_date": "2024-01-15",
-    "technology_adoption": [
-      "Docker",
-      "Kubernetes",
-      "Jenkins",
-      "Grafana",
-      "Prometheus"
-    ],
-    "urgent_hiring_language": [
-      "urgent"
-    ],
-    "budget_signals": {
-      "salary_ranges": [
-        "$85",
-        "$140k"
-      ],
-      "hourly_rates": [
-        "$85/hour"
-      ],
-      "equity_mentions": [],
-      "budget_phrases": []
-    },
-    "pain_points": [
-      "modernize",
-      "scalability issues"
-    ],
-    "skills_mentioned": [
-      "Scalability",
-      "Kubernetes",
-      "Docker",
-      "Prometheus",
-      "Jenkins",
-      "Grafana"
-    ],
-    "signal_processing_date": "2025-07-02T18:30:17.677191"
-  },
-  {
-    "title": "Machine Learning Engineer",
-    "company": "AIStartup",
-    "location": "Austin",
-    "description": "TensorFlow and PyTorch expert wanted. $160k-200k + equity.\n                Python, AWS, MLOps experience. Work on cutting-edge AI products.\n                Help migrate from legacy ML infrastructure to modern stack.",
-    "detail_url": "https://example.com/job4",
-    "scraped_date": "2024-01-15",
-    "technology_adoption": [
-      "Python",
-      "TensorFlow",
-      "PyTorch",
-      "AWS",
-      "MLOps"
-    ],
-    "urgent_hiring_language": [],
-    "budget_signals": {
-      "salary_ranges": [
-        "$160k"
-      ],
-      "hourly_rates": [],
-      "equity_mentions": [
-        "equity"
-      ],
-      "budget_phrases": []
-    },
-    "pain_points": [
-      "legacy",
-      "migrate"
-    ],
-    "skills_mentioned": [
-      "MLOps",
-      "TensorFlow",
-      "AWS",
-      "PyTorch",
-      "Python"
-    ],
-    "signal_processing_date": "2025-07-02T18:30:17.677191"
-  },
-  {
-    "title": "Full Stack Developer",
-    "company": "Enterprise Corp",
-    "location": "Remote",
-    "description": "Full stack role: React + Python/Django. £75,000 salary.\n                PostgreSQL, AWS, Docker required. Legacy system integration work.\n                Immediate start needed for critical project.",
-    "detail_url": "https://example.com/job5",
-    "scraped_date": "2024-01-15",
-    "technology_adoption": [
-      "Python",
-      "React",
-      "Django",
-      "AWS",
-      "Docker",
-      "PostgreSQL"
-    ],
-    "urgent_hiring_language": [
-      "immediate"
-    ],
-    "budget_signals": {
-      "salary_ranges": [
-        "£75,000"
+        "$120k"
       ],
       "hourly_rates": [],
       "equity_mentions": [],
@@ -197,16 +23,80 @@
     },
     "pain_points": [
       "legacy system",
+      "migration",
       "legacy"
     ],
     "skills_mentioned": [
-      "React",
-      "Docker",
-      "Django",
-      "PostgreSQL",
-      "AWS",
-      "Python"
+      "Python",
+      "AWS"
     ],
-    "signal_processing_date": "2025-07-02T18:30:17.677191"
+    "signal_processing_date": "2025-07-09T16:08:04.180984"
+  },
+  {
+    "title": "React Frontend Engineer",
+    "company": "StartupInc",
+    "location": "San Francisco",
+    "description": "React developer needed immediately! €80,000 salary. Work with Node.js, TypeScript. Help modernize our technical debt.",
+    "detail_url": "https://example.com/job2",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "TypeScript",
+      "React",
+      "Node.js"
+    ],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [
+        "€80,000"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "technical debt",
+      "modernize"
+    ],
+    "skills_mentioned": [
+      "TypeScript",
+      "React",
+      "Node.js"
+    ],
+    "signal_processing_date": "2025-07-09T16:08:04.180984"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "CloudCorp",
+    "location": "New York",
+    "description": "Kubernetes and Docker expert. $75/hour. Jenkins, Grafana experience. Urgent hire for scaling issues.",
+    "detail_url": "https://example.com/job3",
+    "scraped_date": "2024-01-15",
+    "technology_adoption": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Grafana"
+    ],
+    "urgent_hiring_language": [
+      "urgent"
+    ],
+    "budget_signals": {
+      "salary_ranges": [
+        "$75"
+      ],
+      "hourly_rates": [
+        "$75/hour"
+      ],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "skills_mentioned": [
+      "Jenkins",
+      "Kubernetes",
+      "Docker",
+      "Grafana"
+    ],
+    "signal_processing_date": "2025-07-09T16:08:04.180984"
   }
 ]
