@@ -13,19 +13,71 @@ from collections import Counter
 from typing import List, Dict, Any
 
 def load_jobs_from_mongo(db_url, db_name="JobPosting", collection_name="ScrapedJobs"):
-    """Load jobs from MongoDB - same pattern as Agent 1"""
-    client = MongoClient(db_url)
+    """Load jobs from MongoDB with SSL handling"""
+    import ssl
+    
+    # Multiple connection methods to handle SSL issues
+    connection_configs = [
+        {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE, "serverSelectionTimeoutMS": 5000},
+        {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+        {"serverSelectionTimeoutMS": 5000}  # fallback
+    ]
+    
+    client = None
+    for config in connection_configs:
+        try:
+            print(f"Trying MongoDB connection with config: {config}")
+            client = MongoClient(db_url, **config)
+            client.admin.command('ping')  # Test connection
+            print("MongoDB connection successful!")
+            break
+        except Exception as e:
+            print(f"Connection attempt failed: {e}")
+            if client:
+                client.close()
+            continue
+    
+    if not client:
+        raise Exception("Failed to connect to MongoDB with all methods")
+    
     db = client[db_name]
     collection = db[collection_name]
     
     jobs = list(collection.find())
-    print(f"📥 Loaded {len(jobs)} jobs from MongoDB")
+    print(f"Loaded {len(jobs)} jobs from MongoDB")
     client.close()
     return jobs
 
 def save_to_mongo(processed_jobs, db_url, db_name="JobPosting", collection_name="ProcessedJobs"):
-    """Save processed jobs to MongoDB - same pattern as Agent 1"""
-    client = MongoClient(db_url)
+    """Save processed jobs to MongoDB with SSL handling"""
+    import ssl
+    
+    # Multiple connection methods to handle SSL issues
+    connection_configs = [
+        {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE, "serverSelectionTimeoutMS": 5000},
+        {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+        {"serverSelectionTimeoutMS": 5000}  # fallback
+    ]
+    
+    client = None
+    for config in connection_configs:
+        try:
+            print(f"Trying MongoDB connection with config: {config}")
+            client = MongoClient(db_url, **config)
+            client.admin.command('ping')  # Test connection
+            print("MongoDB connection successful!")
+            break
+        except Exception as e:
+            print(f"Connection attempt failed: {e}")
+            if client:
+                client.close()
+            continue
+    
+    if not client:
+        raise Exception("Failed to connect to MongoDB with all methods")
+    
     db = client[db_name]
     collection = db[collection_name]
     
@@ -33,9 +85,9 @@ def save_to_mongo(processed_jobs, db_url, db_name="JobPosting", collection_name=
         # Clear existing processed jobs
         collection.delete_many({})
         collection.insert_many(processed_jobs)
-        print(f"✅ Inserted {len(processed_jobs)} processed jobs into MongoDB.")
+        print(f"Inserted {len(processed_jobs)} processed jobs into MongoDB.")
     else:
-        print("⚠️ No processed jobs to insert.")
+        print("No processed jobs to insert.")
     
     client.close()
 
@@ -181,13 +233,13 @@ def process_jobs(jobs: List[Dict]) -> List[Dict]:
     """Process all jobs and extract signals"""
     processed_jobs = []
     
-    print(f"🔄 Processing {len(jobs)} jobs for BD signals...")
+    print(f"Processing {len(jobs)} jobs for BD signals...")
     
     for idx, job in enumerate(jobs, 1):
         try:
             title = job.get('title', 'Unknown')
             company = job.get('company', 'Unknown')
-            print(f"📊 Processing job {idx}/{len(jobs)}: {title} at {company}")
+            print(f"Processing job {idx}/{len(jobs)}: {title} at {company}")
             
             processed_job = process_job_signals(job)
             processed_jobs.append(processed_job)
@@ -197,13 +249,13 @@ def process_jobs(jobs: List[Dict]) -> List[Dict]:
             urgent_count = len(processed_job.get('urgent_hiring_language', []))
             pain_count = len(processed_job.get('pain_points', []))
             
-            print(f"   💡 Found: {tech_count} technologies, {urgent_count} urgent signals, {pain_count} pain points")
+            print(f"   Found: {tech_count} technologies, {urgent_count} urgent signals, {pain_count} pain points")
             
         except Exception as e:
-            print(f"❌ Error processing job {idx}: {e}")
+            print(f"Error processing job {idx}: {e}")
             continue
     
-    print(f"✅ Successfully processed {len(processed_jobs)} jobs")
+    print(f"Successfully processed {len(processed_jobs)} jobs")
     return processed_jobs
 
 def generate_statistics(processed_jobs: List[Dict]) -> Dict:
@@ -211,7 +263,7 @@ def generate_statistics(processed_jobs: List[Dict]) -> Dict:
     if not processed_jobs:
         return {}
     
-    print("📈 Generating statistics...")
+    print("Generating statistics...")
     
     # Technology stats
     all_technologies = []
@@ -260,29 +312,29 @@ def generate_statistics(processed_jobs: List[Dict]) -> Dict:
 def print_summary(stats: Dict):
     """Print processing summary"""
     print("\n" + "="*60)
-    print("📊 JOB POSTING SIGNAL PROCESSING SUMMARY")
+    print("JOB POSTING SIGNAL PROCESSING SUMMARY")
     print("="*60)
     
-    print(f"📈 Total Jobs Processed: {stats['total_jobs_processed']}")
-    print(f"🕒 Processing Date: {stats['processing_date']}")
+    print(f"Total Jobs Processed: {stats['total_jobs_processed']}")
+    print(f"Processing Date: {stats['processing_date']}")
     
-    print(f"\n🔧 TOP TECHNOLOGIES:")
+    print(f"\nTOP TECHNOLOGIES:")
     for tech, count in stats['top_technologies'].items():
         print(f"   • {tech}: {count} mentions")
     
-    print(f"\n⚡ URGENT HIRING:")
+    print(f"\nURGENT HIRING:")
     print(f"   • Jobs with urgent language: {stats['urgent_jobs_count']}")
     print(f"   • Percentage: {stats['urgent_percentage']}%")
     
-    print(f"\n💰 BUDGET SIGNALS:")
+    print(f"\nBUDGET SIGNALS:")
     print(f"   • Jobs with salary info: {stats['jobs_with_salary']}")
     print(f"   • Jobs with equity: {stats['jobs_with_equity']}")
     
-    print(f"\n🔥 TOP PAIN POINTS:")
+    print(f"\nTOP PAIN POINTS:")
     for pain, count in stats['top_pain_points'].items():
         print(f"   • {pain}: {count} mentions")
     
-    print(f"\n🏢 COMPANY HIRING VOLUME:")
+    print(f"\nCOMPANY HIRING VOLUME:")
     for company, count in stats['company_hiring_volume'].items():
         print(f"   • {company}: {count} job(s)")
     
@@ -306,43 +358,63 @@ def save_to_files(processed_jobs: List[Dict], stats: Dict, output_dir: str = "ou
     with open(stats_file, 'w', encoding='utf-8') as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
     
-    print(f"✅ Saved results to {output_dir}/")
+    print(f"Saved results to {output_dir}/")
 
 if __name__ == "__main__":
     # MongoDB URL - same as Agent 1
-    MONGO_URL = "mongodb+srv://adityabramhe7:C3kg0TDi21QaKOAM@jobposting.tgcylyz.mongodb.net/"
+    MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017/")
     
-    print("🚀 Starting Signal Processing Agent (Agent 2)...")
+    print("Starting Signal Processing Agent (Agent 2)...")
     
     try:
-        # Load jobs from MongoDB
-        jobs = load_jobs_from_mongo(MONGO_URL)
+        # Load jobs from MongoDB or JSON fallback
+        jobs = []
+        try:
+            jobs = load_jobs_from_mongo(MONGO_URL)
+        except Exception as e:
+            print(f"MongoDB connection failed: {e}")
+            print("Attempting to load from JSON file...")
+            
+            # Try to load from data/scraped_jobs.json
+            json_file = "../data/scraped_jobs.json"
+            if os.path.exists(json_file):
+                with open(json_file, 'r') as f:
+                    jobs = json.load(f)
+                print(f"✅ Loaded {len(jobs)} jobs from JSON file")
+            else:
+                print("❌ No JSON file found either")
         
         if not jobs:
-            print("❌ No jobs found in MongoDB. Make sure Agent 1 has run successfully.")
+            print("No jobs found in MongoDB or JSON. Make sure Agent 1 has run successfully.")
             exit(1)
         
         # Process jobs for signals
         processed_jobs = process_jobs(jobs)
         
         if not processed_jobs:
-            print("❌ No jobs were processed successfully.")
+            print("No jobs were processed successfully.")
             exit(1)
         
         # Generate statistics
         stats = generate_statistics(processed_jobs)
         
-        # Save to MongoDB
-        save_to_mongo(processed_jobs, MONGO_URL)
-        
-        # Save to files
+        # Save to files first (always works)
         save_to_files(processed_jobs, stats)
+        
+        # Try to save to MongoDB (may fail)
+        try:
+            save_to_mongo(processed_jobs, MONGO_URL)
+            print("✅ Successfully saved to MongoDB")
+        except Exception as mongo_error:
+            print(f"⚠️ MongoDB save failed: {mongo_error}")
+            print("📁 Data saved to JSON files instead")
         
         # Print summary
         print_summary(stats)
         
         print("\n✅ Signal processing completed successfully!")
+        print(f"📊 Processed {len(processed_jobs)} jobs")
         
     except Exception as e:
-        print(f"❌ Error: {e}")
-        print("💡 Make sure MongoDB is accessible and Agent 1 has populated data")
+        print(f"❌ Critical error: {e}")
+        print("Make sure input data is available")

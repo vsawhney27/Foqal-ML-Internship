@@ -18,19 +18,69 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def load_processed_signals_from_mongo(db_url, db_name="JobPosting", collection_name="ProcessedJobs"):
-    """Load processed signals from MongoDB - same pattern as other agents"""
-    client = MongoClient(db_url)
+    """Load processed signals from MongoDB with SSL handling"""
+    import ssl
+    
+    # Multiple connection methods to handle SSL issues (from Agent 1)
+    connection_configs = [
+        {"tls": True, "tlsAllowInvalidCertificates": True},
+        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE},
+        {}  # fallback
+    ]
+    
+    client = None
+    for config in connection_configs:
+        try:
+            print(f"Trying MongoDB connection with config: {config}")
+            client = MongoClient(db_url, **config)
+            client.admin.command('ping')  # Test connection
+            print("MongoDB connection successful!")
+            break
+        except Exception as e:
+            print(f"Connection attempt failed: {e}")
+            if client:
+                client.close()
+            continue
+    
+    if not client:
+        raise Exception("Failed to connect to MongoDB with all methods")
+    
     db = client[db_name]
     collection = db[collection_name]
     
     signals = list(collection.find())
-    print(f"📥 Loaded {len(signals)} processed job signals from MongoDB")
+    print(f"Loaded {len(signals)} processed job signals from MongoDB")
     client.close()
     return signals
 
 def save_insights_to_mongo(insights, db_url, db_name="JobPosting", collection_name="insights"):
-    """Save insights to MongoDB - same pattern as other agents"""
-    client = MongoClient(db_url)
+    """Save insights to MongoDB with SSL handling"""
+    import ssl
+    
+    # Multiple connection methods to handle SSL issues (from Agent 1)
+    connection_configs = [
+        {"tls": True, "tlsAllowInvalidCertificates": True},
+        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE},
+        {}  # fallback
+    ]
+    
+    client = None
+    for config in connection_configs:
+        try:
+            print(f"Trying MongoDB connection with config: {config}")
+            client = MongoClient(db_url, **config)
+            client.admin.command('ping')  # Test connection
+            print("MongoDB connection successful!")
+            break
+        except Exception as e:
+            print(f"Connection attempt failed: {e}")
+            if client:
+                client.close()
+            continue
+    
+    if not client:
+        raise Exception("Failed to connect to MongoDB with all methods")
+    
     db = client[db_name]
     collection = db[collection_name]
     
@@ -38,14 +88,17 @@ def save_insights_to_mongo(insights, db_url, db_name="JobPosting", collection_na
         # Clear existing insights
         collection.delete_many({})
         collection.insert_many(insights)
-        print(f"✅ Inserted {len(insights)} company insights into MongoDB")
+        print(f"Inserted {len(insights)} company insights into MongoDB")
     else:
-        print("⚠️ No insights to insert")
+        print("No insights to insert")
     
     client.close()
 
 def analyze_company_hiring_patterns(company_jobs: List[Dict]) -> List[str]:
-    """Analyze hiring patterns for a single company"""
+    """
+    Analyze hiring patterns for a single company and correlate with potential service needs.
+    Generates alerts for high-priority opportunities.
+    """
     insights = []
     
     # Analyze job volume and urgency
@@ -84,7 +137,8 @@ def analyze_company_hiring_patterns(company_jobs: List[Dict]) -> List[str]:
         all_pain_points.extend(job.get('pain_points', []))
     pain_counter = Counter(all_pain_points)
     
-    # Generate insights based on analysis
+    # Generate insights based on analysis - correlating hiring patterns with service needs
+    # Generate high-priority opportunity alerts based on patterns
     
     # 1. Hiring volume and urgency insights
     if job_count >= 3:
@@ -188,10 +242,10 @@ def generate_company_insights(processed_signals: List[Dict]) -> List[Dict]:
     insights = []
     current_time = datetime.datetime.now().isoformat()
     
-    print(f"🔍 Analyzing {len(company_jobs)} companies...")
+    print(f"Analyzing {len(company_jobs)} companies...")
     
     for company, jobs in company_jobs.items():
-        print(f"📊 Analyzing {company} ({len(jobs)} jobs)")
+        print(f"Analyzing {company} ({len(jobs)} jobs)")
         
         company_insights = analyze_company_hiring_patterns(jobs)
         
@@ -212,7 +266,7 @@ def generate_company_insights(processed_signals: List[Dict]) -> List[Dict]:
             insights.append(insight_doc)
             
             # Print insights for review
-            print(f"   💡 Generated {len(company_insights)} insights:")
+            print(f"   Generated {len(company_insights)} insights:")
             for insight in insight_doc['insights']:
                 print(f"      • {insight}")
     
@@ -297,26 +351,26 @@ def save_to_files(insights: List[Dict], industry_trends: Dict, output_dir: str =
     with open(trends_file, 'w', encoding='utf-8') as f:
         json.dump(industry_trends, f, indent=2, ensure_ascii=False)
     
-    print(f"✅ Saved insights to {output_dir}/")
+    print(f"Saved insights to {output_dir}/")
 
 def print_insights_summary(insights: List[Dict], industry_trends: Dict):
     """Print a summary of generated insights"""
     print("\n" + "="*70)
-    print("📊 BUSINESS DEVELOPMENT INSIGHTS SUMMARY")
+    print("BUSINESS DEVELOPMENT INSIGHTS SUMMARY")
     print("="*70)
     
-    print(f"🏢 Companies Analyzed: {len(insights)}")
-    print(f"🕒 Analysis Date: {insights[0]['timestamp'] if insights else 'N/A'}")
+    print(f"Companies Analyzed: {len(insights)}")
+    print(f"Analysis Date: {insights[0]['timestamp'] if insights else 'N/A'}")
     
-    print(f"\n💡 KEY COMPANY INSIGHTS:")
+    print(f"\nKEY COMPANY INSIGHTS:")
     for insight_doc in insights:
         company = insight_doc['company']
         job_count = insight_doc['job_count']
-        print(f"\n🏢 {company} ({job_count} jobs analyzed):")
+        print(f"\n{company} ({job_count} jobs analyzed):")
         for insight in insight_doc['insights']:
             print(f"   • {insight}")
     
-    print(f"\n🌐 INDUSTRY TRENDS:")
+    print(f"\nINDUSTRY TRENDS:")
     print(f"   • Top Technologies: {', '.join([f'{tech} ({count})' for tech, count in industry_trends['top_technologies'][:5]])}")
     print(f"   • Companies with Urgent Hiring: {industry_trends['urgent_hiring_companies_count']}/{industry_trends['total_companies']}")
     print(f"   • Top Pain Points: {', '.join([f'{pain} ({count})' for pain, count in industry_trends['top_pain_points'][:3]])}")
@@ -326,28 +380,38 @@ def print_insights_summary(insights: List[Dict], industry_trends: Dict):
 def main():
     """Main execution function"""
     # MongoDB URL - same as other agents
-    MONGO_URL = os.getenv("MONGODB_URL", "mongodb+srv://adityabramhe7:C3kg0TDi21QaKOAM@jobposting.tgcylyz.mongodb.net/")
+    MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017/")
     
-    print("🚀 Starting Business Development Insight Generator (Agent 3)...")
+    print("Starting Business Development Insight Generator (Agent 3)...")
     
     try:
-        # Load processed signals from MongoDB
-        try:
-            processed_signals = load_processed_signals_from_mongo(MONGO_URL)
-        except Exception as e:
-            print(f"⚠️ MongoDB connection failed: {e}")
-            print("🔄 Using sample data instead...")
-            processed_signals = create_sample_processed_signals()
+        # Load processed signals from JSON file (skip MongoDB due to SSL issues)
+        processed_signals = []
+        
+        # Try to load from Agent 2's output JSON file first
+        json_file = "../agent2_signal_processor/output/signals_output.json"
+        if os.path.exists(json_file):
+            with open(json_file, 'r') as f:
+                processed_signals = json.load(f)
+            print(f"✅ Loaded {len(processed_signals)} processed signals from JSON file")
+        else:
+            print("❌ No JSON file found, trying MongoDB...")
+            try:
+                processed_signals = load_processed_signals_from_mongo(MONGO_URL)
+            except Exception as e:
+                print(f"MongoDB connection failed: {e}")
+                print("Using sample data instead...")
+                processed_signals = create_sample_processed_signals()
         
         if not processed_signals:
-            print("❌ No processed signals found. Make sure Agent 2 has run successfully.")
+            print("No processed signals found. Make sure Agent 2 has run successfully.")
             return
         
         # Generate company insights
         company_insights = generate_company_insights(processed_signals)
         
         if not company_insights:
-            print("❌ No insights were generated.")
+            print("No insights were generated.")
             return
         
         # Analyze industry trends (stretch goal)
@@ -357,8 +421,8 @@ def main():
         try:
             save_insights_to_mongo(company_insights, MONGO_URL)
         except Exception as e:
-            print(f"⚠️ MongoDB save failed: {e}")
-            print("💾 Results saved to files instead")
+            print(f"MongoDB save failed: {e}")
+            print("Results saved to files instead")
         
         # Save to files
         save_to_files(company_insights, industry_trends)
@@ -366,11 +430,11 @@ def main():
         # Print summary
         print_insights_summary(company_insights, industry_trends)
         
-        print(f"\n✅ Generated {len(company_insights)} company insights successfully!")
+        print(f"\nGenerated {len(company_insights)} company insights successfully!")
         
     except Exception as e:
-        print(f"❌ Error: {e}")
-        print("💡 Check that Agent 2 has processed job signals")
+        print(f"Error: {e}")
+        print("Check that Agent 2 has processed job signals")
 
 if __name__ == "__main__":
     main()

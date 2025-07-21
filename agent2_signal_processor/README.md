@@ -5,7 +5,7 @@ This agent processes job postings scraped by Agent 1 and extracts key business d
 
 ## Features
 
-### 🔍 Signal Extraction
+### Signal Extraction
 - **Technology Adoption**: Detects 100+ technology keywords (Python, AWS, Kubernetes, etc.)
 - **Urgent Hiring Language**: Finds phrases like "ASAP", "immediate", "start now"
 - **Budget Signals**: Extracts salary ranges, hourly rates, and equity mentions
@@ -13,7 +13,7 @@ This agent processes job postings scraped by Agent 1 and extracts key business d
 - **Skills Analysis**: Comprehensive skill extraction and analysis
 - **Hiring Volume**: Tracks job postings per company
 
-### 📊 Data Processing
+### Data Processing
 - MongoDB integration for data persistence
 - Statistical analysis and reporting
 - Export to JSON and CSV formats
@@ -22,13 +22,13 @@ This agent processes job postings scraped by Agent 1 and extracts key business d
 ## Project Structure
 ```
 agent2_signal_processor/
-├── processor.py          # Main processing logic
-├── signals.py           # Signal extraction functions
-├── mongo_utils.py       # MongoDB utilities
-├── output/              # Generated output files
-├── requirements.txt     # Dependencies
-├── __init__.py         # Module initialization
-└── README.md           # This file
+ processor.py # Main processing logic
+ signals.py # Signal extraction functions
+ mongo_utils.py # MongoDB utilities
+ output/ # Generated output files
+ requirements.txt # Dependencies
+ __init__.py # Module initialization
+ README.md # This file
 ```
 
 ## Installation
@@ -39,8 +39,8 @@ pip install -r requirements.txt
 ```
 
 2. Ensure MongoDB connection (same as Agent 1):
-   - Uses the MongoDB URL from Agent 1's configuration
-   - Connects to `JobPosting.ScrapedJobs` collection
+ - Uses the MongoDB URL from Agent 1's configuration
+ - Connects to `JobPosting.ScrapedJobs` collection
 
 ## Usage
 
@@ -74,10 +74,10 @@ processor.disconnect()
 ### Individual Signal Functions
 ```python
 from agent2_signal_processor.signals import (
-    extract_technology_adoption,
-    extract_urgent_hiring_language,
-    extract_budget_signals,
-    extract_pain_points
+ extract_technology_adoption,
+ extract_urgent_hiring_language,
+ extract_budget_signals,
+ extract_pain_points
 )
 
 # Extract specific signals

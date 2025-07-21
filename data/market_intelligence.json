@@ -1,0 +1,64 @@
+{
+  "market_timestamp": "2025-07-18T22:02:11.988747",
+  "total_companies_analyzed": 16,
+  "hot_technologies": [
+    [
+      "PyTorch",
+      4
+    ],
+    [
+      "Python",
+      3
+    ],
+    [
+      "Kubernetes",
+      2
+    ],
+    [
+      "TensorFlow",
+      2
+    ],
+    [
+      "Spark",
+      2
+    ],
+    [
+      "MLOps",
+      2
+    ],
+    [
+      "AWS",
+      1
+    ]
+  ],
+  "market_urgency_rate": 43.75,
+  "top_market_pain_points": [
+    [
+      "legacy",
+      6
+    ],
+    [
+      "migration",
+      1
+    ],
+    [
+      "legacy system",
+      1
+    ],
+    [
+      "technical debt",
+      1
+    ],
+    [
+      "migrate",
+      1
+    ]
+  ],
+  "companies_urgently_hiring": 7,
+  "ai_ml_adoption_rate": 50.0,
+  "market_recommendations": [
+    "Focus on PyTorch, Python, Kubernetes expertise as these are the most in-demand technologies",
+    "Develop solutions for legacy, migration as these are common market pain points",
+    "Prioritize rapid-deployment services as 7 companies show urgent hiring signals"
+  ]
+}

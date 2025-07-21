@@ -1,0 +1,299 @@
+{
+  "processing_timestamp": "2025-07-18T22:02:11.955052",
+  "total_jobs_processed": 16,
+  "companies_analyzed": 16,
+  "data_sources": [
+    "meta.com",
+    "deepmind.google",
+    "huggingface.co",
+    "cohere.com",
+    "anthropic.com",
+    "waymo.com",
+    "remoteok.com",
+    "databricks.com",
+    "openai.com"
+  ],
+  "technology_trends": {
+    "total_technologies_mentioned": 16,
+    "unique_technologies": 7,
+    "top_technologies": [
+      [
+        "PyTorch",
+        4
+      ],
+      [
+        "Python",
+        3
+      ],
+      [
+        "Kubernetes",
+        2
+      ],
+      [
+        "TensorFlow",
+        2
+      ],
+      [
+        "Spark",
+        2
+      ],
+      [
+        "MLOps",
+        2
+      ],
+      [
+        "AWS",
+        1
+      ]
+    ],
+    "ai_ml_adoption": 8
+  },
+  "urgent_hiring_analysis": {
+    "jobs_with_urgent_signals": 7,
+    "urgent_percentage": 43.75,
+    "companies_urgently_hiring": 7
+  },
+  "compensation_analysis": {
+    "jobs_with_salary_info": 16,
+    "salary_transparency_rate": 100.0,
+    "jobs_offering_equity": 8,
+    "equity_offering_rate": 50.0
+  },
+  "market_opportunities": {
+    "total_pain_points_identified": 11,
+    "companies_with_pain_points": 7,
+    "top_pain_points": [
+      [
+        "legacy",
+        6
+      ],
+      [
+        "migration",
+        1
+      ],
+      [
+        "legacy system",
+        1
+      ],
+      [
+        "technical debt",
+        1
+      ],
+      [
+        "migrate",
+        1
+      ]
+    ],
+    "modernization_opportunities": 8
+  },
+  "company_insights": {
+    "ModelVault": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "Iris Studio": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "Dimension": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "OneSecondDelivery": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "AMNESIA media": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "Ampcontrol": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "Shopify": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "NannyML": {
+      "job_count": 1,
+      "tech_diversity_score": 0,
+      "technologies": [],
+      "urgent_hiring": false,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "Anthropic": {
+      "job_count": 1,
+      "tech_diversity_score": 1,
+      "technologies": [
+        "PyTorch"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 0,
+      "top_pain_points": []
+    },
+    "OpenAI": {
+      "job_count": 1,
+      "tech_diversity_score": 3,
+      "technologies": [
+        "AWS",
+        "Python",
+        "Kubernetes"
+      ],
+      "urgent_hiring": false,
+      "pain_points_count": 3,
+      "top_pain_points": [
+        [
+          "legacy",
+          1
+        ],
+        [
+          "migration",
+          1
+        ],
+        [
+          "legacy system",
+          1
+        ]
+      ]
+    },
+    "Google DeepMind": {
+      "job_count": 1,
+      "tech_diversity_score": 1,
+      "technologies": [
+        "TensorFlow"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 1,
+      "top_pain_points": [
+        [
+          "legacy",
+          1
+        ]
+      ]
+    },
+    "Meta": {
+      "job_count": 1,
+      "tech_diversity_score": 4,
+      "technologies": [
+        "MLOps",
+        "Python",
+        "PyTorch",
+        "Spark"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 1,
+      "top_pain_points": [
+        [
+          "technical debt",
+          1
+        ]
+      ]
+    },
+    "Databricks": {
+      "job_count": 1,
+      "tech_diversity_score": 3,
+      "technologies": [
+        "Kubernetes",
+        "Spark",
+        "MLOps"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 2,
+      "top_pain_points": [
+        [
+          "legacy",
+          1
+        ],
+        [
+          "migrate",
+          1
+        ]
+      ]
+    },
+    "Hugging Face": {
+      "job_count": 1,
+      "tech_diversity_score": 1,
+      "technologies": [
+        "PyTorch"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 1,
+      "top_pain_points": [
+        [
+          "legacy",
+          1
+        ]
+      ]
+    },
+    "Waymo": {
+      "job_count": 1,
+      "tech_diversity_score": 2,
+      "technologies": [
+        "Python",
+        "TensorFlow"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 2,
+      "top_pain_points": [
+        [
+          "legacy",
+          1
+        ],
+        [
+          "modernize",
+          1
+        ]
+      ]
+    },
+    "Cohere": {
+      "job_count": 1,
+      "tech_diversity_score": 1,
+      "technologies": [
+        "PyTorch"
+      ],
+      "urgent_hiring": true,
+      "pain_points_count": 1,
+      "top_pain_points": [
+        [
+          "legacy",
+          1
+        ]
+      ]
+    }
+  },
+  "scaling_indicators": {
+    "companies_hiring_multiple_roles": 0,
+    "scaling_companies": [],
+    "avg_jobs_per_company": 1.0
+  }
+}
