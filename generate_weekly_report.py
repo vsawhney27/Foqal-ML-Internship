@@ -7,7 +7,6 @@ import json
 import os
 import datetime
 from collections import Counter, defaultdict
-import subprocess
 
 def load_previous_week_data():
     """Load previous week's data for comparison"""
@@ -229,14 +228,9 @@ For questions contact: [BD Operations Team]
 def save_and_distribute_report():
     """Save report and prepare for distribution"""
     
-    # Generate fresh data by running pipeline
-    print("Running fresh data collection...")
-    try:
-        subprocess.run(["python3", "run_complete_pipeline.py"], check=True, timeout=600)
-        print("Fresh data collected successfully")
-    except Exception as e:
-        print(f"Fresh data collection failed: {e}")
-        print("Using existing data for report")
+    # Use existing data for report generation
+    # Note: Run the pipeline manually before generating reports
+    print("Using existing data for report generation...")
     
     # Generate report
     print("Generating weekly report...")

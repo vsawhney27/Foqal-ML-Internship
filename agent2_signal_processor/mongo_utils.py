@@ -22,9 +22,9 @@ class MongoDBHandler:
  try:
  # Multiple connection methods to handle SSL issues (from Agent 1)
  connection_configs = [
- {"tls": True, "tlsAllowInvalidCertificates": True},
- {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE},
- {}  # fallback
+ {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+ {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+ {"serverSelectionTimeoutMS": 5000}  # fallback
  ]
  
  self.client = None

@@ -9,7 +9,17 @@
     "source": "Openai Careers",
     "scraped_date": "2025-07-21 17:10:29",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710582"
+    "collection_date": "2025-07-21T17:11:55.710582",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.633097"
   },
   {
     "title": "View open roles",
@@ -21,7 +31,19 @@
     "source": "Openai Careers",
     "scraped_date": "2025-07-21 17:10:31",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710606"
+    "collection_date": "2025-07-21T17:11:55.710606",
+    "technology_adoption": [
+      "Go"
+    ],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.635822"
   },
   {
     "title": "Developer docs",
@@ -32,7 +54,19 @@
     "source": "Anthropic Careers",
     "scraped_date": "2025-07-21 17:10:35",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710616"
+    "collection_date": "2025-07-21T17:11:55.710616",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [
+      "upgrade"
+    ],
+    "signal_processing_date": "2025-07-21T17:12:15.637950"
   },
   {
     "title": "Engineering at Anthropic",
@@ -43,7 +77,17 @@
     "source": "Anthropic Careers",
     "scraped_date": "2025-07-21 17:10:36",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710622"
+    "collection_date": "2025-07-21T17:11:55.710622",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.639280"
   },
   {
     "title": "View Open Positions→",
@@ -55,7 +99,20 @@
     "source": "Scale Careers",
     "scraped_date": "2025-07-21 17:10:40",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710641"
+    "collection_date": "2025-07-21T17:11:55.710641",
+    "technology_adoption": [
+      "Go",
+      "Azure"
+    ],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.642396"
   },
   {
     "title": "careers",
@@ -67,7 +124,17 @@
     "source": "Huggingface Careers",
     "scraped_date": "2025-07-21 17:10:42",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710649"
+    "collection_date": "2025-07-21T17:11:55.710649",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.642524"
   },
   {
     "title": "Join the team making AI breakthroughs at the world’s largest companies",
@@ -79,7 +146,17 @@
     "source": "Databricks Careers",
     "scraped_date": "2025-07-21 17:10:45",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710663"
+    "collection_date": "2025-07-21T17:11:55.710663",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.643255"
   },
   {
     "title": "Learn More",
@@ -90,7 +167,17 @@
     "source": "Snowflake Careers",
     "scraped_date": "2025-07-21 17:10:48",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710668"
+    "collection_date": "2025-07-21T17:11:55.710668",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.643387"
   },
   {
     "title": "/sitemap.xml",
@@ -102,7 +189,17 @@
     "source": "Palantir Careers",
     "scraped_date": "2025-07-21 17:10:52",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710673"
+    "collection_date": "2025-07-21T17:11:55.710673",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.643514"
   },
   {
     "title": "Open Positions",
@@ -114,7 +211,17 @@
     "source": "Nvidia Careers",
     "scraped_date": "2025-07-21 17:10:54",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710686"
+    "collection_date": "2025-07-21T17:11:55.710686",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.643641"
   },
   {
     "title": "Open Positions",
@@ -126,7 +233,17 @@
     "source": "Nvidia Careers",
     "scraped_date": "2025-07-21 17:10:56",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710691"
+    "collection_date": "2025-07-21T17:11:55.710691",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.643773"
   },
   {
     "title": "Staghorn coral off the island of Bonaire, Caribbean Netherlands",
@@ -138,7 +255,17 @@
     "source": "Microsoft Careers",
     "scraped_date": "2025-07-21 17:11:00",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710705"
+    "collection_date": "2025-07-21T17:11:55.710705",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.643905"
   },
   {
     "title": "Rainforests of the sea",
@@ -150,7 +277,17 @@
     "source": "Microsoft Careers",
     "scraped_date": "2025-07-21 17:11:01",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710708"
+    "collection_date": "2025-07-21T17:11:55.710708",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.644018"
   },
   {
     "title": "work_outlinework_outlineJobsJobs",
@@ -162,7 +299,17 @@
     "source": "Google Careers",
     "scraped_date": "2025-07-21 17:11:05",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710717"
+    "collection_date": "2025-07-21T17:11:55.710717",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.644134"
   },
   {
     "title": "Software Engineering roles",
@@ -174,7 +321,17 @@
     "source": "Google Careers",
     "scraped_date": "2025-07-21 17:11:05",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710722"
+    "collection_date": "2025-07-21T17:11:55.710722",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.644340"
   },
   {
     "title": "Careers at Apple",
@@ -185,7 +342,19 @@
     "source": "Apple Careers",
     "scraped_date": "2025-07-21 17:11:14",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710727"
+    "collection_date": "2025-07-21T17:11:55.710727",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [
+        "equity"
+      ],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.647305"
   },
   {
     "title": "Work at Apple",
@@ -196,7 +365,17 @@
     "source": "Apple Careers",
     "scraped_date": "2025-07-21 17:11:15",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710736"
+    "collection_date": "2025-07-21T17:11:55.710736",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.650107"
   },
   {
     "title": "Job categories",
@@ -207,7 +386,17 @@
     "source": "Amazon Careers",
     "scraped_date": "2025-07-21 17:11:20",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710741"
+    "collection_date": "2025-07-21T17:11:55.710741",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.650206"
   },
   {
     "title": "Account security",
@@ -218,7 +407,17 @@
     "source": "Amazon Careers",
     "scraped_date": "2025-07-21 17:11:23",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710745"
+    "collection_date": "2025-07-21T17:11:55.710745",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.650319"
   },
   {
     "title": "Uber Careers",
@@ -230,7 +429,19 @@
     "source": "Uber Careers",
     "scraped_date": "2025-07-21 17:11:38",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710766"
+    "collection_date": "2025-07-21T17:11:55.710766",
+    "technology_adoption": [
+      "Go"
+    ],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.652886"
   },
   {
     "title": "Business Development & Sales",
@@ -242,7 +453,17 @@
     "source": "Uber Careers",
     "scraped_date": "2025-07-21 17:11:39",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710779"
+    "collection_date": "2025-07-21T17:11:55.710779",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.655433"
   },
   {
     "title": "Job Search",
@@ -254,7 +475,17 @@
     "source": "Airbnb Careers",
     "scraped_date": "2025-07-21 17:11:42",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710786"
+    "collection_date": "2025-07-21T17:11:55.710786",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.655531"
   },
   {
     "title": "Contractor Roles",
@@ -266,7 +497,17 @@
     "source": "Airbnb Careers",
     "scraped_date": "2025-07-21 17:11:43",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710791"
+    "collection_date": "2025-07-21T17:11:55.710791",
+    "technology_adoption": [],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.655629"
   },
   {
     "title": "Skip the line",
@@ -278,6 +519,20 @@
     "source": "Shopify Careers",
     "scraped_date": "2025-07-21 17:11:53",
     "data_quality_checked": true,
-    "collection_date": "2025-07-21T17:11:55.710806"
+    "collection_date": "2025-07-21T17:11:55.710806",
+    "technology_adoption": [
+      "Go"
+    ],
+    "urgent_hiring_language": [],
+    "budget_signals": {
+      "salary_ranges": [
+        "$1"
+      ],
+      "hourly_rates": [],
+      "equity_mentions": [],
+      "budget_phrases": []
+    },
+    "pain_points": [],
+    "signal_processing_date": "2025-07-21T17:12:15.657099"
   }
 ]

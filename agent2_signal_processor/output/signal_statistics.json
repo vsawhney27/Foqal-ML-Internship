@@ -1,0 +1,27 @@
+{
+  "total_jobs_processed": 24,
+  "processing_date": "2025-07-21T17:12:15.657222",
+  "top_technologies": {
+    "Go": 4,
+    "Azure": 1
+  },
+  "urgent_jobs_count": 0,
+  "urgent_percentage": 0.0,
+  "jobs_with_salary": 1,
+  "jobs_with_equity": 1,
+  "top_pain_points": {
+    "upgrade": 1
+  },
+  "company_hiring_volume": {
+    "Openai": 2,
+    "Anthropic": 2,
+    "Nvidia": 2,
+    "Microsoft": 2,
+    "Google": 2,
+    "Apple": 2,
+    "Amazon": 2,
+    "Uber": 2,
+    "Airbnb": 2,
+    "Scale": 1
+  }
+}

@@ -1,61 +1,21 @@
 {
   "top_technologies": [
     [
-      "Python",
-      8
+      "Go",
+      4
     ],
     [
-      "PyTorch",
-      5
-    ],
-    [
-      "Docker",
-      3
-    ],
-    [
-      "Kubernetes",
-      3
-    ],
-    [
-      "TensorFlow",
-      3
-    ],
-    [
-      "AWS",
-      2
-    ],
-    [
-      "Spark",
-      2
-    ],
-    [
-      "GCP",
+      "Azure",
       1
     ]
   ],
-  "urgent_hiring_companies_count": 8,
-  "total_companies": 8,
+  "urgent_hiring_companies_count": 0,
+  "total_companies": 15,
   "top_pain_points": [
     [
-      "legacy",
-      7
-    ],
-    [
-      "technical debt",
-      6
-    ],
-    [
-      "modernize",
-      3
-    ],
-    [
-      "migrate",
-      2
-    ],
-    [
-      "legacy system",
-      2
+      "upgrade",
+      1
     ]
   ],
-  "analysis_date": "2025-07-21T16:32:45.577948"
+  "analysis_date": "2025-07-21T17:31:36.057686"
 }

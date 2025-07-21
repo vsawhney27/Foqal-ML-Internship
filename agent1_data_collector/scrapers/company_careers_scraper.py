@@ -141,38 +141,72 @@ class CompanyCareerscraper:
         """Find job listing elements using common patterns"""
         job_elements = []
         
-        # Common job listing selectors
+        # Enhanced job listing selectors
         selectors = [
-            '[data-job-id]',
-            '.job-item',
-            '.job-listing',
-            '.position',
-            '.role',
-            '.opportunity',
-            '.career-item',
-            'li[class*="job"]',
-            'div[class*="job"]',
-            'a[href*="job"]',
-            'a[href*="position"]',
-            'a[href*="career"]'
+            # Data attributes
+            '[data-job-id]', '[data-position-id]', '[data-role-id]',
+            
+            # Common class patterns
+            '.job-item', '.job-listing', '.job-card', '.job-post',
+            '.position', '.position-item', '.position-card',
+            '.role', '.role-item', '.role-card',
+            '.opportunity', '.career-item', '.career-post',
+            
+            # Generic patterns
+            'li[class*="job"]', 'div[class*="job"]', 'article[class*="job"]',
+            'li[class*="position"]', 'div[class*="position"]',
+            'li[class*="role"]', 'div[class*="role"]',
+            'li[class*="career"]', 'div[class*="career"]',
+            
+            # Link patterns
+            'a[href*="job"]', 'a[href*="jobs"]',
+            'a[href*="position"]', 'a[href*="positions"]',
+            'a[href*="career"]', 'a[href*="careers"]',
+            'a[href*="role"]', 'a[href*="roles"]',
+            'a[href*="opening"]', 'a[href*="opportunity"]'
         ]
         
+        # Try each selector and collect all matches
         for selector in selectors:
-            elements = soup.select(selector)
-            if elements:
-                job_elements.extend(elements)
-                break  # Use first successful selector
+            try:
+                elements = soup.select(selector)
+                if elements:
+                    job_elements.extend(elements)
+            except Exception:
+                continue
         
-        # If no specific job elements found, look for links with job-related keywords
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_elements = []
+        for elem in job_elements:
+            elem_id = id(elem)
+            if elem_id not in seen:
+                seen.add(elem_id)
+                unique_elements.append(elem)
+        
+        job_elements = unique_elements
+        
+        # If still no specific job elements found, look for links with job-related keywords
         if not job_elements:
-            job_keywords = ['engineer', 'scientist', 'developer', 'analyst', 'ai', 'ml', 'machine learning', 'data']
+            job_keywords = [
+                'engineer', 'scientist', 'developer', 'analyst', 
+                'ai', 'ml', 'machine learning', 'data',
+                'software', 'python', 'backend', 'frontend',
+                'senior', 'junior', 'lead', 'principal',
+                'manager', 'director', 'architect'
+            ]
             links = soup.find_all('a', href=True)
             
             for link in links:
                 text = link.get_text().lower()
-                if any(keyword in text for keyword in job_keywords):
+                href = link.get('href', '').lower()
+                
+                # Check both text and href for job-related terms
+                if (any(keyword in text for keyword in job_keywords) or
+                    any(term in href for term in ['job', 'position', 'career', 'role'])):
                     job_elements.append(link)
         
+        logger.info(f"Found {len(job_elements)} potential job elements")
         return job_elements
     
     def extract_job_from_element(self, element, company_name, base_url):
@@ -187,6 +221,11 @@ class CompanyCareerscraper:
             # Job URL
             job_url = self.extract_job_url(element, base_url)
             
+            # If no description found on listing page, try to fetch from job page
+            if not description or description == "" or len(description) < 50:
+                if job_url and job_url != base_url:
+                    description = self.extract_job_page_content(job_url)
+            
             # Location
             location = self.extract_location(element)
             
@@ -197,7 +236,7 @@ class CompanyCareerscraper:
                 'title': title,
                 'company': company_name,
                 'location': location or 'Not specified',
-                'description': description,
+                'description': description or 'Job details available on company website',
                 'department': department,
                 'job_url': job_url,
                 'source': f'{company_name} Careers',
@@ -284,6 +323,88 @@ class CompanyCareerscraper:
         
         return any(keyword in text_to_check for keyword in ai_ml_keywords)
     
+    def extract_job_page_content(self, job_url):
+        """Extract detailed content from individual job page"""
+        try:
+            # Add rate limiting for individual job page requests
+            time.sleep(random.uniform(0.5, 1.5))
+            
+            proxy = self.get_proxy()
+            proxies = {'http': proxy, 'https': proxy} if proxy else None
+            
+            logger.info(f"Fetching job details from: {job_url}")
+            response = self.session.get(job_url, proxies=proxies, timeout=20)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Try multiple content extraction strategies
+            content_strategies = [
+                # Strategy 1: Look for job description containers
+                lambda s: s.find('div', {'class': re.compile(r'.*description.*', re.I)}),
+                lambda s: s.find('div', {'id': re.compile(r'.*description.*', re.I)}),
+                lambda s: s.find('section', {'class': re.compile(r'.*description.*', re.I)}),
+                
+                # Strategy 2: Look for job content containers
+                lambda s: s.find('div', {'class': re.compile(r'.*job-content.*', re.I)}),
+                lambda s: s.find('div', {'class': re.compile(r'.*job-details.*', re.I)}),
+                lambda s: s.find('div', {'class': re.compile(r'.*position-details.*', re.I)}),
+                
+                # Strategy 3: Look for main content areas
+                lambda s: s.find('main'),
+                lambda s: s.find('article'),
+                lambda s: s.find('div', {'class': re.compile(r'.*content.*', re.I)}),
+                
+                # Strategy 4: Look for specific job posting elements
+                lambda s: s.find('div', {'data-testid': re.compile(r'.*description.*', re.I)}),
+                lambda s: s.find('div', {'role': 'main'}),
+            ]
+            
+            description_text = ""
+            
+            for strategy in content_strategies:
+                try:
+                    container = strategy(soup)
+                    if container:
+                        # Extract text, preserving some structure
+                        text = container.get_text(separator='\n', strip=True)
+                        if text and len(text) > 100:  # Reasonable content length
+                            description_text = text
+                            break
+                except:
+                    continue
+            
+            # Fallback: get all paragraph text if nothing specific found
+            if not description_text:
+                paragraphs = soup.find_all('p')
+                if paragraphs:
+                    text_parts = []
+                    for p in paragraphs:
+                        p_text = p.get_text(strip=True)
+                        if len(p_text) > 20:  # Filter out short/empty paragraphs
+                            text_parts.append(p_text)
+                    
+                    description_text = '\n'.join(text_parts)
+            
+            # Clean up the text
+            if description_text:
+                # Remove excessive whitespace
+                description_text = re.sub(r'\n\s*\n', '\n\n', description_text)
+                description_text = re.sub(r' +', ' ', description_text)
+                description_text = description_text.strip()
+                
+                # Truncate if too long (keep first 2000 chars)
+                if len(description_text) > 2000:
+                    description_text = description_text[:2000] + "..."
+                
+                return description_text
+            
+            return "Job details available on company website"
+            
+        except Exception as e:
+            logger.warning(f"Failed to extract content from {job_url}: {e}")
+            return "See job page for details"
+    
     def try_alternative_extraction(self, soup, company_name, base_url, limit):
         """Try alternative extraction methods if standard approach fails"""
         jobs = []
@@ -297,28 +418,47 @@ class CompanyCareerscraper:
                 href = link.get('href', '')
                 text = link.get_text().strip()
                 
-                # Filter for job-related links
-                if (any(word in href.lower() for word in ['job', 'position', 'career', 'role']) or
-                    any(word in text.lower() for word in ['engineer', 'scientist', 'developer', 'analyst'])):
+                # More specific filtering for actual job postings
+                job_indicators_in_href = ['job/', '/job-', 'position/', '/position-', 'role/', '/role-', 'opening/', '/opening-']
+                job_indicators_in_text = ['engineer', 'scientist', 'developer', 'analyst', 'manager', 'director', 'lead', 'senior', 'junior']
+                
+                # Must have specific job indicators and avoid generic career links
+                if ((any(indicator in href.lower() for indicator in job_indicators_in_href) or
+                     any(indicator in text.lower() for indicator in job_indicators_in_text)) and
+                    len(text) > 5 and len(text) < 100 and  # Reasonable title length
+                    not any(generic in text.lower() for generic in ['view all', 'see all', 'explore', 'learn more', 'careers', 'join us'])):
                     job_links.append(link)
+            
+            # Sort by title length to prioritize specific job titles
+            job_links.sort(key=lambda x: len(x.get_text().strip()), reverse=True)
             
             for link in job_links[:limit]:
                 title = link.get_text(strip=True)
                 job_url = urljoin(base_url, link['href'])
                 
-                if title and len(title) > 5:  # Reasonable title length
-                    job_data = {
-                        'title': title,
-                        'company': company_name,
-                        'location': 'Not specified',
-                        'description': 'See job page for details',
-                        'job_url': job_url,
-                        'source': f'{company_name} Careers',
-                        'scraped_date': time.strftime('%Y-%m-%d %H:%M:%S')
-                    }
-                    
-                    if self.is_ai_ml_related(job_data):
-                        jobs.append(job_data)
+                # Skip if URL is same as base URL or too generic
+                if job_url == base_url or any(generic in job_url.lower() for generic in ['/careers', '/jobs', '/career']):
+                    continue
+                
+                # Try to fetch the actual job page content
+                description = self.extract_job_page_content(job_url)
+                
+                # Skip if description is too generic
+                if any(generic in description.lower() for generic in ['careers', 'join us', 'view open roles', 'explore opportunities']):
+                    continue
+                
+                job_data = {
+                    'title': title,
+                    'company': company_name,
+                    'location': 'Not specified',
+                    'description': description,
+                    'job_url': job_url,
+                    'source': f'{company_name} Careers',
+                    'scraped_date': time.strftime('%Y-%m-%d %H:%M:%S')
+                }
+                
+                if self.is_ai_ml_related(job_data) and len(description) > 200:  # Ensure substantial content
+                    jobs.append(job_data)
         
         except Exception as e:
             logger.warning(f"Alternative extraction failed: {e}")

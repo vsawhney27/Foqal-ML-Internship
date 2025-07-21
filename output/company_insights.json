@@ -1,0 +1,77 @@
+[
+  {
+    "company": "TechCorp",
+    "insights": [
+      "TechCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "TechCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Python (2 roles), AWS (2 roles), Docker (1 roles)"
+    ],
+    "job_count": 2,
+    "timestamp": "2025-07-21T17:22:02.131566",
+    "analysis_metadata": {
+      "total_technologies": 6,
+      "urgent_jobs": 2,
+      "budget_transparency": 2,
+      "pain_points_mentioned": 2
+    }
+  },
+  {
+    "company": "StartupInc",
+    "insights": [
+      "StartupInc has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "StartupInc is building diverse technical capabilities across React (1 roles), TypeScript (1 roles), Node.js (1 roles)"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-21T17:22:02.131566",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 1,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1
+    }
+  },
+  {
+    "company": "CloudCorp",
+    "insights": [
+      "CloudCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "CloudCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Kubernetes (1 roles), Docker (1 roles), AWS (1 roles)"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-21T17:22:02.131566",
+    "analysis_metadata": {
+      "total_technologies": 4,
+      "urgent_jobs": 1,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1
+    }
+  },
+  {
+    "company": "DataCorp",
+    "insights": [
+      "DataCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "DataCorp is heavily investing in AI/ML capabilities, with focus on Python (1 roles), TensorFlow (1 roles), AWS (1 roles)"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-21T17:22:02.131566",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 1,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1
+    }
+  },
+  {
+    "company": "SecureTech",
+    "insights": [
+      "SecureTech has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "SecureTech is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles), Linux (1 roles)"
+    ],
+    "job_count": 1,
+    "timestamp": "2025-07-21T17:22:02.131566",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 1,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1
+    }
+  }
+]

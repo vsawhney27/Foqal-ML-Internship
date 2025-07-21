@@ -1,122 +1,58 @@
 [
   {
-    "company": "OpenAI",
+    "company": "Scale",
     "insights": [
-      "OpenAI has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "OpenAI is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles), Docker (1 roles)"
+      "Scale is prioritizing cloud infrastructure and DevOps, with emphasis on Go (1 roles), Azure (1 roles)"
     ],
     "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
-    "analysis_metadata": {
-      "total_technologies": 6,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
-  },
-  {
-    "company": "Anthropic",
-    "insights": [
-      "Anthropic has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Anthropic is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles), Docker (1 roles)"
-    ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
-    "analysis_metadata": {
-      "total_technologies": 5,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
-  },
-  {
-    "company": "Google DeepMind",
-    "insights": [
-      "Google DeepMind has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Google DeepMind is heavily investing in AI/ML capabilities, with focus on Python (1 roles), GCP (1 roles), TensorFlow (1 roles)"
-    ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
-    "analysis_metadata": {
-      "total_technologies": 3,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
-  },
-  {
-    "company": "Meta",
-    "insights": [
-      "Meta has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Meta is heavily investing in AI/ML capabilities, with focus on Python (1 roles), Spark (1 roles), PyTorch (1 roles)"
-    ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
-    "analysis_metadata": {
-      "total_technologies": 3,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
-  },
-  {
-    "company": "Databricks",
-    "insights": [
-      "Databricks has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Databricks is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), Docker (1 roles), Kubernetes (1 roles)"
-    ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
-    "analysis_metadata": {
-      "total_technologies": 4,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
-  },
-  {
-    "company": "Hugging Face",
-    "insights": [
-      "Hugging Face has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Hugging Face is heavily investing in AI/ML capabilities, with focus on Python (1 roles), PyTorch (1 roles)"
-    ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
+    "timestamp": "2025-07-21T17:31:36.057141",
     "analysis_metadata": {
       "total_technologies": 2,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
+      "urgent_jobs": 0,
+      "budget_transparency": 0,
       "pain_points_mentioned": 0
     }
   },
   {
-    "company": "Waymo",
+    "company": "Microsoft",
     "insights": [
-      "Waymo has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Waymo is heavily investing in AI/ML capabilities, with focus on Python (1 roles), TensorFlow (1 roles)"
+      "Microsoft is making significant investments in AI/ML talent, indicating strategic focus on artificial intelligence capabilities"
     ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
+    "job_count": 2,
+    "timestamp": "2025-07-21T17:31:36.057141",
     "analysis_metadata": {
-      "total_technologies": 2,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0
     }
   },
   {
-    "company": "Cohere",
+    "company": "Amazon",
     "insights": [
-      "Cohere has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "Cohere is heavily investing in AI/ML capabilities, with focus on Python (1 roles), PyTorch (1 roles)"
+      "Amazon is strengthening security capabilities, potentially due to compliance requirements or security incidents"
+    ],
+    "job_count": 2,
+    "timestamp": "2025-07-21T17:31:36.057141",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0
+    }
+  },
+  {
+    "company": "Shopify",
+    "insights": [
+      "Shopify is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
     ],
     "job_count": 1,
-    "timestamp": "2025-07-21T16:32:45.577790",
+    "timestamp": "2025-07-21T17:31:36.057141",
     "analysis_metadata": {
-      "total_technologies": 2,
-      "urgent_jobs": 1,
+      "total_technologies": 1,
+      "urgent_jobs": 0,
       "budget_transparency": 1,
-      "pain_points_mentioned": 1
+      "pain_points_mentioned": 0
     }
   }
 ]

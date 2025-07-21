@@ -23,9 +23,9 @@ def load_processed_signals_from_mongo(db_url, db_name="JobPosting", collection_n
     
     # Multiple connection methods to handle SSL issues (from Agent 1)
     connection_configs = [
-        {"tls": True, "tlsAllowInvalidCertificates": True},
-        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE},
-        {}  # fallback
+        {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+        {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+        {"serverSelectionTimeoutMS": 5000}  # fallback
     ]
     
     client = None
@@ -59,9 +59,9 @@ def save_insights_to_mongo(insights, db_url, db_name="JobPosting", collection_na
     
     # Multiple connection methods to handle SSL issues (from Agent 1)
     connection_configs = [
-        {"tls": True, "tlsAllowInvalidCertificates": True},
-        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE},
-        {}  # fallback
+        {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+        {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+        {"serverSelectionTimeoutMS": 5000}  # fallback
     ]
     
     client = None
@@ -379,7 +379,11 @@ def print_insights_summary(insights: List[Dict], industry_trends: Dict):
 
 def main():
     """Main execution function"""
-    # MongoDB URL - same as other agents
+    # Load environment variables
+    from dotenv import load_dotenv
+    load_dotenv()
+    
+    # MongoDB URL from environment  
     MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017/")
     
     print("Starting Business Development Insight Generator (Agent 3)...")
@@ -390,11 +394,27 @@ def main():
         
         # Try to load from Agent 2's output JSON file first
         json_file = "../agent2_signal_processor/output/signals_output.json"
-        if os.path.exists(json_file):
-            with open(json_file, 'r') as f:
-                processed_signals = json.load(f)
-            print(f"✅ Loaded {len(processed_signals)} processed signals from JSON file")
-        else:
+        # Also try alternative paths
+        alt_paths = [
+            "../agent2_signal_processor/output/signals_output.json",
+            "../../agent2_signal_processor/output/signals_output.json", 
+            "../data/processed_jobs.json"
+        ]
+        # Try all possible paths
+        loaded = False
+        for path in alt_paths:
+            if os.path.exists(path):
+                try:
+                    with open(path, 'r') as f:
+                        processed_signals = json.load(f)
+                    print(f"✅ Loaded {len(processed_signals)} processed signals from {path}")
+                    loaded = True
+                    break
+                except Exception as e:
+                    print(f"Failed to load {path}: {e}")
+                    continue
+        
+        if not loaded:
             print("❌ No JSON file found, trying MongoDB...")
             try:
                 processed_signals = load_processed_signals_from_mongo(MONGO_URL)

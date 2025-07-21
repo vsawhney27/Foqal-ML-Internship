@@ -19,7 +19,6 @@ def load_jobs_from_mongo(db_url, db_name="JobPosting", collection_name="ScrapedJ
     # Multiple connection methods to handle SSL issues
     connection_configs = [
         {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
-        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE, "serverSelectionTimeoutMS": 5000},
         {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
         {"serverSelectionTimeoutMS": 5000}  # fallback
     ]
@@ -56,7 +55,6 @@ def save_to_mongo(processed_jobs, db_url, db_name="JobPosting", collection_name=
     # Multiple connection methods to handle SSL issues
     connection_configs = [
         {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
-        {"ssl": True, "ssl_cert_reqs": ssl.CERT_NONE, "serverSelectionTimeoutMS": 5000},
         {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
         {"serverSelectionTimeoutMS": 5000}  # fallback
     ]
@@ -361,7 +359,11 @@ def save_to_files(processed_jobs: List[Dict], stats: Dict, output_dir: str = "ou
     print(f"Saved results to {output_dir}/")
 
 if __name__ == "__main__":
-    # MongoDB URL - same as Agent 1
+    # Load environment variables
+    from dotenv import load_dotenv
+    load_dotenv()
+    
+    # MongoDB URL from environment
     MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017/")
     
     print("Starting Signal Processing Agent (Agent 2)...")
@@ -375,13 +377,23 @@ if __name__ == "__main__":
             print(f"MongoDB connection failed: {e}")
             print("Attempting to load from JSON file...")
             
-            # Try to load from data/scraped_jobs.json
-            json_file = "../data/scraped_jobs.json"
-            if os.path.exists(json_file):
-                with open(json_file, 'r') as f:
-                    jobs = json.load(f)
-                print(f"✅ Loaded {len(jobs)} jobs from JSON file")
-            else:
+            # Try to load from agent1 output with multiple paths
+            possible_paths = [
+                "../agent1_data_collector/scraped_jobs.json",
+                "agent1_data_collector/scraped_jobs.json",
+                "./agent1_data_collector/scraped_jobs.json"
+            ]
+            
+            json_loaded = False
+            for json_file in possible_paths:
+                if os.path.exists(json_file):
+                    with open(json_file, 'r') as f:
+                        jobs = json.load(f)
+                    print(f"✅ Loaded {len(jobs)} jobs from JSON file")
+                    json_loaded = True
+                    break
+            
+            if not json_loaded:
                 print("❌ No JSON file found either")
         
         if not jobs:
