@@ -94,22 +94,50 @@ def extract_technology_adoption(description: str) -> List[str]:
     if not description:
         return []
     
+    # Multi-word technologies should be checked first (longer matches take priority)
     tech_keywords = [
-        'Python', 'Java', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'C++', 'C#', 'PHP', 'Ruby',
-        'React', 'Angular', 'Vue', 'Django', 'Flask', 'FastAPI', 'Spring', 'Express', 'Node.js',
-        'AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'GitLab CI',
-        'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Neo4j', 'DynamoDB',
-        'Git', 'Linux', 'Nginx', 'Apache', 'Grafana', 'Prometheus', 'Kafka', 'Spark',
-        'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV',
-        'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'GraphQL', 'REST API', 'Microservices'
+        # Multi-word technologies first
+        'React Native', 'Vue.js', 'Angular.js', 'Next.js', 'Node.js', 'Express.js',
+        'Spring Boot', 'Django REST', 'FastAPI', 'GitLab CI', 'GitHub Actions',
+        'Google Cloud Platform', 'Amazon Web Services', 'Microsoft Azure',
+        'REST API', 'GraphQL API', 'Machine Learning', 'Artificial Intelligence',
+        'DevOps Engineer', 'Full Stack', 'Front End', 'Back End', 'End-to-End',
+        'CI/CD', 'ML/AI', 'AI/ML', 'Technical Debt', 'Legacy System',
+        'Cloud Computing', 'Data Science', 'Big Data', 'Real Time',
+        # Single-word technologies
+        'Python', 'Java', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'C++', 'C#', 'PHP', 'Ruby', 'Kotlin', 'Swift', 'Scala',
+        'React', 'Angular', 'Vue', 'Django', 'Flask', 'Spring', 'Express', 'Laravel', 'Rails',
+        'AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Ansible',
+        'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Neo4j', 'DynamoDB', 'Cassandra',
+        'Git', 'Linux', 'Ubuntu', 'Nginx', 'Apache', 'Grafana', 'Prometheus', 'Kafka', 'Spark', 'Hadoop',
+        'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'Keras',
+        'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'SASS', 'LESS', 'GraphQL', 'Microservices',
+        'Blockchain', 'Solidity', 'Ethereum', 'Bitcoin', 'Crypto', 'NFT', 'DeFi'
     ]
     
-    found_tech = []
-    description_lower = description.lower()
+    # Normalize the description: handle Unicode characters and clean text
+    import unicodedata
+    description_clean = unicodedata.normalize('NFKD', description).encode('ascii', 'ignore').decode('ascii')
+    description_lower = description_clean.lower()
     
+    found_tech = []
+    
+    # Check for technologies, prioritizing longer matches
     for tech in tech_keywords:
-        if re.search(r'\b' + re.escape(tech.lower()) + r'\b', description_lower):
-            found_tech.append(tech)
+        tech_lower = tech.lower()
+        # Use word boundaries but handle common variations
+        patterns = [
+            r'\b' + re.escape(tech_lower) + r'\b',  # Exact match
+            r'\b' + re.escape(tech_lower.replace(' ', '')) + r'\b',  # No spaces (e.g., "reactnative")
+            r'\b' + re.escape(tech_lower.replace(' ', '-')) + r'\b',  # Hyphenated (e.g., "react-native")
+            r'\b' + re.escape(tech_lower.replace(' ', '_')) + r'\b',  # Underscored
+            r'\b' + re.escape(tech_lower.replace('.', '')) + r'\b',   # No dots (e.g., "nodejs")
+        ]
+        
+        for pattern in patterns:
+            if re.search(pattern, description_lower) and tech not in found_tech:
+                found_tech.append(tech)
+                break
     
     return found_tech
 
@@ -118,20 +146,45 @@ def extract_urgent_hiring_language(description: str) -> List[str]:
     if not description:
         return []
     
+    # Normalize description to handle Unicode characters
+    import unicodedata
+    description_clean = unicodedata.normalize('NFKD', description).encode('ascii', 'ignore').decode('ascii')
+    description_lower = description_clean.lower()
+    
+    # Expanded urgent hiring patterns with more variations
     urgent_patterns = [
-        r'\basap\b', r'\bimmediate\b', r'\bstart now\b', r'\bstart immediately\b',
-        r'\burgent\b', r'\brushing\b', r'\bquickly\b', r'\bhiring now\b',
-        r'\bstart monday\b', r'\bstart this week\b', r'\bhigh priority\b'
+        # Direct urgency terms
+        r'\basap\b', r'\bimmediate\b', r'\bimmediately\b', r'\burgent\b', r'\brushing\b', 
+        r'\bquickly\b', r'\bfast.track\b', r'\bexpedited\b', r'\bhigh.priority\b',
+        
+        # Hiring timeline urgency
+        r'\bstart now\b', r'\bstart immediately\b', r'\bhire immediately\b', r'\bhiring now\b',
+        r'\bready to hire\b', r'\bstart monday\b', r'\bstart this week\b', r'\bthis month\b',
+        r'\bfill.*position.*quickly\b', r'\bneed.*someone.*asap\b',
+        
+        # Business urgency indicators  
+        r'\bcritical.*hire\b', r'\bcritical.*need\b', r'\bmust.*fill.*soon\b',
+        r'\bbackfill.*urgent\b', r'\bstaffing.*emergency\b', r'\bgap.*needs.*filling\b',
+        
+        # Project urgency
+        r'\bproject.*starts.*soon\b', r'\bdeadline.*approaching\b', r'\btight.*timeline\b',
+        r'\btime.sensitive\b', r'\bmission.critical\b', r'\bcannot.*delay\b',
+        
+        # Growth/scaling urgency
+        r'\brapid.*growth\b', r'\bscaling.*team\b', r'\bexpanding.*quickly\b',
+        r'\bgrowing.*fast\b', r'\baggressive.*hiring\b', r'\bmultiple.*positions\b'
     ]
     
     found_phrases = []
-    description_lower = description.lower()
     
     for pattern in urgent_patterns:
-        matches = re.findall(pattern, description_lower)
-        found_phrases.extend(matches)
+        matches = re.findall(pattern, description_lower, re.IGNORECASE | re.DOTALL)
+        if matches:
+            # Convert back to readable format
+            readable_phrase = pattern.replace(r'\b', '').replace(r'.*', ' ').replace('.', ' ')
+            found_phrases.extend([readable_phrase.strip()])
     
-    return list(set(found_phrases))
+    return list(set([phrase for phrase in found_phrases if phrase]))
 
 def extract_budget_signals(description: str) -> Dict[str, Any]:
     """Extract salary and budget information"""

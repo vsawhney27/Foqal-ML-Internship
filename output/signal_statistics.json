@@ -1,27 +1,27 @@
 {
   "total_jobs_processed": 79,
-  "processing_date": "2025-07-22T12:33:59.846271",
+  "processing_date": "2025-07-22T12:51:30.041089",
   "top_technologies": {
+    "Back End": 17,
+    "Front End": 12,
     "Go": 10,
+    "Blockchain": 10,
+    "Full Stack": 9,
     "React": 9,
+    "Real Time": 9,
+    "End-to-End": 8,
     "TypeScript": 8,
-    "Python": 7,
-    "AWS": 7,
-    "GraphQL": 5,
-    "Rust": 5,
-    "Ruby": 3,
-    "Docker": 3,
-    "Kubernetes": 3
+    "Python": 7
   },
-  "urgent_jobs_count": 12,
-  "urgent_percentage": 15.19,
+  "urgent_jobs_count": 23,
+  "urgent_percentage": 29.11,
   "jobs_with_salary": 10,
   "jobs_with_equity": 10,
   "top_pain_points": {
     "legacy": 3,
     "modernize": 2,
-    "refactor": 1,
     "performance issues": 1,
+    "refactor": 1,
     "migration": 1
   },
   "company_hiring_volume": {

@@ -8,7 +8,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093678",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "End-to-End"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -17,7 +19,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.729088"
+    "signal_processing_date": "2025-07-22T12:51:29.361390"
   },
   {
     "title": "Content Producer Technical Content Engineer Junior Dev",
@@ -29,9 +31,12 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
-      "TypeScript"
+      "TypeScript",
+      "Crypto"
     ],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "immediately"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -39,7 +44,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.732453"
+    "signal_processing_date": "2025-07-22T12:51:29.375927"
   },
   {
     "title": "Account Executive Retail",
@@ -59,7 +64,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.735262"
+    "signal_processing_date": "2025-07-22T12:51:29.388646"
   },
   {
     "title": "Senior Product Designer",
@@ -79,7 +84,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.737936"
+    "signal_processing_date": "2025-07-22T12:51:29.400209"
   },
   {
     "title": "Data Collection Participant Photo Submission Task",
@@ -102,7 +107,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.740154"
+    "signal_processing_date": "2025-07-22T12:51:29.409537"
   },
   {
     "title": "Underwriter",
@@ -124,7 +129,7 @@
     "pain_points": [
       "modernize"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.742584"
+    "signal_processing_date": "2025-07-22T12:51:29.419523"
   },
   {
     "title": "Full Stack Engineer",
@@ -135,7 +140,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093661",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Full Stack"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -144,10 +151,10 @@
       "budget_phrases": []
     },
     "pain_points": [
-      "refactor",
-      "performance issues"
+      "performance issues",
+      "refactor"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.745013"
+    "signal_processing_date": "2025-07-22T12:51:29.429347"
   },
   {
     "title": "Senior AI Python Developer",
@@ -159,9 +166,11 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "FastAPI",
+      "Back End",
+      "AI/ML",
       "Python",
       "Flask",
-      "FastAPI",
       "AWS",
       "Microservices"
     ],
@@ -179,7 +188,7 @@
     "pain_points": [
       "migration"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.747458"
+    "signal_processing_date": "2025-07-22T12:51:29.438356"
   },
   {
     "title": "User Support Specialist",
@@ -192,6 +201,7 @@
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [],
     "urgent_hiring_language": [
+      "growing fast",
       "quickly"
     ],
     "budget_signals": {
@@ -201,7 +211,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.749696"
+    "signal_processing_date": "2025-07-22T12:51:29.447599"
   },
   {
     "title": "Senior Software Engineer",
@@ -213,9 +223,13 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Full Stack",
+      "Front End",
+      "Back End",
       "TypeScript",
       "Ruby",
       "React",
+      "Rails",
       "AWS",
       "Redis",
       "GraphQL"
@@ -230,7 +244,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.751824"
+    "signal_processing_date": "2025-07-22T12:51:29.456217"
   },
   {
     "title": "ML Scientist Foundation Model",
@@ -242,7 +256,10 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "scaling team",
+      "growing fast"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -250,7 +267,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.753905"
+    "signal_processing_date": "2025-07-22T12:51:29.465480"
   },
   {
     "title": "Exchange Operations Analyst",
@@ -261,7 +278,10 @@
     "job_url": "https://remoteok.io/remote-jobs/1093648",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "End-to-End",
+      "Crypto"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -270,7 +290,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.755809"
+    "signal_processing_date": "2025-07-22T12:51:29.474616"
   },
   {
     "title": "Customer Success Analyst",
@@ -290,7 +310,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.757821"
+    "signal_processing_date": "2025-07-22T12:51:29.483983"
   },
   {
     "title": "QA Analyst",
@@ -312,7 +332,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.759684"
+    "signal_processing_date": "2025-07-22T12:51:29.493239"
   },
   {
     "title": "Technical Account Manager",
@@ -323,7 +343,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093644",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "End-to-End"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -332,7 +354,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.761539"
+    "signal_processing_date": "2025-07-22T12:51:29.502473"
   },
   {
     "title": "Developer Relations Engineer",
@@ -343,7 +365,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093641",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Blockchain"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -352,7 +376,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.763615"
+    "signal_processing_date": "2025-07-22T12:51:29.511599"
   },
   {
     "title": "Entrepreneurial Apprentice Eccentric Millionaire",
@@ -364,7 +388,9 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "rapid growth"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -372,7 +398,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.765628"
+    "signal_processing_date": "2025-07-22T12:51:29.521481"
   },
   {
     "title": "Senior DevOps Engineer",
@@ -384,9 +410,13 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "GitHub Actions",
+      "DevOps Engineer",
+      "CI/CD",
       "Go",
       "AWS",
-      "Docker"
+      "Docker",
+      "LESS"
     ],
     "urgent_hiring_language": [],
     "budget_signals": {
@@ -396,7 +426,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.767330"
+    "signal_processing_date": "2025-07-22T12:51:29.530242"
   },
   {
     "title": "Senior Security Engineer",
@@ -408,9 +438,14 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
-      "GitLab CI"
+      "GitLab CI",
+      "End-to-End",
+      "CI/CD",
+      "Real Time"
     ],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "rapid growth"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -418,7 +453,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.769038"
+    "signal_processing_date": "2025-07-22T12:51:29.539217"
   },
   {
     "title": "Senior DevOps Engineer",
@@ -430,10 +465,14 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Vue.js",
+      "DevOps Engineer",
+      "Front End",
       "TypeScript",
       "Rust",
       "Ruby",
       "Vue",
+      "Rails",
       "Docker",
       "Kubernetes",
       "PostgreSQL",
@@ -448,7 +487,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.770621"
+    "signal_processing_date": "2025-07-22T12:51:29.547438"
   },
   {
     "title": "Manufacturing Experts AI Trainer",
@@ -459,7 +498,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093623",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Cloud Computing"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -468,7 +509,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.772344"
+    "signal_processing_date": "2025-07-22T12:51:29.556845"
   },
   {
     "title": "Membership Site Support Specialist",
@@ -488,7 +529,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.774086"
+    "signal_processing_date": "2025-07-22T12:51:29.566011"
   },
   {
     "title": "Blockchain Security Researcher",
@@ -499,7 +540,11 @@
     "job_url": "https://remoteok.io/remote-jobs/1093620",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Full Stack",
+      "Blockchain",
+      "Ethereum"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -508,7 +553,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.775692"
+    "signal_processing_date": "2025-07-22T12:51:29.574992"
   },
   {
     "title": "$1000 Weekly Virtual Assistant",
@@ -521,6 +566,7 @@
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [],
     "urgent_hiring_language": [
+      "immediately",
       "start immediately"
     ],
     "budget_signals": {
@@ -533,7 +579,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.777039"
+    "signal_processing_date": "2025-07-22T12:51:29.582850"
   },
   {
     "title": "Backend Developer @ lobstr.io Python Scraping Celery",
@@ -545,6 +591,8 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Front End",
+      "Back End",
       "Python",
       "Django",
       "Redis",
@@ -561,7 +609,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.778375"
+    "signal_processing_date": "2025-07-22T12:51:29.590341"
   },
   {
     "title": "Chief Executive Officer Crypto Blockchain",
@@ -572,7 +620,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093606",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Blockchain"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -581,7 +631,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.780132"
+    "signal_processing_date": "2025-07-22T12:51:29.599944"
   },
   {
     "title": "Senior Mobile iOS Engineer",
@@ -592,7 +642,11 @@
     "job_url": "https://remoteok.io/remote-jobs/1093598",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Front End",
+      "Back End",
+      "Swift"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -601,7 +655,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.781719"
+    "signal_processing_date": "2025-07-22T12:51:29.609437"
   },
   {
     "title": "Member of Technical Staff Transparency",
@@ -612,7 +666,12 @@
     "job_url": "https://remoteok.io/remote-jobs/1093596",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Full Stack",
+      "Front End",
+      "Back End",
+      "Crypto"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [
@@ -623,7 +682,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.783281"
+    "signal_processing_date": "2025-07-22T12:51:29.618911"
   },
   {
     "title": "Security Researcher",
@@ -635,7 +694,12 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
-      "Rust"
+      "End-to-End",
+      "Rust",
+      "Blockchain",
+      "Solidity",
+      "Ethereum",
+      "DeFi"
     ],
     "urgent_hiring_language": [],
     "budget_signals": {
@@ -645,7 +709,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.784837"
+    "signal_processing_date": "2025-07-22T12:51:29.627579"
   },
   {
     "title": "Senior TS React Developer",
@@ -657,6 +721,8 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Front End",
+      "Back End",
       "TypeScript",
       "PHP",
       "React"
@@ -671,7 +737,7 @@
       ]
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.786372"
+    "signal_processing_date": "2025-07-22T12:51:29.637152"
   },
   {
     "title": "AI Driven Engineer Ruby",
@@ -683,7 +749,9 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Back End",
       "Ruby",
+      "Rails",
       "Kafka"
     ],
     "urgent_hiring_language": [],
@@ -694,7 +762,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.787850"
+    "signal_processing_date": "2025-07-22T12:51:29.646146"
   },
   {
     "title": "Senior Security Engineer",
@@ -705,8 +773,12 @@
     "job_url": "https://remoteok.io/remote-jobs/1093568",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
-    "urgent_hiring_language": [],
+    "technology_adoption": [
+      "Ethereum"
+    ],
+    "urgent_hiring_language": [
+      "growing fast"
+    ],
     "budget_signals": {
       "salary_ranges": [
         "$3"
@@ -718,7 +790,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.789441"
+    "signal_processing_date": "2025-07-22T12:51:29.655511"
   },
   {
     "title": "Software Engineer",
@@ -729,9 +801,12 @@
     "job_url": "https://remoteok.io/remote-jobs/1093565",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "LESS"
+    ],
     "urgent_hiring_language": [
-      "quickly"
+      "quickly",
+      "mission critical"
     ],
     "budget_signals": {
       "salary_ranges": [
@@ -747,7 +822,7 @@
       ]
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.791033"
+    "signal_processing_date": "2025-07-22T12:51:29.665035"
   },
   {
     "title": "Business Development Manager Ad Tech",
@@ -769,7 +844,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.792512"
+    "signal_processing_date": "2025-07-22T12:51:29.674510"
   },
   {
     "title": "Senior Developer",
@@ -785,7 +860,9 @@
       "TypeScript",
       "Rust",
       "React",
-      "AWS"
+      "AWS",
+      "Crypto",
+      "DeFi"
     ],
     "urgent_hiring_language": [],
     "budget_signals": {
@@ -797,7 +874,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.793989"
+    "signal_processing_date": "2025-07-22T12:51:29.683540"
   },
   {
     "title": "Partnerships Lead",
@@ -808,7 +885,10 @@
     "job_url": "https://remoteok.io/remote-jobs/1093557",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Blockchain",
+      "Crypto"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -817,7 +897,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.795446"
+    "signal_processing_date": "2025-07-22T12:51:29.692618"
   },
   {
     "title": "Lead Software Engineer II Backend",
@@ -829,6 +909,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Back End",
       "Python",
       "AWS"
     ],
@@ -840,7 +921,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.797097"
+    "signal_processing_date": "2025-07-22T12:51:29.702166"
   },
   {
     "title": "Application Engineer",
@@ -851,7 +932,10 @@
     "job_url": "https://remoteok.io/remote-jobs/1093516",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "GitHub Actions",
+      "CI/CD"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -860,7 +944,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.798547"
+    "signal_processing_date": "2025-07-22T12:51:29.711525"
   },
   {
     "title": "Senior Product Manager Data",
@@ -871,7 +955,10 @@
     "job_url": "https://remoteok.io/remote-jobs/1093509",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Blockchain",
+      "Crypto"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -880,7 +967,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.799960"
+    "signal_processing_date": "2025-07-22T12:51:29.720856"
   },
   {
     "title": "Svelte Developer",
@@ -892,13 +979,18 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Front End",
+      "Back End",
       "JavaScript",
       "TypeScript",
+      "Kotlin",
       "HTML",
       "CSS",
       "Tailwind"
     ],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "growing fast"
+    ],
     "budget_signals": {
       "salary_ranges": [
         "$30",
@@ -911,7 +1003,7 @@
     "pain_points": [
       "modernize"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.801272"
+    "signal_processing_date": "2025-07-22T12:51:29.729210"
   },
   {
     "title": "Full Stack Engineer",
@@ -923,10 +1015,15 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Full Stack",
+      "Front End",
+      "Back End",
       "TypeScript",
       "Go"
     ],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "growing fast"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -936,7 +1033,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.802745"
+    "signal_processing_date": "2025-07-22T12:51:29.738488"
   },
   {
     "title": "Senior Software Engineer",
@@ -948,8 +1045,17 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "React Native",
+      "Next.js",
+      "Full Stack",
+      "Front End",
+      "Back End",
       "React",
-      "GraphQL"
+      "GraphQL",
+      "Blockchain",
+      "Solidity",
+      "Ethereum",
+      "DeFi"
     ],
     "urgent_hiring_language": [],
     "budget_signals": {
@@ -959,7 +1065,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.804171"
+    "signal_processing_date": "2025-07-22T12:51:29.746910"
   },
   {
     "title": "Senior Software Engineer",
@@ -971,9 +1077,14 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Full Stack",
+      "Front End",
+      "Back End",
       "Docker"
     ],
-    "urgent_hiring_language": [],
+    "urgent_hiring_language": [
+      "scaling team"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -981,7 +1092,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.805579"
+    "signal_processing_date": "2025-07-22T12:51:29.756114"
   },
   {
     "title": "Founding Product Lead",
@@ -993,6 +1104,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "AI/ML",
       "Go"
     ],
     "urgent_hiring_language": [],
@@ -1003,7 +1115,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.807004"
+    "signal_processing_date": "2025-07-22T12:51:29.765709"
   },
   {
     "title": "Software Engineer II",
@@ -1015,6 +1127,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Next.js",
       "GraphQL"
     ],
     "urgent_hiring_language": [
@@ -1029,7 +1142,7 @@
     "pain_points": [
       "migrating"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.808498"
+    "signal_processing_date": "2025-07-22T12:51:29.775792"
   },
   {
     "title": "EMEA Solutions Engineer",
@@ -1040,8 +1153,12 @@
     "job_url": "https://remoteok.io/remote-jobs/1093492",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
-    "urgent_hiring_language": [],
+    "technology_adoption": [
+      "Real Time"
+    ],
+    "urgent_hiring_language": [
+      "mission critical"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -1049,7 +1166,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.809855"
+    "signal_processing_date": "2025-07-22T12:51:29.785539"
   },
   {
     "title": "Customer Support Operations Lead",
@@ -1060,8 +1177,12 @@
     "job_url": "https://remoteok.io/remote-jobs/1093490",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
-    "urgent_hiring_language": [],
+    "technology_adoption": [
+      "Real Time"
+    ],
+    "urgent_hiring_language": [
+      "high priority"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -1069,7 +1190,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.811197"
+    "signal_processing_date": "2025-07-22T12:51:29.794773"
   },
   {
     "title": "Growth Marketer",
@@ -1080,8 +1201,14 @@
     "job_url": "https://remoteok.io/remote-jobs/1093483",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
-    "urgent_hiring_language": [],
+    "technology_adoption": [
+      "Blockchain",
+      "Ethereum",
+      "DeFi"
+    ],
+    "urgent_hiring_language": [
+      "scaling team"
+    ],
     "budget_signals": {
       "salary_ranges": [],
       "hourly_rates": [],
@@ -1089,7 +1216,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.812795"
+    "signal_processing_date": "2025-07-22T12:51:29.803991"
   },
   {
     "title": "Senior Software Engineer Full Stack",
@@ -1100,10 +1227,13 @@
     "job_url": "https://remoteok.io/remote-jobs/1093481",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Artificial Intelligence",
+      "Real Time"
+    ],
     "urgent_hiring_language": [
-      "quickly",
-      "immediate"
+      "immediate",
+      "quickly"
     ],
     "budget_signals": {
       "salary_ranges": [],
@@ -1112,7 +1242,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.814322"
+    "signal_processing_date": "2025-07-22T12:51:29.813759"
   },
   {
     "title": "Fullstack Developer JS Developer",
@@ -1124,12 +1254,13 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Node.js",
       "JavaScript",
       "React",
-      "Node.js",
       "Git",
       "HTML",
-      "CSS"
+      "CSS",
+      "SASS"
     ],
     "urgent_hiring_language": [],
     "budget_signals": {
@@ -1141,7 +1272,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.815677"
+    "signal_processing_date": "2025-07-22T12:51:29.822701"
   },
   {
     "title": "Data Engineer II",
@@ -1153,6 +1284,8 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Machine Learning",
+      "Real Time",
       "Apache"
     ],
     "urgent_hiring_language": [],
@@ -1163,7 +1296,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.817006"
+    "signal_processing_date": "2025-07-22T12:51:29.831701"
   },
   {
     "title": "Back End Engineer",
@@ -1175,6 +1308,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "End-to-End",
       "Go"
     ],
     "urgent_hiring_language": [
@@ -1187,7 +1321,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.818324"
+    "signal_processing_date": "2025-07-22T12:51:29.841057"
   },
   {
     "title": "Senior Backend Engineer",
@@ -1198,7 +1332,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093474",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Back End"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -1207,7 +1343,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.818734"
+    "signal_processing_date": "2025-07-22T12:51:29.844060"
   },
   {
     "title": "Staff Front End Engineer",
@@ -1219,6 +1355,8 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Front End",
+      "Back End",
       "Go",
       "GraphQL"
     ],
@@ -1232,7 +1370,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.820085"
+    "signal_processing_date": "2025-07-22T12:51:29.853433"
   },
   {
     "title": "Senior Scientific Software Engineer Magnet Protection Systems",
@@ -1258,7 +1396,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.821450"
+    "signal_processing_date": "2025-07-22T12:51:29.862999"
   },
   {
     "title": "Staff Engineer Distributed Systems",
@@ -1278,7 +1416,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.821870"
+    "signal_processing_date": "2025-07-22T12:51:29.866772"
   },
   {
     "title": "Senior Site Reliability Engineer ML Platforms",
@@ -1290,6 +1428,10 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Machine Learning",
+      "ML/AI",
+      "Data Science",
+      "Real Time",
       "Kubernetes"
     ],
     "urgent_hiring_language": [],
@@ -1300,7 +1442,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.823205"
+    "signal_processing_date": "2025-07-22T12:51:29.875889"
   },
   {
     "title": "Senior Software Engineer Open Source Server",
@@ -1311,7 +1453,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093463",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Real Time"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -1320,7 +1464,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.823634"
+    "signal_processing_date": "2025-07-22T12:51:29.878973"
   },
   {
     "title": "Golang Engineer",
@@ -1331,7 +1475,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093462",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Cloud Computing"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -1342,7 +1488,7 @@
     "pain_points": [
       "legacy"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.824114"
+    "signal_processing_date": "2025-07-22T12:51:29.882058"
   },
   {
     "title": "Golang Engineer",
@@ -1353,7 +1499,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093459",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Cloud Computing"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -1364,7 +1512,7 @@
     "pain_points": [
       "legacy"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.824535"
+    "signal_processing_date": "2025-07-22T12:51:29.885184"
   },
   {
     "title": "Senior Python Backend Engineer",
@@ -1376,10 +1524,14 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "FastAPI",
+      "GitHub Actions",
+      "End-to-End",
+      "CI/CD",
+      "Real Time",
       "Python",
       "Go",
       "Rust",
-      "FastAPI",
       "AWS",
       "Terraform",
       "Grafana",
@@ -1395,7 +1547,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.825814"
+    "signal_processing_date": "2025-07-22T12:51:29.893571"
   },
   {
     "title": "Go Developer Consultant",
@@ -1407,6 +1559,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Back End",
       "Go"
     ],
     "urgent_hiring_language": [],
@@ -1417,7 +1570,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.826218"
+    "signal_processing_date": "2025-07-22T12:51:29.896580"
   },
   {
     "title": "VP Associate Talent Acquisition",
@@ -1428,7 +1581,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093456",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "End-to-End"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -1437,7 +1592,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.827556"
+    "signal_processing_date": "2025-07-22T12:51:29.905951"
   },
   {
     "title": "Software Engineer Interop",
@@ -1449,7 +1604,8 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
-      "Rust"
+      "Rust",
+      "Blockchain"
     ],
     "urgent_hiring_language": [],
     "budget_signals": {
@@ -1459,7 +1615,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.828903"
+    "signal_processing_date": "2025-07-22T12:51:29.915163"
   },
   {
     "title": "Senior Backend Engineer II",
@@ -1479,7 +1635,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.829576"
+    "signal_processing_date": "2025-07-22T12:51:29.918258"
   },
   {
     "title": "Infrastructure Engineer",
@@ -1499,7 +1655,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.830013"
+    "signal_processing_date": "2025-07-22T12:51:29.921161"
   },
   {
     "title": "React Native Developer",
@@ -1511,14 +1667,19 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "Back End",
+      "Real Time",
       "JavaScript",
       "TypeScript",
       "Go",
       "React",
-      "Node.js",
       "GraphQL"
     ],
     "urgent_hiring_language": [
+      "growing fast",
       "quickly"
     ],
     "budget_signals": {
@@ -1530,7 +1691,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.831376"
+    "signal_processing_date": "2025-07-22T12:51:29.930575"
   },
   {
     "title": "Software Engineer",
@@ -1560,7 +1721,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.832820"
+    "signal_processing_date": "2025-07-22T12:51:29.941274"
   },
   {
     "title": "Heavy Maintenance Representative",
@@ -1580,7 +1741,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.834138"
+    "signal_processing_date": "2025-07-22T12:51:29.951971"
   },
   {
     "title": "Freelance Screenshot Collector Chinese",
@@ -1591,7 +1752,9 @@
     "job_url": "https://remoteok.io/remote-jobs/1093446",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Artificial Intelligence"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [
@@ -1602,7 +1765,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.835551"
+    "signal_processing_date": "2025-07-22T12:51:29.961988"
   },
   {
     "title": "Workday HR Systems Analyst",
@@ -1624,7 +1787,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.836993"
+    "signal_processing_date": "2025-07-22T12:51:29.972439"
   },
   {
     "title": "Information Security Officer",
@@ -1646,7 +1809,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.838285"
+    "signal_processing_date": "2025-07-22T12:51:29.982117"
   },
   {
     "title": "Software Engineer Ledger IOE Cardano",
@@ -1657,7 +1820,10 @@
     "job_url": "https://remoteok.io/remote-jobs/1093443",
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
-    "technology_adoption": [],
+    "technology_adoption": [
+      "Blockchain",
+      "DeFi"
+    ],
     "urgent_hiring_language": [],
     "budget_signals": {
       "salary_ranges": [],
@@ -1670,7 +1836,7 @@
       "integration issues",
       "legacy code"
     ],
-    "signal_processing_date": "2025-07-22T12:33:59.839609"
+    "signal_processing_date": "2025-07-22T12:51:29.991581"
   },
   {
     "title": "Senior Staff Software Engineer Backend",
@@ -1690,7 +1856,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.840015"
+    "signal_processing_date": "2025-07-22T12:51:29.994665"
   },
   {
     "title": "Opportunity for Golang Experts > who can think and work Full Stack",
@@ -1702,6 +1868,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Full Stack",
       "React"
     ],
     "urgent_hiring_language": [],
@@ -1712,7 +1879,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.840494"
+    "signal_processing_date": "2025-07-22T12:51:29.997839"
   },
   {
     "title": "Senior Fullstack Developer",
@@ -1724,6 +1891,9 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Full Stack",
+      "Front End",
+      "Back End",
       "React"
     ],
     "urgent_hiring_language": [],
@@ -1736,7 +1906,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.841852"
+    "signal_processing_date": "2025-07-22T12:51:30.007791"
   },
   {
     "title": "Customer Content Manager",
@@ -1756,7 +1926,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.843252"
+    "signal_processing_date": "2025-07-22T12:51:30.019407"
   },
   {
     "title": "English Language Data Annotator",
@@ -1768,6 +1938,7 @@
     "source": "RemoteOK",
     "scraped_date": "2025-07-22 12:32:25",
     "technology_adoption": [
+      "Artificial Intelligence",
       "React"
     ],
     "urgent_hiring_language": [
@@ -1780,7 +1951,7 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.844586"
+    "signal_processing_date": "2025-07-22T12:51:30.030270"
   },
   {
     "title": "Senior System Software Engineer Cloud Networking",
@@ -1796,6 +1967,7 @@
       "Go",
       "Kubernetes",
       "Terraform",
+      "Ansible",
       "Linux"
     ],
     "urgent_hiring_language": [],
@@ -1806,6 +1978,6 @@
       "budget_phrases": []
     },
     "pain_points": [],
-    "signal_processing_date": "2025-07-22T12:33:59.846115"
+    "signal_processing_date": "2025-07-22T12:51:30.040944"
   }
 ]
