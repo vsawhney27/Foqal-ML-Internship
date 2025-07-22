@@ -393,9 +393,11 @@ def main():
         processed_signals = []
         
         # Try to load from Agent 2's output JSON file first
-        json_file = "../agent2_signal_processor/output/signals_output.json"
+        json_file = "signals_output.json"  # Current directory
         # Also try alternative paths
         alt_paths = [
+            "signals_output.json",
+            "../output/signals_output.json",
             "../agent2_signal_processor/output/signals_output.json",
             "../../agent2_signal_processor/output/signals_output.json", 
             "../data/processed_jobs.json"
@@ -420,8 +422,9 @@ def main():
                 processed_signals = load_processed_signals_from_mongo(MONGO_URL)
             except Exception as e:
                 print(f"MongoDB connection failed: {e}")
-                print("Using sample data instead...")
-                processed_signals = create_sample_processed_signals()
+                print("❌ No data available from MongoDB or JSON files.")
+                print("Please run Agent 2 first to generate processed signals.")
+                return
         
         if not processed_signals:
             print("No processed signals found. Make sure Agent 2 has run successfully.")

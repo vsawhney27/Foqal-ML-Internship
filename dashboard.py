@@ -70,60 +70,24 @@ def load_data():
         except Exception as e:
             st.warning(f"Could not load signals data: {e}")
     
-    # If no data was loaded, create sample data for demo
+    # No sample data fallback - require real data
     if not data_loaded:
-        data = create_sample_data()
-        st.info("📊 Using sample data for demonstration. Run the job analysis pipeline to see real data.")
+        st.error("❌ No data available. Please run the job analysis pipeline to generate data:")
+        st.code("""
+# Run the complete pipeline:
+python3 agent1_data_collector/main.py
+python3 agent2_signal_processor/main.py
+cd agent3_insight_generator && python3 main.py && cd ..
+python3 generate_weekly_report.py
+        """)
+        return {
+            'company_insights': [],
+            'industry_trends': {},
+            'signal_statistics': {},
+            'signals_data': []
+        }
     
     return data
-
-def create_sample_data():
-    """Create sample data for demo purposes"""
-    return {
-        'company_insights': [
-            {
-                'company': 'TechCorp',
-                'job_count': 5,
-                'insights': [
-                    'TechCorp is actively hiring for AI/ML roles',
-                    'Strong focus on cloud technologies'
-                ],
-                'analysis_metadata': {'urgent_jobs': 2, 'total_technologies': 8}
-            },
-            {
-                'company': 'DataInc',
-                'job_count': 3,
-                'insights': [
-                    'DataInc is expanding their data science team',
-                    'Emphasis on Python and machine learning'
-                ],
-                'analysis_metadata': {'urgent_jobs': 1, 'total_technologies': 5}
-            }
-        ],
-        'industry_trends': {
-            'top_technologies': [
-                ['Python', 15],
-                ['AWS', 12],
-                ['React', 10],
-                ['Docker', 8],
-                ['Kubernetes', 6]
-            ],
-            'urgent_hiring_companies_count': 8,
-            'total_companies': 15,
-            'top_pain_points': [
-                ['legacy systems', 5],
-                ['scalability', 3],
-                ['technical debt', 2]
-            ]
-        },
-        'signal_statistics': {
-            'total_jobs_processed': 25,
-            'companies_analyzed': 15,
-            'technologies_found': 20,
-            'urgent_jobs': 8
-        },
-        'signals_data': []
-    }
 
 def create_technology_chart(industry_trends):
     """Create technology adoption chart"""
