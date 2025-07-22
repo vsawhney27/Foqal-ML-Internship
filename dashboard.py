@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 def load_data():
-    """Load data from agent outputs"""
+    """Load data from agent outputs with fallback to sample data"""
     data = {
         'company_insights': [],
         'industry_trends': {},
@@ -28,14 +28,17 @@ def load_data():
         'signals_data': []
     }
     
+    data_loaded = False
+    
     # Load company insights
     insights_file = "agent3_insight_generator/output/company_insights.json"
     if os.path.exists(insights_file):
         try:
             with open(insights_file, 'r') as f:
                 data['company_insights'] = json.load(f)
-        except:
-            st.warning("Could not load company insights")
+                data_loaded = True
+        except Exception as e:
+            st.warning(f"Could not load company insights: {e}")
     
     # Load industry trends
     trends_file = "agent3_insight_generator/output/industry_trends.json"
@@ -43,8 +46,9 @@ def load_data():
         try:
             with open(trends_file, 'r') as f:
                 data['industry_trends'] = json.load(f)
-        except:
-            st.warning("Could not load industry trends")
+                data_loaded = True
+        except Exception as e:
+            st.warning(f"Could not load industry trends: {e}")
     
     # Load signal statistics
     stats_file = "agent2_signal_processor/output/signal_statistics.json"
@@ -52,8 +56,9 @@ def load_data():
         try:
             with open(stats_file, 'r') as f:
                 data['signal_statistics'] = json.load(f)
-        except:
-            st.warning("Could not load signal statistics")
+                data_loaded = True
+        except Exception as e:
+            st.warning(f"Could not load signal statistics: {e}")
     
     # Load raw signals data
     signals_file = "agent2_signal_processor/output/signals_output.json"
@@ -61,10 +66,64 @@ def load_data():
         try:
             with open(signals_file, 'r') as f:
                 data['signals_data'] = json.load(f)
-        except:
-            st.warning("Could not load signals data")
+                data_loaded = True
+        except Exception as e:
+            st.warning(f"Could not load signals data: {e}")
+    
+    # If no data was loaded, create sample data for demo
+    if not data_loaded:
+        data = create_sample_data()
+        st.info("📊 Using sample data for demonstration. Run the job analysis pipeline to see real data.")
     
     return data
+
+def create_sample_data():
+    """Create sample data for demo purposes"""
+    return {
+        'company_insights': [
+            {
+                'company': 'TechCorp',
+                'job_count': 5,
+                'insights': [
+                    'TechCorp is actively hiring for AI/ML roles',
+                    'Strong focus on cloud technologies'
+                ],
+                'analysis_metadata': {'urgent_jobs': 2, 'total_technologies': 8}
+            },
+            {
+                'company': 'DataInc',
+                'job_count': 3,
+                'insights': [
+                    'DataInc is expanding their data science team',
+                    'Emphasis on Python and machine learning'
+                ],
+                'analysis_metadata': {'urgent_jobs': 1, 'total_technologies': 5}
+            }
+        ],
+        'industry_trends': {
+            'top_technologies': [
+                ['Python', 15],
+                ['AWS', 12],
+                ['React', 10],
+                ['Docker', 8],
+                ['Kubernetes', 6]
+            ],
+            'urgent_hiring_companies_count': 8,
+            'total_companies': 15,
+            'top_pain_points': [
+                ['legacy systems', 5],
+                ['scalability', 3],
+                ['technical debt', 2]
+            ]
+        },
+        'signal_statistics': {
+            'total_jobs_processed': 25,
+            'companies_analyzed': 15,
+            'technologies_found': 20,
+            'urgent_jobs': 8
+        },
+        'signals_data': []
+    }
 
 def create_technology_chart(industry_trends):
     """Create technology adoption chart"""
