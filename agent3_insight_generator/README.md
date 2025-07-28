@@ -31,46 +31,46 @@ Takes processed job signals and transforms them into actionable business intelli
 
 ## Key Features
 
-### 🎯 Company-Specific Insights
+### Company-Specific Insights
 - **Hiring Volume Analysis**: Identifies scaling patterns and urgency
 - **Technology Focus**: Detects strategic technology investments
 - **Role Prioritization**: Analyzes seniority levels and specializations
 - **Budget Patterns**: Identifies compensation and equity strategies
 - **Modernization Efforts**: Detects technical debt and legacy system updates
 
-### 🌐 Industry Trends (Stretch Goal)
+### Industry Trends (Stretch Goal)
 - **Technology Adoption**: Cross-company technology trends
 - **Market Urgency**: Percentage of companies with urgent hiring
 - **Common Pain Points**: Industry-wide technical challenges
 
-### 📊 Example Insights Generated
+### Example Insights Generated
 ```json
 {
-  "company": "TechCorp",
-  "insights": [
-    "TechCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-    "TechCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles)"
-  ],
-  "job_count": 1,
-  "timestamp": "2025-07-09T17:52:28.409286",
-  "analysis_metadata": {
-    "total_technologies": 2,
-    "urgent_jobs": 1,
-    "budget_transparency": 1,
-    "pain_points_mentioned": 1
-  }
+ "company": "TechCorp",
+ "insights": [
+ "TechCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+ "TechCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles)"
+ ],
+ "job_count": 1,
+ "timestamp": "2025-07-09T17:52:28.409286",
+ "analysis_metadata": {
+ "total_technologies": 2,
+ "urgent_jobs": 1,
+ "budget_transparency": 1,
+ "pain_points_mentioned": 1
+ }
 }
 ```
 
 ## File Structure
 ```
 agent3_insight_generator/
-├── main.py              # Main Agent 3 with full MongoDB integration
-├── test.py             # Test script that works without MongoDB
-├── output/             # Generated insights and trends
-│   ├── company_insights.json
-│   └── industry_trends.json
-└── README.md          # This file
+ main.py # Main Agent 3 with full MongoDB integration
+ test.py # Test script that works without MongoDB
+ output/ # Generated insights and trends
+ company_insights.json
+ industry_trends.json
+ README.md # This file
 ```
 
 ## Usage
@@ -96,9 +96,9 @@ python3 test.py
 ### Pipeline Flow
 ```
 Agent 1 (Scraper) → MongoDB.ScrapedJobs
-                           ↓
-Agent 2 (Processor) → MongoDB.ProcessedJobs  
-                           ↓
+ ↓
+Agent 2 (Processor) → MongoDB.ProcessedJobs 
+ ↓
 Agent 3 (Insights) → MongoDB.insights + JSON files
 ```
 

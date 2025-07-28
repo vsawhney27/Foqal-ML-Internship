@@ -1,0 +1,411 @@
+{
+  "date": "2025-07-22T12:16:21.341297",
+  "data": [
+    {
+      "company": "Databricks",
+      "opportunity_score": 110,
+      "priority_level": "High",
+      "business_insights": [
+        "is prioritizing cloud-native infrastructure with Kubernetes (1 roles), Spark (1 roles), MLOps (1 roles), indicating potential for DevOps consulting, cloud migration, and scalability optimization services",
+        "is addressing legacy system challenges with 1 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services",
+        "has urgent hiring needs (100% urgent roles), suggesting immediate pain points and readiness for fast-deployment consulting solutions"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 3,
+        "pain_points_identified": 2,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Cloud Infrastructure & DevOps",
+        "Legacy System Modernization"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "databricks.com"
+      ]
+    },
+    {
+      "company": "Meta",
+      "opportunity_score": 105,
+      "priority_level": "High",
+      "business_insights": [
+        "is heavily investing in AI/ML infrastructure with focus on Python (1 roles), Spark (1 roles), PyTorch (1 roles), creating opportunities for ML consulting, model optimization, and AI strategy services",
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "is addressing legacy system challenges with 1 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 4,
+        "pain_points_identified": 1,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "AI/ML Strategy & Implementation",
+        "Full-Stack Development & Architecture",
+        "Technical Debt Reduction",
+        "Data Science & Analytics Consulting"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "meta.com"
+      ]
+    },
+    {
+      "company": "Waymo",
+      "opportunity_score": 100,
+      "priority_level": "High",
+      "business_insights": [
+        "is heavily investing in AI/ML infrastructure with focus on Python (1 roles), TensorFlow (1 roles), creating opportunities for ML consulting, model optimization, and AI strategy services",
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "is addressing legacy system challenges with 1 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 2,
+        "pain_points_identified": 2,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "AI/ML Strategy & Implementation",
+        "Full-Stack Development & Architecture",
+        "Legacy System Modernization"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "waymo.com"
+      ]
+    },
+    {
+      "company": "OpenAI",
+      "opportunity_score": 95,
+      "priority_level": "High",
+      "business_insights": [
+        "is prioritizing cloud-native infrastructure with Python (1 roles), AWS (1 roles), Kubernetes (1 roles), indicating potential for DevOps consulting, cloud migration, and scalability optimization services",
+        "is addressing legacy system challenges with 2 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services",
+        "is offering equity compensation, indicating growth-stage company with potential for strategic partnerships and long-term engagement opportunities"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 3,
+        "pain_points_identified": 3,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Cloud Infrastructure & DevOps",
+        "Full-Stack Development & Architecture",
+        "Legacy System Modernization"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "openai.com"
+      ]
+    },
+    {
+      "company": "Google DeepMind",
+      "opportunity_score": 75,
+      "priority_level": "High",
+      "business_insights": [
+        "is heavily investing in AI/ML infrastructure with focus on TensorFlow (1 roles), creating opportunities for ML consulting, model optimization, and AI strategy services",
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "is addressing legacy system challenges with 1 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 1,
+        "pain_points_identified": 1,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "AI/ML Strategy & Implementation",
+        "Legacy System Modernization"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "deepmind.google"
+      ]
+    },
+    {
+      "company": "Hugging Face",
+      "opportunity_score": 75,
+      "priority_level": "High",
+      "business_insights": [
+        "is heavily investing in AI/ML infrastructure with focus on PyTorch (1 roles), creating opportunities for ML consulting, model optimization, and AI strategy services",
+        "has active research initiatives, indicating potential for research partnerships, innovation consulting, and cutting-edge technology implementation services",
+        "is addressing legacy system challenges with 1 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 1,
+        "pain_points_identified": 1,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "AI/ML Strategy & Implementation",
+        "Legacy System Modernization"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "huggingface.co"
+      ]
+    },
+    {
+      "company": "Cohere",
+      "opportunity_score": 75,
+      "priority_level": "High",
+      "business_insights": [
+        "is heavily investing in AI/ML infrastructure with focus on PyTorch (1 roles), creating opportunities for ML consulting, model optimization, and AI strategy services",
+        "is addressing legacy system challenges with 1 mentions, creating strong opportunities for modernization consulting, system migration, and technical debt reduction services",
+        "has urgent hiring needs (100% urgent roles), suggesting immediate pain points and readiness for fast-deployment consulting solutions"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 1,
+        "pain_points_identified": 1,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "AI/ML Strategy & Implementation",
+        "Legacy System Modernization"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "cohere.com"
+      ]
+    },
+    {
+      "company": "Anthropic",
+      "opportunity_score": 60,
+      "priority_level": "High",
+      "business_insights": [
+        "is heavily investing in AI/ML infrastructure with focus on PyTorch (1 roles), creating opportunities for ML consulting, model optimization, and AI strategy services",
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "has urgent hiring needs (100% urgent roles), suggesting immediate pain points and readiness for fast-deployment consulting solutions"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 1,
+        "technology_diversity": 1,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "AI/ML Strategy & Implementation"
+      ],
+      "contact_timing": "Immediate",
+      "data_sources": [
+        "anthropic.com"
+      ]
+    },
+    {
+      "company": "ModelVault",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "is in startup/early growth phase with founding-level hires, presenting opportunities for foundational technology consulting, architecture design, and scaling strategy services",
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Startup Technical Advisory"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "Iris Studio",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Software Development",
+        "Technical Consulting",
+        "System Architecture"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "Dimension",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "is in startup/early growth phase with founding-level hires, presenting opportunities for foundational technology consulting, architecture design, and scaling strategy services",
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Startup Technical Advisory"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "OneSecondDelivery",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Software Development",
+        "Technical Consulting",
+        "System Architecture"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "AMNESIA media",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Software Development",
+        "Technical Consulting",
+        "System Architecture"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "Ampcontrol",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Data Science & Analytics Consulting"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "Shopify",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Data Science & Analytics Consulting"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    },
+    {
+      "company": "NannyML",
+      "opportunity_score": 20,
+      "priority_level": "Low",
+      "business_insights": [
+        "is prioritizing senior-level talent acquisition, suggesting complex technical challenges and potential for high-level consulting engagements and technical advisory services",
+        "demonstrates high compensation transparency, suggesting mature hiring processes and potential openness to consulting partnerships"
+      ],
+      "job_count": 1,
+      "timestamp": "2025-07-18T22:02:11.988232",
+      "engagement_readiness": {
+        "urgent_hiring_signals": 0,
+        "technology_diversity": 0,
+        "pain_points_identified": 0,
+        "budget_transparency": 1
+      },
+      "recommended_services": [
+        "Data Science & Analytics Consulting"
+      ],
+      "contact_timing": "Within 2 weeks",
+      "data_sources": [
+        "remoteok.com"
+      ]
+    }
+  ]
+}

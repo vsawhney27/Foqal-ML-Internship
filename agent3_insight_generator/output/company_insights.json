@@ -1,47 +1,1227 @@
 [
   {
-    "company": "TechCorp",
+    "company": "CrowdGen by Appen",
     "insights": [
-      "TechCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "TechCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles)"
+      "CrowdGen by Appen is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
     ],
+    "alerts": [],
+    "scaling_departments": [],
     "job_count": 1,
-    "timestamp": "2025-07-09T17:52:28.409286",
+    "timestamp": "2025-07-28T16:36:31.854334",
     "analysis_metadata": {
-      "total_technologies": 2,
-      "urgent_jobs": 1,
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
       "budget_transparency": 1,
-      "pain_points_mentioned": 1
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 1,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
     }
   },
   {
-    "company": "StartupInc",
+    "company": "Sensor Tower",
     "insights": [
-      "StartupInc is building diverse technical capabilities across TypeScript (1 roles), React (1 roles), Node.js (1 roles)",
-      "StartupInc is undergoing technical modernization, with roles focused on legacy system updates and technical debt reduction"
+      "Sensor Tower is facing scaling challenges, hiring talent to address performance and infrastructure bottlenecks"
     ],
+    "alerts": [],
+    "scaling_departments": [],
     "job_count": 1,
-    "timestamp": "2025-07-09T17:52:28.409286",
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 1,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Koombea",
+    "insights": [
+      "Koombea has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "Koombea is building diverse technical capabilities across Python (1 roles), Flask (1 roles), FastAPI (1 roles)"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 1,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "Python": 1,
+      "Flask": 1,
+      "FastAPI": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 1,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Slate",
+    "insights": [
+      "Slate has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Proof",
+    "insights": [
+      "Proof is building diverse technical capabilities across TypeScript (1 roles), Ruby (1 roles), React (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
     "analysis_metadata": {
       "total_technologies": 3,
       "urgent_jobs": 0,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "TypeScript": 1,
+      "Ruby": 1,
+      "React": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
     }
   },
   {
-    "company": "CloudCorp",
+    "company": "Prompt",
     "insights": [
-      "CloudCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "CloudCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Docker (1 roles), Kubernetes (1 roles), Jenkins (1 roles)"
+      "Prompt is prioritizing cloud infrastructure and DevOps, with emphasis on Go (1 roles), AWS (1 roles), Docker (1 roles)"
     ],
+    "alerts": [],
+    "scaling_departments": [],
     "job_count": 1,
-    "timestamp": "2025-07-09T17:52:28.409286",
+    "timestamp": "2025-07-28T16:36:31.854334",
     "analysis_metadata": {
-      "total_technologies": 4,
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Design": 1
+    },
+    "top_technologies": {
+      "Go": 1,
+      "AWS": 1,
+      "Docker": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 1,
+      "security": 0
+    }
+  },
+  {
+    "company": "Loft Orbital Solutions",
+    "insights": [
+      "Loft Orbital Solutions is strengthening security capabilities, potentially due to compliance requirements or security incidents"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "GitLab CI": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 1
+    }
+  },
+  {
+    "company": "FetLife",
+    "insights": [
+      "FetLife is building diverse technical capabilities across TypeScript (1 roles), Rust (1 roles), Ruby (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "TypeScript": 1,
+      "Rust": 1,
+      "Ruby": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 1,
+      "security": 0
+    }
+  },
+  {
+    "company": "Tenderly",
+    "insights": [
+      "Tenderly is strengthening security capabilities, potentially due to compliance requirements or security incidents"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 1,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 1
+    }
+  },
+  {
+    "company": "HOLDON NOW",
+    "insights": [
+      "HOLDON NOW has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "HOLDON NOW is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
       "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
       "budget_transparency": 1,
-      "pain_points_mentioned": 0
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Data Science": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "lobstr.io",
+    "insights": [
+      "lobstr.io is building diverse technical capabilities across Python (1 roles), Django (1 roles), Redis (1 roles)",
+      "lobstr.io is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "Python": 1,
+      "Django": 1,
+      "Redis": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 1,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Anchorage Digital",
+    "insights": [
+      "Anchorage Digital is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Spearbit",
+    "insights": [
+      "Spearbit is strengthening security capabilities, potentially due to compliance requirements or security incidents"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "Rust": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 1
+    }
+  },
+  {
+    "company": "Prezly",
+    "insights": [
+      "Prezly is building diverse technical capabilities across TypeScript (1 roles), PHP (1 roles), React (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "TypeScript": 1,
+      "PHP": 1,
+      "React": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 1,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Immutable",
+    "insights": [
+      "Immutable is strengthening security capabilities, potentially due to compliance requirements or security incidents",
+      "Immutable is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 1
+    }
+  },
+  {
+    "company": "Loancrate",
+    "insights": [
+      "Loancrate has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "Loancrate is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Wintermute",
+    "insights": [
+      "Wintermute is building diverse technical capabilities across Python (1 roles), TypeScript (1 roles), Rust (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Design": 1
+    },
+    "top_technologies": {
+      "Python": 1,
+      "TypeScript": 1,
+      "Rust": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Best Egg",
+    "insights": [
+      "Best Egg is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 2,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Design": 1
+    },
+    "top_technologies": {
+      "Python": 1,
+      "AWS": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 1,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Green Stuff World",
+    "insights": [
+      "Green Stuff World is building diverse technical capabilities across JavaScript (1 roles), TypeScript (1 roles), HTML (1 roles)",
+      "Green Stuff World is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 1,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "JavaScript": 1,
+      "TypeScript": 1,
+      "HTML": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "ModelVault",
+    "insights": [
+      "ModelVault is prioritizing cloud infrastructure and DevOps, with emphasis on Docker (1 roles), Go (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 2,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 2,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 2
+    },
+    "department_distribution": {
+      "Engineering": 1,
+      "Product": 1
+    },
+    "top_technologies": {
+      "Docker": 1,
+      "Go": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Trunk.io",
+    "insights": [
+      "Trunk.io has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 1,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "GraphQL": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Pano AI",
+    "insights": [
+      "Pano AI has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Design": 1
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "GuideWell",
+    "insights": [
+      "GuideWell is building diverse technical capabilities across JavaScript (1 roles), React (1 roles), Node.js (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Design": 1
+    },
+    "top_technologies": {
+      "JavaScript": 1,
+      "React": 1,
+      "Node.js": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Medely",
+    "insights": [
+      "Medely has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [
+      {
+        "department": "Engineering",
+        "role_count": 2
+      }
+    ],
+    "job_count": 2,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 2,
+      "urgent_jobs": 2,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 2
+    },
+    "top_technologies": {
+      "Go": 2,
+      "GraphQL": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 2,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Commonwealth Fusion Systems",
+    "insights": [
+      "Commonwealth Fusion Systems has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "Commonwealth Fusion Systems is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "Python": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "2100 NVIDIA USA",
+    "insights": [
+      "2100 NVIDIA USA is prioritizing cloud infrastructure and DevOps, with emphasis on Kubernetes (2 roles), Python (1 roles), Go (1 roles)",
+      "2100 NVIDIA USA is prioritizing senior-level hires, suggesting complex technical challenges or leadership expansion"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 2,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 2
+    },
+    "department_distribution": {
+      "Engineering": 1,
+      "Design": 1
+    },
+    "top_technologies": {
+      "Kubernetes": 2,
+      "Python": 1,
+      "Go": 1
+    },
+    "role_analysis": {
+      "senior": 2,
+      "engineer": 2,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 1,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 1,
+      "security": 0
+    }
+  },
+  {
+    "company": "Unikraft",
+    "insights": [
+      "Unikraft is undergoing significant technical modernization, with multiple roles focused on legacy system updates and technical debt reduction"
+    ],
+    "alerts": [],
+    "scaling_departments": [
+      {
+        "department": "Engineering",
+        "role_count": 2
+      }
+    ],
+    "job_count": 2,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 0,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 2,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 2
+    },
+    "top_technologies": {},
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 2,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Orga AI",
+    "insights": [
+      "Orga AI is building diverse technical capabilities across Python (1 roles), Go (1 roles), Rust (1 roles)"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "Python": 1,
+      "Go": 1,
+      "Rust": 1
+    },
+    "role_analysis": {
+      "senior": 1,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 1,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Interviews Chat",
+    "insights": [
+      "Interviews Chat has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "Interviews Chat is building diverse technical capabilities across JavaScript (1 roles), TypeScript (1 roles), Go (1 roles)"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 3,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "JavaScript": 1,
+      "TypeScript": 1,
+      "Go": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 1,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 1,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Jump",
+    "insights": [
+      "Jump has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
+      "Jump is transparent about compensation, suggesting competitive hiring market or employer branding strategy"
+    ],
+    "alerts": [
+      {
+        "type": "URGENT_HIRING_SPIKE",
+        "message": "Critical staffing needs: 100% urgent roles",
+        "priority": "HIGH",
+        "action": "Expedited service offerings"
+      }
+    ],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 1,
+      "urgent_percentage": 100.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "Terraform": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 1,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "TransPerfect",
+    "insights": [
+      "TransPerfect has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling"
+    ],
+    "alerts": [],
+    "scaling_departments": [
+      {
+        "department": "Engineering",
+        "role_count": 2
+      }
+    ],
+    "job_count": 2,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 1,
+      "urgent_percentage": 50.0,
+      "budget_transparency": 1,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 2
+    },
+    "top_technologies": {
+      "React": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 1,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 0
+    }
+  },
+  {
+    "company": "Finoa",
+    "insights": [
+      "Finoa is prioritizing cloud infrastructure and DevOps, with emphasis on AWS (1 roles)",
+      "Finoa is strengthening security capabilities, potentially due to compliance requirements or security incidents"
+    ],
+    "alerts": [],
+    "scaling_departments": [],
+    "job_count": 1,
+    "timestamp": "2025-07-28T16:36:31.854334",
+    "analysis_metadata": {
+      "total_technologies": 1,
+      "urgent_jobs": 0,
+      "urgent_percentage": 0.0,
+      "budget_transparency": 0,
+      "pain_points_mentioned": 0,
+      "department_count": 1
+    },
+    "department_distribution": {
+      "Engineering": 1
+    },
+    "top_technologies": {
+      "AWS": 1
+    },
+    "role_analysis": {
+      "senior": 0,
+      "engineer": 0,
+      "developer": 0,
+      "data": 0,
+      "ai_ml": 0,
+      "frontend": 0,
+      "backend": 0,
+      "devops": 0,
+      "security": 1
     }
   }
 ]

@@ -13,19 +13,69 @@ from collections import Counter
 from typing import List, Dict, Any
 
 def load_jobs_from_mongo(db_url, db_name="JobPosting", collection_name="ScrapedJobs"):
-    """Load jobs from MongoDB - same pattern as Agent 1"""
-    client = MongoClient(db_url)
+    """Load jobs from MongoDB with SSL handling"""
+    import ssl
+    
+    # Multiple connection methods to handle SSL issues
+    connection_configs = [
+        {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+        {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+        {"serverSelectionTimeoutMS": 5000}  # fallback
+    ]
+    
+    client = None
+    for config in connection_configs:
+        try:
+            print(f"Trying MongoDB connection with config: {config}")
+            client = MongoClient(db_url, **config)
+            client.admin.command('ping')  # Test connection
+            print("MongoDB connection successful!")
+            break
+        except Exception as e:
+            print(f"Connection attempt failed: {e}")
+            if client:
+                client.close()
+            continue
+    
+    if not client:
+        raise Exception("Failed to connect to MongoDB with all methods")
+    
     db = client[db_name]
     collection = db[collection_name]
     
     jobs = list(collection.find())
-    print(f"📥 Loaded {len(jobs)} jobs from MongoDB")
+    print(f"Loaded {len(jobs)} jobs from MongoDB")
     client.close()
     return jobs
 
 def save_to_mongo(processed_jobs, db_url, db_name="JobPosting", collection_name="ProcessedJobs"):
-    """Save processed jobs to MongoDB - same pattern as Agent 1"""
-    client = MongoClient(db_url)
+    """Save processed jobs to MongoDB with SSL handling"""
+    import ssl
+    
+    # Multiple connection methods to handle SSL issues
+    connection_configs = [
+        {"tls": True, "tlsAllowInvalidCertificates": True, "serverSelectionTimeoutMS": 5000},
+        {"tlsInsecure": True, "serverSelectionTimeoutMS": 5000},
+        {"serverSelectionTimeoutMS": 5000}  # fallback
+    ]
+    
+    client = None
+    for config in connection_configs:
+        try:
+            print(f"Trying MongoDB connection with config: {config}")
+            client = MongoClient(db_url, **config)
+            client.admin.command('ping')  # Test connection
+            print("MongoDB connection successful!")
+            break
+        except Exception as e:
+            print(f"Connection attempt failed: {e}")
+            if client:
+                client.close()
+            continue
+    
+    if not client:
+        raise Exception("Failed to connect to MongoDB with all methods")
+    
     db = client[db_name]
     collection = db[collection_name]
     
@@ -33,9 +83,9 @@ def save_to_mongo(processed_jobs, db_url, db_name="JobPosting", collection_name=
         # Clear existing processed jobs
         collection.delete_many({})
         collection.insert_many(processed_jobs)
-        print(f"✅ Inserted {len(processed_jobs)} processed jobs into MongoDB.")
+        print(f"Inserted {len(processed_jobs)} processed jobs into MongoDB.")
     else:
-        print("⚠️ No processed jobs to insert.")
+        print("No processed jobs to insert.")
     
     client.close()
 
@@ -44,22 +94,50 @@ def extract_technology_adoption(description: str) -> List[str]:
     if not description:
         return []
     
+    # Multi-word technologies should be checked first (longer matches take priority)
     tech_keywords = [
-        'Python', 'Java', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'C++', 'C#', 'PHP', 'Ruby',
-        'React', 'Angular', 'Vue', 'Django', 'Flask', 'FastAPI', 'Spring', 'Express', 'Node.js',
-        'AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'GitLab CI',
-        'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Neo4j', 'DynamoDB',
-        'Git', 'Linux', 'Nginx', 'Apache', 'Grafana', 'Prometheus', 'Kafka', 'Spark',
-        'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV',
-        'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'GraphQL', 'REST API', 'Microservices'
+        # Multi-word technologies first
+        'React Native', 'Vue.js', 'Angular.js', 'Next.js', 'Node.js', 'Express.js',
+        'Spring Boot', 'Django REST', 'FastAPI', 'GitLab CI', 'GitHub Actions',
+        'Google Cloud Platform', 'Amazon Web Services', 'Microsoft Azure',
+        'REST API', 'GraphQL API', 'Machine Learning', 'Artificial Intelligence',
+        'DevOps Engineer', 'Full Stack', 'Front End', 'Back End', 'End-to-End',
+        'CI/CD', 'ML/AI', 'AI/ML', 'Technical Debt', 'Legacy System',
+        'Cloud Computing', 'Data Science', 'Big Data', 'Real Time',
+        # Single-word technologies
+        'Python', 'Java', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'C++', 'C#', 'PHP', 'Ruby', 'Kotlin', 'Swift', 'Scala',
+        'React', 'Angular', 'Vue', 'Django', 'Flask', 'Spring', 'Express', 'Laravel', 'Rails',
+        'AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Ansible',
+        'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Neo4j', 'DynamoDB', 'Cassandra',
+        'Git', 'Linux', 'Ubuntu', 'Nginx', 'Apache', 'Grafana', 'Prometheus', 'Kafka', 'Spark', 'Hadoop',
+        'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'Keras',
+        'HTML', 'CSS', 'Bootstrap', 'Tailwind', 'SASS', 'LESS', 'GraphQL', 'Microservices',
+        'Blockchain', 'Solidity', 'Ethereum', 'Bitcoin', 'Crypto', 'NFT', 'DeFi'
     ]
     
-    found_tech = []
-    description_lower = description.lower()
+    # Normalize the description: handle Unicode characters and clean text
+    import unicodedata
+    description_clean = unicodedata.normalize('NFKD', description).encode('ascii', 'ignore').decode('ascii')
+    description_lower = description_clean.lower()
     
+    found_tech = []
+    
+    # Check for technologies, prioritizing longer matches
     for tech in tech_keywords:
-        if re.search(r'\b' + re.escape(tech.lower()) + r'\b', description_lower):
-            found_tech.append(tech)
+        tech_lower = tech.lower()
+        # Use word boundaries but handle common variations
+        patterns = [
+            r'\b' + re.escape(tech_lower) + r'\b',  # Exact match
+            r'\b' + re.escape(tech_lower.replace(' ', '')) + r'\b',  # No spaces (e.g., "reactnative")
+            r'\b' + re.escape(tech_lower.replace(' ', '-')) + r'\b',  # Hyphenated (e.g., "react-native")
+            r'\b' + re.escape(tech_lower.replace(' ', '_')) + r'\b',  # Underscored
+            r'\b' + re.escape(tech_lower.replace('.', '')) + r'\b',   # No dots (e.g., "nodejs")
+        ]
+        
+        for pattern in patterns:
+            if re.search(pattern, description_lower) and tech not in found_tech:
+                found_tech.append(tech)
+                break
     
     return found_tech
 
@@ -68,20 +146,45 @@ def extract_urgent_hiring_language(description: str) -> List[str]:
     if not description:
         return []
     
+    # Normalize description to handle Unicode characters
+    import unicodedata
+    description_clean = unicodedata.normalize('NFKD', description).encode('ascii', 'ignore').decode('ascii')
+    description_lower = description_clean.lower()
+    
+    # Expanded urgent hiring patterns with more variations
     urgent_patterns = [
-        r'\basap\b', r'\bimmediate\b', r'\bstart now\b', r'\bstart immediately\b',
-        r'\burgent\b', r'\brushing\b', r'\bquickly\b', r'\bhiring now\b',
-        r'\bstart monday\b', r'\bstart this week\b', r'\bhigh priority\b'
+        # Direct urgency terms
+        r'\basap\b', r'\bimmediate\b', r'\bimmediately\b', r'\burgent\b', r'\brushing\b', 
+        r'\bquickly\b', r'\bfast.track\b', r'\bexpedited\b', r'\bhigh.priority\b',
+        
+        # Hiring timeline urgency
+        r'\bstart now\b', r'\bstart immediately\b', r'\bhire immediately\b', r'\bhiring now\b',
+        r'\bready to hire\b', r'\bstart monday\b', r'\bstart this week\b', r'\bthis month\b',
+        r'\bfill.*position.*quickly\b', r'\bneed.*someone.*asap\b',
+        
+        # Business urgency indicators  
+        r'\bcritical.*hire\b', r'\bcritical.*need\b', r'\bmust.*fill.*soon\b',
+        r'\bbackfill.*urgent\b', r'\bstaffing.*emergency\b', r'\bgap.*needs.*filling\b',
+        
+        # Project urgency
+        r'\bproject.*starts.*soon\b', r'\bdeadline.*approaching\b', r'\btight.*timeline\b',
+        r'\btime.sensitive\b', r'\bmission.critical\b', r'\bcannot.*delay\b',
+        
+        # Growth/scaling urgency
+        r'\brapid.*growth\b', r'\bscaling.*team\b', r'\bexpanding.*quickly\b',
+        r'\bgrowing.*fast\b', r'\baggressive.*hiring\b', r'\bmultiple.*positions\b'
     ]
     
     found_phrases = []
-    description_lower = description.lower()
     
     for pattern in urgent_patterns:
-        matches = re.findall(pattern, description_lower)
-        found_phrases.extend(matches)
+        matches = re.findall(pattern, description_lower, re.IGNORECASE | re.DOTALL)
+        if matches:
+            # Convert back to readable format
+            readable_phrase = pattern.replace(r'\b', '').replace(r'.*', ' ').replace('.', ' ')
+            found_phrases.extend([readable_phrase.strip()])
     
-    return list(set(found_phrases))
+    return list(set([phrase for phrase in found_phrases if phrase]))
 
 def extract_budget_signals(description: str) -> Dict[str, Any]:
     """Extract salary and budget information"""
@@ -181,13 +284,13 @@ def process_jobs(jobs: List[Dict]) -> List[Dict]:
     """Process all jobs and extract signals"""
     processed_jobs = []
     
-    print(f"🔄 Processing {len(jobs)} jobs for BD signals...")
+    print(f"Processing {len(jobs)} jobs for BD signals...")
     
     for idx, job in enumerate(jobs, 1):
         try:
             title = job.get('title', 'Unknown')
             company = job.get('company', 'Unknown')
-            print(f"📊 Processing job {idx}/{len(jobs)}: {title} at {company}")
+            print(f"Processing job {idx}/{len(jobs)}: {title} at {company}")
             
             processed_job = process_job_signals(job)
             processed_jobs.append(processed_job)
@@ -197,13 +300,13 @@ def process_jobs(jobs: List[Dict]) -> List[Dict]:
             urgent_count = len(processed_job.get('urgent_hiring_language', []))
             pain_count = len(processed_job.get('pain_points', []))
             
-            print(f"   💡 Found: {tech_count} technologies, {urgent_count} urgent signals, {pain_count} pain points")
+            print(f"   Found: {tech_count} technologies, {urgent_count} urgent signals, {pain_count} pain points")
             
         except Exception as e:
-            print(f"❌ Error processing job {idx}: {e}")
+            print(f"Error processing job {idx}: {e}")
             continue
     
-    print(f"✅ Successfully processed {len(processed_jobs)} jobs")
+    print(f"Successfully processed {len(processed_jobs)} jobs")
     return processed_jobs
 
 def generate_statistics(processed_jobs: List[Dict]) -> Dict:
@@ -211,7 +314,7 @@ def generate_statistics(processed_jobs: List[Dict]) -> Dict:
     if not processed_jobs:
         return {}
     
-    print("📈 Generating statistics...")
+    print("Generating statistics...")
     
     # Technology stats
     all_technologies = []
@@ -260,29 +363,29 @@ def generate_statistics(processed_jobs: List[Dict]) -> Dict:
 def print_summary(stats: Dict):
     """Print processing summary"""
     print("\n" + "="*60)
-    print("📊 JOB POSTING SIGNAL PROCESSING SUMMARY")
+    print("JOB POSTING SIGNAL PROCESSING SUMMARY")
     print("="*60)
     
-    print(f"📈 Total Jobs Processed: {stats['total_jobs_processed']}")
-    print(f"🕒 Processing Date: {stats['processing_date']}")
+    print(f"Total Jobs Processed: {stats['total_jobs_processed']}")
+    print(f"Processing Date: {stats['processing_date']}")
     
-    print(f"\n🔧 TOP TECHNOLOGIES:")
+    print(f"\nTOP TECHNOLOGIES:")
     for tech, count in stats['top_technologies'].items():
         print(f"   • {tech}: {count} mentions")
     
-    print(f"\n⚡ URGENT HIRING:")
+    print(f"\nURGENT HIRING:")
     print(f"   • Jobs with urgent language: {stats['urgent_jobs_count']}")
     print(f"   • Percentage: {stats['urgent_percentage']}%")
     
-    print(f"\n💰 BUDGET SIGNALS:")
+    print(f"\nBUDGET SIGNALS:")
     print(f"   • Jobs with salary info: {stats['jobs_with_salary']}")
     print(f"   • Jobs with equity: {stats['jobs_with_equity']}")
     
-    print(f"\n🔥 TOP PAIN POINTS:")
+    print(f"\nTOP PAIN POINTS:")
     for pain, count in stats['top_pain_points'].items():
         print(f"   • {pain}: {count} mentions")
     
-    print(f"\n🏢 COMPANY HIRING VOLUME:")
+    print(f"\nCOMPANY HIRING VOLUME:")
     for company, count in stats['company_hiring_volume'].items():
         print(f"   • {company}: {count} job(s)")
     
@@ -306,43 +409,77 @@ def save_to_files(processed_jobs: List[Dict], stats: Dict, output_dir: str = "ou
     with open(stats_file, 'w', encoding='utf-8') as f:
         json.dump(stats, f, indent=2, ensure_ascii=False)
     
-    print(f"✅ Saved results to {output_dir}/")
+    print(f"Saved results to {output_dir}/")
 
 if __name__ == "__main__":
-    # MongoDB URL - same as Agent 1
-    MONGO_URL = "mongodb+srv://adityabramhe7:C3kg0TDi21QaKOAM@jobposting.tgcylyz.mongodb.net/"
+    # Load environment variables
+    from dotenv import load_dotenv
+    load_dotenv()
     
-    print("🚀 Starting Signal Processing Agent (Agent 2)...")
+    # MongoDB URL from environment
+    MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017/")
+    
+    print("Starting Signal Processing Agent (Agent 2)...")
     
     try:
-        # Load jobs from MongoDB
-        jobs = load_jobs_from_mongo(MONGO_URL)
+        # Load jobs from MongoDB or JSON fallback
+        jobs = []
+        try:
+            jobs = load_jobs_from_mongo(MONGO_URL)
+        except Exception as e:
+            print(f"MongoDB connection failed: {e}")
+            print("Attempting to load from JSON file...")
+            
+            # Try to load from agent1 output with multiple paths
+            possible_paths = [
+                "../agent1_data_collector/scraped_jobs.json",
+                "agent1_data_collector/scraped_jobs.json",
+                "./agent1_data_collector/scraped_jobs.json"
+            ]
+            
+            json_loaded = False
+            for json_file in possible_paths:
+                if os.path.exists(json_file):
+                    with open(json_file, 'r') as f:
+                        jobs = json.load(f)
+                    print(f"✅ Loaded {len(jobs)} jobs from JSON file")
+                    json_loaded = True
+                    break
+            
+            if not json_loaded:
+                print("❌ No JSON file found either")
         
         if not jobs:
-            print("❌ No jobs found in MongoDB. Make sure Agent 1 has run successfully.")
+            print("No jobs found in MongoDB or JSON. Make sure Agent 1 has run successfully.")
             exit(1)
         
         # Process jobs for signals
         processed_jobs = process_jobs(jobs)
         
         if not processed_jobs:
-            print("❌ No jobs were processed successfully.")
+            print("No jobs were processed successfully.")
             exit(1)
         
         # Generate statistics
         stats = generate_statistics(processed_jobs)
         
-        # Save to MongoDB
-        save_to_mongo(processed_jobs, MONGO_URL)
-        
-        # Save to files
+        # Save to files first (always works)
         save_to_files(processed_jobs, stats)
+        
+        # Try to save to MongoDB (may fail)
+        try:
+            save_to_mongo(processed_jobs, MONGO_URL)
+            print("✅ Successfully saved to MongoDB")
+        except Exception as mongo_error:
+            print(f"⚠️ MongoDB save failed: {mongo_error}")
+            print("📁 Data saved to JSON files instead")
         
         # Print summary
         print_summary(stats)
         
         print("\n✅ Signal processing completed successfully!")
+        print(f"📊 Processed {len(processed_jobs)} jobs")
         
     except Exception as e:
-        print(f"❌ Error: {e}")
-        print("💡 Make sure MongoDB is accessible and Agent 1 has populated data")
+        print(f"❌ Critical error: {e}")
+        print("Make sure input data is available")

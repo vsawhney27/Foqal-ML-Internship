@@ -1,37 +1,39 @@
 {
-  "total_jobs_processed": 8,
-  "processing_date": "2025-07-09T16:15:15.912714",
+  "total_jobs_processed": 79,
+  "processing_date": "2025-07-22T12:55:39.501213",
   "top_technologies": {
-    "Python": 5,
-    "AWS": 4,
-    "React": 3,
-    "Docker": 3,
-    "Django": 2,
-    "Node.js": 2,
-    "Kubernetes": 2,
-    "PostgreSQL": 2,
-    "TensorFlow": 2,
-    "Flask": 1
+    "Back End": 17,
+    "Front End": 12,
+    "Go": 10,
+    "Blockchain": 10,
+    "Full Stack": 9,
+    "React": 9,
+    "Real Time": 9,
+    "End-to-End": 8,
+    "TypeScript": 8,
+    "Python": 7
   },
-  "urgent_jobs_count": 8,
-  "urgent_percentage": 100.0,
-  "jobs_with_salary": 8,
-  "jobs_with_equity": 4,
+  "urgent_jobs_count": 23,
+  "urgent_percentage": 29.11,
+  "jobs_with_salary": 10,
+  "jobs_with_equity": 10,
   "top_pain_points": {
-    "modernize": 5,
-    "legacy": 5,
-    "technical debt": 2,
-    "scalability issues": 2,
-    "performance issues": 1
+    "legacy": 3,
+    "modernize": 2,
+    "performance issues": 1,
+    "refactor": 1,
+    "migration": 1
   },
   "company_hiring_volume": {
-    "TechCorp": 1,
-    "StartupInc": 1,
-    "CloudCorp": 1,
-    "AIStartup": 1,
-    "Enterprise Corp": 1,
-    "DataCorp": 1,
-    "FinTech Solutions": 1,
-    "SecureTech": 1
+    "ModelVault": 2,
+    "Medely": 2,
+    "2100 NVIDIA USA": 2,
+    "Unikraft": 2,
+    "TransPerfect": 2,
+    "OANDA Europe Ltd.": 1,
+    "Private.Ki": 1,
+    "Quantum Metric": 1,
+    "AllTrails": 1,
+    "CrowdGen by Appen": 1
   }
 }

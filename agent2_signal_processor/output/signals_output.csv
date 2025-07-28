@@ -1,4 +1,0 @@
-title,company,location,scraped_date,signal_processing_date,detail_url,technologies_count,technologies,urgent_signals_count,urgent_signals,pain_points_count,pain_points,skills_count,top_skills,has_salary_info,has_equity,salary_ranges,hourly_rates
-Senior Python Developer,TechCorp,Remote,2024-01-15,2025-07-09T16:08:04.180984,https://example.com/job1,2,"Python, AWS",1,asap,3,"legacy system, migration, legacy",2,"Python, AWS",True,False,$120k,
-React Frontend Engineer,StartupInc,San Francisco,2024-01-15,2025-07-09T16:08:04.180984,https://example.com/job2,3,"TypeScript, React, Node.js",0,,2,"technical debt, modernize",3,"TypeScript, React, Node.js",True,False,"€80,000",
-DevOps Engineer,CloudCorp,New York,2024-01-15,2025-07-09T16:08:04.180984,https://example.com/job3,4,"Docker, Kubernetes, Jenkins, Grafana",1,urgent,0,,4,"Jenkins, Kubernetes, Docker, Grafana",True,False,$75,$75/hour

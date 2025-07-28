@@ -1,0 +1,76 @@
+{
+  "report_date": "2025-07-21T17:32:07.912697",
+  "report_period": "Weekly",
+  "executive_summary": {
+    "total_companies_analyzed": 16,
+    "new_high_priority_opportunities": 0,
+    "weekly_change_in_opportunities": 0,
+    "market_urgency_level": 43.75
+  },
+  "new_opportunities": [],
+  "weekly_trends": {
+    "new_companies": [],
+    "lost_companies": [],
+    "high_priority_change": 0,
+    "total_companies_change": 0
+  },
+  "market_analysis": {
+    "trending_technologies": [
+      [
+        "PyTorch",
+        4
+      ],
+      [
+        "Python",
+        3
+      ],
+      [
+        "Kubernetes",
+        2
+      ],
+      [
+        "TensorFlow",
+        2
+      ],
+      [
+        "Spark",
+        2
+      ]
+    ],
+    "market_pain_points": [
+      [
+        "legacy",
+        6
+      ],
+      [
+        "migration",
+        1
+      ],
+      [
+        "legacy system",
+        1
+      ]
+    ],
+    "urgency_rate": 43.75,
+    "ai_adoption_rate": 50.0
+  },
+  "recommended_actions": [
+    {
+      "action": "Prepare rapid-deployment service packages",
+      "rationale": "Market urgency rate at 43.8%",
+      "timing": "This week",
+      "contact_method": "Update sales materials and proposals"
+    },
+    {
+      "action": "Develop PyTorch case studies and expertise marketing",
+      "rationale": "PyTorch is most in-demand technology",
+      "timing": "Next 2 weeks",
+      "contact_method": "Content marketing and thought leadership"
+    }
+  ],
+  "next_week_focus": [
+    "Follow up on high-priority contacts",
+    "Monitor technology trend shifts",
+    "Update service offerings based on market demands"
+  ]
+}

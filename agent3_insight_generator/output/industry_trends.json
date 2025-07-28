@@ -1,65 +1,69 @@
 {
   "top_technologies": [
     [
-      "Python",
-      1
-    ],
-    [
-      "AWS",
-      1
-    ],
-    [
-      "TypeScript",
-      1
+      "Go",
+      10
     ],
     [
       "React",
-      1
+      9
     ],
     [
-      "Node.js",
-      1
+      "TypeScript",
+      8
+    ],
+    [
+      "Python",
+      7
+    ],
+    [
+      "AWS",
+      7
+    ],
+    [
+      "GraphQL",
+      5
+    ],
+    [
+      "Rust",
+      5
+    ],
+    [
+      "Ruby",
+      3
     ],
     [
       "Docker",
-      1
+      3
     ],
     [
       "Kubernetes",
-      1
-    ],
-    [
-      "Jenkins",
-      1
-    ],
-    [
-      "Grafana",
-      1
+      3
     ]
   ],
-  "urgent_hiring_companies_count": 2,
-  "total_companies": 3,
+  "urgent_hiring_companies_count": 11,
+  "total_companies": 74,
   "top_pain_points": [
     [
-      "legacy system",
+      "legacy",
+      3
+    ],
+    [
+      "modernize",
+      2
+    ],
+    [
+      "refactor",
+      1
+    ],
+    [
+      "performance issues",
       1
     ],
     [
       "migration",
       1
-    ],
-    [
-      "legacy",
-      1
-    ],
-    [
-      "technical debt",
-      1
-    ],
-    [
-      "modernize",
-      1
     ]
   ],
-  "analysis_date": "2025-07-09T17:52:28.410364"
+  "analysis_date": "2025-07-28T16:36:31.855240"
 }
