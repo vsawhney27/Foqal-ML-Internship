@@ -2,11 +2,11 @@
 
 An automated system that analyzes publicly available job postings to identify business development opportunities and market trends.
 
-## 🎯 Core Objective
+## Core Objective
 
 Build an automated system that looks for signals in publicly available data to identify potential business opportunities and market trends using job posting portals.
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Agent 1: Data Collection Agent
 - **Purpose**: Scrapes job postings from remote job sites
@@ -34,7 +34,7 @@ Build an automated system that looks for signals in publicly available data to i
   - Generates alerts for high-priority opportunities
 - **Output**: Business development insights and recommendations
 
-## 🎯 Key BD Signals Tracked
+## Key BD Signals Tracked
 
 - **Scaling indicators**: Multiple similar roles, senior + junior hiring pairs
 - **Technology adoption**: New tech stack mentions, cloud migration signals
@@ -42,7 +42,7 @@ Build an automated system that looks for signals in publicly available data to i
 - **Pain points**: Mentions of legacy systems, integration challenges
 - **Budget signals**: Salary ranges, contractor vs FTE ratios
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 ```bash
@@ -70,24 +70,24 @@ python run_agent3_production.py  # Intelligence generation
 streamlit run dashboard.py
 ```
 
-## 📊 Deliverables
+## Deliverables
 
-✅ **Working prototype with data pipeline**
+**Working prototype with data pipeline**
 - Three-agent system with MongoDB integration
 - Automated scraping, processing, and analysis
 
-✅ **Dashboard showing top opportunities and trends**  
+**Dashboard showing top opportunities and trends**  
 - Streamlit-based interactive dashboard
 - Real-time visualization of company opportunities and market trends
 
-✅ **Weekly signal reports with actionable insights**
+**Weekly signal reports with actionable insights**
 - Automated report generation
 - Company-specific insights and recommendations
 
-✅ **Documentation for scaling the system**
+**Documentation for scaling the system**
 - Complete setup and scaling documentation in `SYSTEM_DOCUMENTATION.md`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── agent1_data_collector/          # Data collection agent
@@ -113,14 +113,14 @@ streamlit run dashboard.py
 └── SYSTEM_DOCUMENTATION.md         # Detailed documentation
 ```
 
-## 🔧 Configuration
+## Configuration
 
 The system is pre-configured to work out of the box with:
 - RemoteOK as the job source (focusing on AI/ML roles)
 - MongoDB Atlas for data storage
 - JSON file backups for all data
 
-## 📈 Sample Output
+## Sample Output
 
 ### Company Insights Example
 ```json
@@ -146,7 +146,7 @@ The system is pre-configured to work out of the box with:
 - Pain point analysis
 - Real-time metrics
 
-## 🚀 Scaling the System
+## Scaling the System
 
 See `SYSTEM_DOCUMENTATION.md` for detailed scaling instructions including:
 - Adding new job sources
@@ -155,14 +155,14 @@ See `SYSTEM_DOCUMENTATION.md` for detailed scaling instructions including:
 - Production deployment strategies
 - Performance optimization
 
-## 🔍 Monitoring & Maintenance
+## Monitoring & Maintenance
 
 - Check `reports/weekly/` for generated insights
 - Monitor data quality in dashboard
 - Review MongoDB collections for data consistency
 - Update scraping targets as needed
 
-## 📝 Next Steps
+## Next Steps
 
 1. **Expand data sources**: Add LinkedIn, Indeed, Glassdoor
 2. **Enhanced ML**: Implement advanced NLP for better signal detection  
@@ -170,7 +170,7 @@ See `SYSTEM_DOCUMENTATION.md` for detailed scaling instructions including:
 4. **API integration**: Build REST API for external access
 5. **Advanced analytics**: Add predictive modeling for market trends
 
-## 🤝 Contributing
+## Contributing
 
 This is a production-ready system for business development intelligence. Contributions should focus on:
 - Adding new signal detection capabilities
