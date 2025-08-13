@@ -133,7 +133,7 @@ class CompanyClusterer:
         
         return company_clusters
     
-    def get_cluster_characteristics(self, jobs: List[Dict], company_clusters: Dict[str, int]) -> Dict[int, Dict]:
+    def get_cluster_characteristics(self, jobs: List[Dict], company_clusters: Dict[str, int]) -> Dict[str, Dict]:
         """Analyze characteristics of each cluster"""
         if not self.is_fitted:
             raise ValueError("Model must be fitted before analyzing clusters")
@@ -164,11 +164,11 @@ class CompanyClusterer:
             total_jobs = len(cluster_jobs)
             
             # Hiring volume
-            cluster_chars[cluster_id]['avg_hiring_volume'] = total_jobs / companies_in_cluster
+            cluster_chars[cluster_id]['avg_hiring_volume'] = float(total_jobs / companies_in_cluster)
             
             # Urgency ratio
             urgent_jobs = sum(1 for job in cluster_jobs if job.get('urgent_hiring_language', []))
-            cluster_chars[cluster_id]['avg_urgency_ratio'] = urgent_jobs / total_jobs if total_jobs > 0 else 0
+            cluster_chars[cluster_id]['avg_urgency_ratio'] = float(urgent_jobs / total_jobs if total_jobs > 0 else 0)
             
             # Technology analysis
             all_tech = []
@@ -187,9 +187,14 @@ class CompanyClusterer:
             # Salary transparency
             jobs_with_salary = sum(1 for job in cluster_jobs 
                                  if job.get('budget_signals', {}).get('salary_ranges', []))
-            cluster_chars[cluster_id]['salary_transparency'] = jobs_with_salary / total_jobs if total_jobs > 0 else 0
+            cluster_chars[cluster_id]['salary_transparency'] = float(jobs_with_salary / total_jobs if total_jobs > 0 else 0)
         
-        return dict(cluster_chars)
+        # Convert keys to strings for JSON serialization
+        result = {}
+        for cluster_id, chars in cluster_chars.items():
+            result[str(cluster_id)] = chars
+        
+        return result
 
 class OpportunityScorer:
     """ML-based opportunity scoring using ensemble methods"""

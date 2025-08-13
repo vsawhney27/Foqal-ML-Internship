@@ -9,6 +9,7 @@ import datetime
 import os
 import logging
 import sys
+import numpy as np
 from typing import List, Dict, Any
 from collections import defaultdict
 
@@ -20,6 +21,21 @@ from ml_models.predictive import HiringTrendPredictor
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+def convert_numpy_types(obj):
+    """Convert numpy types to native Python types for JSON serialization"""
+    if isinstance(obj, dict):
+        return {str(key): convert_numpy_types(value) for key, value in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_numpy_types(item) for item in obj]
+    elif isinstance(obj, np.integer):
+        return int(obj)
+    elif isinstance(obj, np.floating):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    else:
+        return obj
 
 class MLInsightGenerator:
     """ML-enhanced business insight generation"""
@@ -427,6 +443,9 @@ def main():
         # Generate comprehensive insights
         insights = ml_insights.generate_comprehensive_insights_ml(jobs)
         
+        # Convert numpy types for JSON serialization
+        insights = convert_numpy_types(insights)
+        
         # Save results
         os.makedirs("output", exist_ok=True)
         
@@ -450,7 +469,7 @@ def main():
             json.dump(traditional_insights, f, indent=2, ensure_ascii=False)
         
         # Save industry trends
-        market_trends = insights['market_trends']
+        market_trends = convert_numpy_types(insights['market_trends'])
         with open("output/industry_trends.json", 'w', encoding='utf-8') as f:
             json.dump(market_trends, f, indent=2, ensure_ascii=False)
         

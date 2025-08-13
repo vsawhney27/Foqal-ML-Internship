@@ -1,69 +1,20 @@
 {
-  "top_technologies": [
-    [
-      "AWS",
-      5
-    ],
-    [
-      "Python",
-      4
-    ],
-    [
-      "Docker",
-      2
-    ],
-    [
-      "TensorFlow",
-      2
-    ],
-    [
-      "Kubernetes",
-      2
-    ],
-    [
-      "PostgreSQL",
-      1
-    ],
-    [
-      "React",
-      1
-    ],
-    [
-      "TypeScript",
-      1
-    ],
-    [
-      "Node.js",
-      1
-    ],
-    [
-      "Jenkins",
-      1
-    ]
-  ],
-  "urgent_hiring_companies_count": 5,
-  "total_companies": 5,
-  "top_pain_points": [
-    [
-      "modernize",
-      4
-    ],
-    [
-      "scalability issues",
-      2
-    ],
-    [
-      "legacy system",
-      1
-    ],
-    [
-      "legacy code",
-      1
-    ],
-    [
-      "performance issues",
-      1
-    ]
-  ],
-  "analysis_date": "2025-07-21T17:22:02.132089"
+  "current_trends": {
+    "technology_trends": {
+      "Go": 10,
+      "Blockchain": 10,
+      "React": 9,
+      "TypeScript": 8,
+      "Web3": 8,
+      "AWS": 7,
+      "Python": 7,
+      "iOS": 5,
+      "GraphQL": 5,
+      "Rust": 5
+    },
+    "urgency_rate": 15.19,
+    "total_companies": 74
+  },
+  "prediction_method": "rule_based",
+  "confidence_level": "low"
 }

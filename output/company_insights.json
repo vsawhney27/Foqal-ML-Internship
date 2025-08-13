@@ -1,77 +1,131 @@
 [
   {
-    "company": "TechCorp",
+    "company": "ModelVault",
     "insights": [
-      "TechCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "TechCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Python (2 roles), AWS (2 roles), Docker (1 roles)"
+      "ModelVault shows exceptional growth indicators with 100% opportunity score"
     ],
     "job_count": 2,
-    "timestamp": "2025-07-21T17:22:02.131566",
-    "analysis_metadata": {
-      "total_technologies": 6,
-      "urgent_jobs": 2,
-      "budget_transparency": 2,
-      "pain_points_mentioned": 2
-    }
+    "opportunity_score": 100,
+    "timestamp": "2025-08-13T15:43:36.421740"
   },
   {
-    "company": "StartupInc",
+    "company": "Medely",
     "insights": [
-      "StartupInc has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "StartupInc is building diverse technical capabilities across React (1 roles), TypeScript (1 roles), Node.js (1 roles)"
+      "Medely shows exceptional growth indicators with 100% opportunity score",
+      "Medely is in rapid hiring mode, indicating urgent scaling needs"
     ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T17:22:02.131566",
-    "analysis_metadata": {
-      "total_technologies": 3,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
+    "job_count": 2,
+    "opportunity_score": 100,
+    "timestamp": "2025-08-13T15:43:36.421740"
   },
   {
-    "company": "CloudCorp",
+    "company": "2100 NVIDIA USA",
     "insights": [
-      "CloudCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "CloudCorp is prioritizing cloud infrastructure and DevOps, with emphasis on Kubernetes (1 roles), Docker (1 roles), AWS (1 roles)"
+      "2100 NVIDIA USA shows exceptional growth indicators with 100% opportunity score"
     ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T17:22:02.131566",
-    "analysis_metadata": {
-      "total_technologies": 4,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
+    "job_count": 2,
+    "opportunity_score": 100,
+    "timestamp": "2025-08-13T15:43:36.421740"
   },
   {
-    "company": "DataCorp",
+    "company": "Unikraft",
     "insights": [
-      "DataCorp has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "DataCorp is heavily investing in AI/ML capabilities, with focus on Python (1 roles), TensorFlow (1 roles), AWS (1 roles)"
+      "Unikraft shows exceptional growth indicators with 100% opportunity score"
     ],
-    "job_count": 1,
-    "timestamp": "2025-07-21T17:22:02.131566",
-    "analysis_metadata": {
-      "total_technologies": 3,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
+    "job_count": 2,
+    "opportunity_score": 100,
+    "timestamp": "2025-08-13T15:43:36.421740"
   },
   {
-    "company": "SecureTech",
+    "company": "TransPerfect",
     "insights": [
-      "SecureTech has urgent hiring needs, suggesting either rapid growth or critical skill gaps that need immediate filling",
-      "SecureTech is prioritizing cloud infrastructure and DevOps, with emphasis on Python (1 roles), AWS (1 roles), Linux (1 roles)"
+      "TransPerfect shows exceptional growth indicators with 100% opportunity score"
+    ],
+    "job_count": 2,
+    "opportunity_score": 100,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Interviews Chat",
+    "insights": [
+      "Interviews Chat demonstrates solid expansion signals with 72.99% opportunity score",
+      "Interviews Chat is in rapid hiring mode, indicating urgent scaling needs"
     ],
     "job_count": 1,
-    "timestamp": "2025-07-21T17:22:02.131566",
-    "analysis_metadata": {
-      "total_technologies": 3,
-      "urgent_jobs": 1,
-      "budget_transparency": 1,
-      "pain_points_mentioned": 1
-    }
+    "opportunity_score": 72.99,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "FetLife",
+    "insights": [
+      "FetLife demonstrates solid expansion signals with 68.71% opportunity score"
+    ],
+    "job_count": 1,
+    "opportunity_score": 68.71,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Koombea",
+    "insights": [
+      "Koombea demonstrates solid expansion signals with 60.19% opportunity score",
+      "Koombea is in rapid hiring mode, indicating urgent scaling needs"
+    ],
+    "job_count": 1,
+    "opportunity_score": 60.19,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Orga AI",
+    "insights": [],
+    "job_count": 1,
+    "opportunity_score": 50.46,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Commonwealth Fusion Systems",
+    "insights": [
+      "Commonwealth Fusion Systems is in rapid hiring mode, indicating urgent scaling needs",
+      "Commonwealth Fusion Systems is heavily investing in new technologies, suggesting modernization initiatives"
+    ],
+    "job_count": 1,
+    "opportunity_score": 39.84,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Aurora Labs",
+    "insights": [],
+    "job_count": 1,
+    "opportunity_score": 30.65,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Green Stuff World",
+    "insights": [],
+    "job_count": 1,
+    "opportunity_score": 28.75,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "IO Global",
+    "insights": [],
+    "job_count": 1,
+    "opportunity_score": 27.86,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Proof",
+    "insights": [],
+    "job_count": 1,
+    "opportunity_score": 24.85,
+    "timestamp": "2025-08-13T15:43:36.421740"
+  },
+  {
+    "company": "Jump",
+    "insights": [
+      "Jump is in rapid hiring mode, indicating urgent scaling needs"
+    ],
+    "job_count": 1,
+    "opportunity_score": 24.48,
+    "timestamp": "2025-08-13T15:43:36.421740"
   }
 ]

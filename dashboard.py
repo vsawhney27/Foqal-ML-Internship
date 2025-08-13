@@ -30,8 +30,8 @@ def load_data():
     
     data_loaded = False
     
-    # Load company insights
-    insights_file = "agent3_insight_generator/output/company_insights.json"
+    # Load company insights (from main output directory)
+    insights_file = "output/company_insights.json"
     if os.path.exists(insights_file):
         try:
             with open(insights_file, 'r') as f:
@@ -41,7 +41,7 @@ def load_data():
             st.warning(f"Could not load company insights: {e}")
     
     # Load industry trends
-    trends_file = "agent3_insight_generator/output/industry_trends.json"
+    trends_file = "output/industry_trends.json"
     if os.path.exists(trends_file):
         try:
             with open(trends_file, 'r') as f:
@@ -51,7 +51,7 @@ def load_data():
             st.warning(f"Could not load industry trends: {e}")
     
     # Load signal statistics
-    stats_file = "agent2_signal_processor/output/signal_statistics.json"
+    stats_file = "output/signal_statistics.json"
     if os.path.exists(stats_file):
         try:
             with open(stats_file, 'r') as f:
@@ -61,7 +61,7 @@ def load_data():
             st.warning(f"Could not load signal statistics: {e}")
     
     # Load raw signals data
-    signals_file = "agent2_signal_processor/output/signals_output.json"
+    signals_file = "output/signals_output.json"
     if os.path.exists(signals_file):
         try:
             with open(signals_file, 'r') as f:
@@ -91,14 +91,27 @@ python3 generate_weekly_report.py
 
 def create_technology_chart(industry_trends):
     """Create technology adoption chart"""
-    if not industry_trends.get('top_technologies'):
+    # Try multiple data formats
+    tech_data = None
+    
+    if industry_trends.get('top_technologies'):
+        tech_data = industry_trends['top_technologies']
+    elif industry_trends.get('current_trends', {}).get('technology_trends'):
+        tech_dict = industry_trends['current_trends']['technology_trends']
+        tech_data = [[k, v] for k, v in tech_dict.items()]
+    
+    if not tech_data:
         return None
-        
-    tech_data = industry_trends['top_technologies']
+    
+    # Convert to DataFrame
+    if isinstance(tech_data, dict):
+        tech_data = [[k, v] for k, v in tech_data.items()]
+    
     df = pd.DataFrame(tech_data, columns=['Technology', 'Mentions'])
+    df = df.sort_values('Mentions', ascending=False).head(10)
     
     fig = px.bar(
-        df.head(10), 
+        df, 
         x='Mentions', 
         y='Technology',
         orientation='h',
@@ -116,11 +129,19 @@ def create_company_opportunities_chart(company_insights):
     
     companies_data = []
     for insight in company_insights[:10]:  # Top 10 companies
+        # Handle both old and new data formats
+        urgency_score = 0
+        if 'analysis_metadata' in insight:
+            urgency_score = insight['analysis_metadata'].get('urgent_jobs', 0)
+        elif 'urgent_jobs_count' in insight:
+            urgency_score = insight['urgent_jobs_count']
+        
         companies_data.append({
             'Company': insight['company'],
             'Job Count': insight['job_count'],
-            'Insight Count': len(insight['insights']),
-            'Urgency Score': insight['analysis_metadata'].get('urgent_jobs', 0)
+            'Insight Count': len(insight.get('insights', [])),
+            'Opportunity Score': insight.get('opportunity_score', 0),
+            'Urgency Score': urgency_score
         })
     
     df = pd.DataFrame(companies_data)
@@ -128,11 +149,11 @@ def create_company_opportunities_chart(company_insights):
     fig = px.scatter(
         df,
         x='Job Count',
-        y='Insight Count', 
-        size='Urgency Score',
+        y='Opportunity Score', 
+        size='Insight Count',
         hover_name='Company',
         title="Company Hiring Activity vs Business Opportunities",
-        labels={'Job Count': 'Number of Open Positions', 'Insight Count': 'Business Insights Generated'}
+        labels={'Job Count': 'Number of Open Positions', 'Opportunity Score': 'ML Opportunity Score (%)'}
     )
     return fig
 
@@ -209,23 +230,44 @@ def main():
         st.subheader("🚀 Top Business Opportunities")
         
         if data['company_insights']:
-            # Show top company insights
-            for i, insight in enumerate(data['company_insights'][:5], 1):
+            # Sort companies by opportunity score (descending) and job count (descending)
+            sorted_insights = sorted(data['company_insights'], 
+                                   key=lambda x: (x.get('opportunity_score', 0), x.get('job_count', 0)), 
+                                   reverse=True)
+            
+            # Show top 5 company insights
+            for i, insight in enumerate(sorted_insights[:5], 1):
                 company = insight['company']
                 job_count = insight['job_count']
-                insights_list = insight['insights']
+                insights_list = insight.get('insights', [])
+                opportunity_score = insight.get('opportunity_score', 0)
                 
-                with st.expander(f"{i}. **{company}** ({job_count} positions)", expanded=(i <= 2)):
-                    for insight_text in insights_list:
-                        st.write(f"• {insight_text}")
+                # Create expanded title with opportunity score
+                title = f"{i}. **{company}** ({job_count} positions)"
+                if opportunity_score > 0:
+                    title += f" - {opportunity_score:.1f}% opportunity score"
+                
+                with st.expander(title, expanded=(i <= 2)):
+                    if insights_list:
+                        for insight_text in insights_list:
+                            st.write(f"• {insight_text}")
+                    else:
+                        st.write("• Company identified for business development potential")
                     
-                    # Show metadata
-                    metadata = insight['analysis_metadata']
+                    # Show metadata - handle both old and new format
                     col_a, col_b = st.columns(2)
                     with col_a:
-                        st.metric("Technologies", metadata.get('total_technologies', 0))
+                        # Try new format first, fallback to old
+                        tech_count = insight.get('technology_count', 0)
+                        if tech_count == 0 and 'analysis_metadata' in insight:
+                            tech_count = insight['analysis_metadata'].get('total_technologies', 0)
+                        st.metric("Technologies", tech_count)
                     with col_b:
-                        st.metric("Urgent Jobs", metadata.get('urgent_jobs', 0))
+                        # Try new format first, fallback to old
+                        urgent_count = insight.get('urgent_jobs_count', 0)
+                        if urgent_count == 0 and 'analysis_metadata' in insight:
+                            urgent_count = insight['analysis_metadata'].get('urgent_jobs', 0)
+                        st.metric("Urgent Jobs", urgent_count)
         else:
             st.info("No company insights available. Run Agent 3 to generate insights.")
     
