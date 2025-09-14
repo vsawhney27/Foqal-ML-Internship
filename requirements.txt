@@ -8,6 +8,11 @@ beautifulsoup4
 pymongo
 python-dotenv
 
+# US Mid-Market Filtering Dependencies
+pydantic
+PyYAML
+pyarrow  # For parquet file support
+
 # Machine Learning Dependencies
 scikit-learn>=1.3.0
 nltk>=3.8

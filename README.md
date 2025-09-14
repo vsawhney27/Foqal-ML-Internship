@@ -71,7 +71,10 @@ python run_complete_pipeline.py
 
 ### US Mid-Market Filtering
 ```bash
-# Export filtered US mid-market jobs
+# Export filtered US mid-market jobs (using Makefile)
+make export-us-mid-market
+
+# Or run directly
 python cli.py export --input scraped_jobs.json --out data/exports/us_mid_market_postings.parquet --only-us-mid-market
 
 # Preview filtered results
@@ -83,9 +86,38 @@ python cli.py export --input scraped_jobs.json --out filtered_jobs.json --only-u
 
 ### View Dashboard
 ```bash
-# Launch interactive dashboard
+# Launch interactive dashboard with multi-page support
 streamlit run dashboard.py
+
+# Or use make target
+make run-dashboard
 ```
+
+#### US Mid-Market Dashboard Page
+
+The system includes a dedicated dashboard page for visualizing US mid-market opportunities:
+
+- **URL**: Visit the "US Mid-Market Opportunities" page in the sidebar
+- **Features**: KPIs, state distribution, company size analysis, filterable job listings
+- **Data Source**: Reads from `data/exports/us_mid_market_postings.parquet`
+
+#### Streamlit Secrets Configuration (Optional)
+
+If you don't want to commit the parquet data file to your repository, you can configure a remote data source:
+
+1. **For Streamlit Cloud**: Add to your app settings:
+```toml
+# .streamlit/secrets.toml
+DATA_EXPORT_URL = "https://your-storage-url/us_mid_market_postings.parquet"
+```
+
+2. **For local development**: Create `.streamlit/secrets.toml`:
+```bash
+mkdir -p .streamlit
+echo 'DATA_EXPORT_URL = "https://your-storage-url/us_mid_market_postings.parquet"' > .streamlit/secrets.toml
+```
+
+The dashboard will automatically fallback to the remote URL if the local file is not found.
 
 ## 📊 Deliverables
 
