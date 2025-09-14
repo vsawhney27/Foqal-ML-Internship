@@ -49,6 +49,7 @@ Build an automated system that looks for signals in publicly available data to i
 ```bash
 # Install Python dependencies
 pip install -r requirements.txt
+pip install pydantic PyYAML  # For US mid-market filtering
 
 # Set up environment variables (optional)
 # MongoDB URL is already configured in the code
@@ -66,6 +67,18 @@ python agent3_insight_generator/ml_insights.py  # ML insight generation
 
 # Traditional pipeline (rule-based fallback)
 python run_complete_pipeline.py
+```
+
+### US Mid-Market Filtering
+```bash
+# Export filtered US mid-market jobs
+python cli.py export --input scraped_jobs.json --out data/exports/us_mid_market_postings.parquet --only-us-mid-market
+
+# Preview filtered results
+python cli.py preview --input scraped_jobs.json --only-us-mid-market --limit 10
+
+# Export with company enrichment (slower)
+python cli.py export --input scraped_jobs.json --out filtered_jobs.json --only-us-mid-market --enrich
 ```
 
 ### View Dashboard
@@ -195,6 +208,109 @@ See `SYSTEM_DOCUMENTATION.md` for detailed scaling instructions including:
 - Monitor data quality in dashboard
 - Review MongoDB collections for data consistency
 - Update scraping targets as needed
+
+## 🎯 US Mid-Market Company Targeting
+
+The system includes advanced filtering capabilities to target US mid-sized companies specifically, helping focus on the most relevant business opportunities.
+
+### Configuration
+
+The filtering system is configured via `configs/filters.yml`:
+
+```yaml
+filters:
+  geo:
+    include_countries: ["US"]
+    include_remote_if_eligible: true
+    allowed_remote_phrases:
+      - "US only"
+      - "United States only"
+      - "authorized to work in the United States"
+      - "US work authorization"
+      - "remote within the United States"
+    us_timezones: ["EST", "EDT", "CST", "CDT", "MST", "MDT", "PST", "PDT"]
+  
+  company_size:
+    employee_min: 50          # Minimum employees for mid-market
+    employee_max: 999         # Maximum employees for mid-market
+    revenue_min_usd: 10000000      # $10M minimum revenue
+    revenue_max_usd: 1000000000    # $1B maximum revenue
+    decision_logic: "employees_or_revenue"  # Either criteria can qualify
+  
+  inconclusive_policy: "require_soft_plus_hard"  # Fallback for missing data
+```
+
+### How It Works
+
+1. **Geographic Filtering**: Jobs must be US-based through:
+   - Direct country identification (`US`)
+   - US state abbreviations (`CA`, `TX`, `NY`)
+   - Remote work with US authorization requirements
+   - US timezone hints in job descriptions
+
+2. **Company Size Detection**: Companies qualify as mid-market through:
+   - **Employee Count**: 50-999 employees
+   - **Revenue Range**: $10M-$1B USD
+   - **Decision Logic**: Either employee count OR revenue qualifies (configurable)
+
+3. **Data Enrichment**: Automatic company data enrichment from:
+   - LinkedIn company pages (employee count, headquarters)
+   - Company about/contact pages (location, size mentions)
+   - Fallback to multiple data sources with error tolerance
+
+4. **Filtering Logic**: 
+   - **Hard Signals**: Direct US location, explicit company size
+   - **Soft Signals**: Timezone hints, remote work authorization text
+   - **Inconclusive Policy**: When company size is unknown, accepts jobs with both hard and soft US signals
+
+### Usage Examples
+
+```bash
+# Basic US mid-market filtering
+python cli.py export --input scraped_jobs.json --out us_mid_market.json --only-us-mid-market
+
+# With company enrichment (slower but more accurate)
+python cli.py export --input scraped_jobs.json --out enriched_results.parquet --only-us-mid-market --enrich
+
+# Preview results to test filtering
+python cli.py preview --input scraped_jobs.json --only-us-mid-market --limit 10
+```
+
+### Sample Query Parameters by Source
+
+**RemoteOK**: `?region=US&company_size=mid`
+**Indeed**: `&l=United+States&companysize=medium`
+**AngelList**: `?locations[]=United+States&company_size[]=mid`
+
+### Filter Results and Auditability
+
+Each filtered job includes detailed reason codes for transparency:
+
+```json
+{
+  "title": "Backend Engineer",
+  "company": "TechCorp",
+  "filter_result": true,
+  "filter_reasons": {
+    "geo.country": true,
+    "size.emp_ok": true,
+    "size.emp_count": 150,
+    "final_decision": true
+  },
+  "filter_summary": "US country + employee count (150)"
+}
+```
+
+### Test Coverage
+
+Comprehensive test suite covers:
+- ✅ US on-site + employees=120 → accept
+- ✅ Remote with "US only" phrase + employees unknown + tz hint present → accept  
+- ✅ US + employees=15 + revenue=$200M with mode=employees_or_revenue → accept
+- ✅ Non-US + employees=500 → reject
+- ✅ US + employees=1200 → reject
+
+Run tests: `python -m pytest tests/test_us_mid_market_filter.py -v`
 
 ## 📝 Next Steps
 

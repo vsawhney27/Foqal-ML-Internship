@@ -1,0 +1,30 @@
+filters:
+  geo:
+    include_countries: ["US"]
+    include_remote_if_eligible: true
+    allowed_remote_phrases:
+      - "US only"
+      - "United States only"
+      - "authorized to work in the United States"
+      - "US work authorization"
+      - "must reside in the United States"
+      - "remote within the United States"
+      - "remote - US"
+      - "US-based"
+    # Accept time-zone hints as soft signals (score boost)
+    us_timezones: ["EST", "EDT", "CST", "CDT", "MST", "MDT", "PST", "PDT"]
+
+  company_size:
+    # Default mid-market by headcount
+    employee_min: 50
+    employee_max: 999
+    # Optional revenue bounds (USD)
+    revenue_min_usd: 10000000      # $10M
+    revenue_max_usd: 1000000000    # $1B
+    # employees_only | revenue_only | employees_or_revenue | employees_and_revenue
+    decision_logic: "employees_or_revenue"
+
+  # Optional exclusions
+  exclude_industries: []
+  # If enrichment is inconclusive, require at least one hard signal + 1 soft signal
+  inconclusive_policy: "require_soft_plus_hard"
