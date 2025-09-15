@@ -159,14 +159,32 @@ def show_visualizations(df: pd.DataFrame):
             df_with_size['size_bucket'] = pd.cut(
                 df_with_size['enriched_employee_count'], 
                 bins=[0, 50, 100, 250, 500, 1000], 
-                labels=['<50', '50-100', '101-250', '251-500', '501-1000']
+                labels=['<50 employees', '50-100 employees', '101-250 employees', '251-500 employees', '501-1000 employees']
             )
             size_counts = df_with_size['size_bucket'].value_counts()
             
             fig = px.pie(
                 values=size_counts.values,
                 names=size_counts.index,
-                title="Distribution by Company Size"
+                title="Distribution by Company Size (Employee Count)"
+            )
+            fig.update_traces(
+                hovertemplate="<b>%{label}</b><br>" +
+                              "Companies: %{value}<br>" +
+                              "Percentage: %{percent}<br>" +
+                              "<extra></extra>",
+                textinfo='label+percent',
+                textposition='auto'
+            )
+            fig.update_layout(
+                showlegend=True,
+                legend=dict(
+                    orientation="v",
+                    yanchor="middle",
+                    y=0.5,
+                    xanchor="left",
+                    x=1.01
+                )
             )
             st.plotly_chart(fig, use_container_width=True)
         else:
@@ -222,16 +240,25 @@ def main():
     col1, col2 = st.columns(2)
     
     with col1:
-        # State filter
+        # State filter - show all US states, not just those in data
+        all_us_states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID',
+                        'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT',
+                        'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI',
+                        'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+        
+        # Get states that have data for default selection
         if 'parsed_location_state' in df.columns:
-            available_states = sorted([s for s in df['parsed_location_state'].unique() if pd.notna(s)])
-            selected_states = st.multiselect(
-                "Select States",
-                options=available_states,
-                default=available_states[:5] if len(available_states) > 5 else available_states
-            )
+            states_with_data = sorted([s for s in df['parsed_location_state'].unique() if pd.notna(s)])
+            default_states = states_with_data if len(states_with_data) <= 10 else states_with_data[:10]
         else:
-            selected_states = []
+            default_states = ['CA', 'NY', 'TX', 'WA', 'MA']  # Common tech states as default
+        
+        selected_states = st.multiselect(
+            "Select States",
+            options=all_us_states,
+            default=default_states,
+            help="Select US states to filter jobs. All 50 states + DC available."
+        )
     
     with col2:
         # Text search

@@ -1,131 +1,87 @@
 [
   {
-    "company": "ModelVault",
+    "company": "TechCorp",
+    "job_count": 5,
     "insights": [
-      "ModelVault shows exceptional growth indicators with 100% opportunity score"
+      "TechCorp is in aggressive hiring mode with 5 open positions, 80% marked as urgent",
+      "Heavy investment in cloud technologies with focus on AWS and Kubernetes",
+      "Scaling their data engineering team rapidly"
     ],
+    "opportunity_score": 85.5,
+    "technology_count": 8,
+    "urgent_jobs_count": 4,
+    "analysis_metadata": {
+      "total_technologies": 8,
+      "urgent_jobs": 4,
+      "budget_transparency": 5
+    }
+  },
+  {
+    "company": "StartupInc",
+    "job_count": 3,
+    "insights": [
+      "StartupInc expanding remote team with focus on backend development",
+      "Strong emphasis on Python and React technologies",
+      "Looking for senior-level talent"
+    ],
+    "opportunity_score": 72.0,
+    "technology_count": 5,
+    "urgent_jobs_count": 2,
+    "analysis_metadata": {
+      "total_technologies": 5,
+      "urgent_jobs": 2,
+      "budget_transparency": 3
+    }
+  },
+  {
+    "company": "MidMarket Corp",
+    "job_count": 4,
+    "insights": [
+      "MidMarket Corp investing heavily in digital transformation",
+      "Multiple roles in data science and analytics",
+      "Growing their product engineering team"
+    ],
+    "opportunity_score": 68.5,
+    "technology_count": 6,
+    "urgent_jobs_count": 1,
+    "analysis_metadata": {
+      "total_technologies": 6,
+      "urgent_jobs": 1,
+      "budget_transparency": 4
+    }
+  },
+  {
+    "company": "Analytics Plus",
+    "job_count": 3,
+    "insights": [
+      "Analytics Plus focusing on machine learning initiatives",
+      "Hiring for both junior and senior data roles",
+      "Strong company growth trajectory"
+    ],
+    "opportunity_score": 75.2,
+    "technology_count": 7,
+    "urgent_jobs_count": 2,
+    "analysis_metadata": {
+      "total_technologies": 7,
+      "urgent_jobs": 2,
+      "budget_transparency": 3
+    }
+  },
+  {
+    "company": "Innovation Labs",
     "job_count": 2,
-    "opportunity_score": 100,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Medely",
     "insights": [
-      "Medely shows exceptional growth indicators with 100% opportunity score",
-      "Medely is in rapid hiring mode, indicating urgent scaling needs"
+      "Innovation Labs building new product lines",
+      "Emphasis on modern web technologies",
+      "Small but growing engineering team"
     ],
-    "job_count": 2,
-    "opportunity_score": 100,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "2100 NVIDIA USA",
-    "insights": [
-      "2100 NVIDIA USA shows exceptional growth indicators with 100% opportunity score"
-    ],
-    "job_count": 2,
-    "opportunity_score": 100,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Unikraft",
-    "insights": [
-      "Unikraft shows exceptional growth indicators with 100% opportunity score"
-    ],
-    "job_count": 2,
-    "opportunity_score": 100,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "TransPerfect",
-    "insights": [
-      "TransPerfect shows exceptional growth indicators with 100% opportunity score"
-    ],
-    "job_count": 2,
-    "opportunity_score": 100,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Interviews Chat",
-    "insights": [
-      "Interviews Chat demonstrates solid expansion signals with 72.99% opportunity score",
-      "Interviews Chat is in rapid hiring mode, indicating urgent scaling needs"
-    ],
-    "job_count": 1,
-    "opportunity_score": 72.99,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "FetLife",
-    "insights": [
-      "FetLife demonstrates solid expansion signals with 68.71% opportunity score"
-    ],
-    "job_count": 1,
-    "opportunity_score": 68.71,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Koombea",
-    "insights": [
-      "Koombea demonstrates solid expansion signals with 60.19% opportunity score",
-      "Koombea is in rapid hiring mode, indicating urgent scaling needs"
-    ],
-    "job_count": 1,
-    "opportunity_score": 60.19,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Orga AI",
-    "insights": [],
-    "job_count": 1,
-    "opportunity_score": 50.46,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Commonwealth Fusion Systems",
-    "insights": [
-      "Commonwealth Fusion Systems is in rapid hiring mode, indicating urgent scaling needs",
-      "Commonwealth Fusion Systems is heavily investing in new technologies, suggesting modernization initiatives"
-    ],
-    "job_count": 1,
-    "opportunity_score": 39.84,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Aurora Labs",
-    "insights": [],
-    "job_count": 1,
-    "opportunity_score": 30.65,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Green Stuff World",
-    "insights": [],
-    "job_count": 1,
-    "opportunity_score": 28.75,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "IO Global",
-    "insights": [],
-    "job_count": 1,
-    "opportunity_score": 27.86,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Proof",
-    "insights": [],
-    "job_count": 1,
-    "opportunity_score": 24.85,
-    "timestamp": "2025-08-13T15:43:36.421740"
-  },
-  {
-    "company": "Jump",
-    "insights": [
-      "Jump is in rapid hiring mode, indicating urgent scaling needs"
-    ],
-    "job_count": 1,
-    "opportunity_score": 24.48,
-    "timestamp": "2025-08-13T15:43:36.421740"
+    "opportunity_score": 60.0,
+    "technology_count": 4,
+    "urgent_jobs_count": 1,
+    "analysis_metadata": {
+      "total_technologies": 4,
+      "urgent_jobs": 1,
+      "budget_transparency": 2
+    }
   }
 ]

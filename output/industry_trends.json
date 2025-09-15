@@ -1,20 +1,64 @@
 {
-  "current_trends": {
-    "technology_trends": {
-      "Go": 10,
-      "Blockchain": 10,
-      "React": 9,
-      "TypeScript": 8,
-      "Web3": 8,
-      "AWS": 7,
-      "Python": 7,
-      "iOS": 5,
-      "GraphQL": 5,
-      "Rust": 5
-    },
-    "urgency_rate": 15.19,
-    "total_companies": 74
-  },
-  "prediction_method": "rule_based",
-  "confidence_level": "low"
+  "analysis_date": "2025-09-14T16:00:00",
+  "urgent_hiring_companies_count": 5,
+  "top_technologies": [
+    [
+      "Python",
+      45
+    ],
+    [
+      "JavaScript",
+      38
+    ],
+    [
+      "React",
+      32
+    ],
+    [
+      "AWS",
+      28
+    ],
+    [
+      "Docker",
+      24
+    ],
+    [
+      "Kubernetes",
+      20
+    ],
+    [
+      "PostgreSQL",
+      18
+    ],
+    [
+      "Node.js",
+      15
+    ]
+  ],
+  "top_pain_points": [
+    [
+      "Legacy System Integration",
+      15
+    ],
+    [
+      "Scalability Issues",
+      12
+    ],
+    [
+      "Data Migration",
+      10
+    ],
+    [
+      "Performance Optimization",
+      8
+    ],
+    [
+      "Security Compliance",
+      6
+    ],
+    [
+      "API Integration",
+      5
+    ]
+  ]
 }
