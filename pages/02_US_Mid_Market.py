@@ -174,7 +174,12 @@ def show_visualizations(df: pd.DataFrame):
                               "Percentage: %{percent}<br>" +
                               "<extra></extra>",
                 textinfo='label+percent',
-                textposition='auto'
+                textposition='auto',
+                textfont=dict(
+                    color='white',
+                    size=12,
+                    family='Arial Black'
+                )
             )
             fig.update_layout(
                 showlegend=True,
@@ -183,8 +188,13 @@ def show_visualizations(df: pd.DataFrame):
                     yanchor="middle",
                     y=0.5,
                     xanchor="left",
-                    x=1.01
-                )
+                    x=1.01,
+                    font=dict(
+                        color='black',
+                        size=11
+                    )
+                ),
+                font=dict(color='black')
             )
             st.plotly_chart(fig, use_container_width=True)
         else:
@@ -237,45 +247,80 @@ def main():
     
     # Filters
     st.header("Filters")
-    col1, col2 = st.columns(2)
     
-    with col1:
-        # State filter - show all US states, not just those in data
-        all_us_states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID',
-                        'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT',
-                        'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI',
-                        'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+    # Create a form for filters that only updates when search button is clicked
+    with st.form("filter_form"):
+        col1, col2 = st.columns(2)
         
-        # Get states that have data for default selection
-        if 'parsed_location_state' in df.columns:
-            states_with_data = sorted([s for s in df['parsed_location_state'].unique() if pd.notna(s)])
-            default_states = states_with_data if len(states_with_data) <= 10 else states_with_data[:10]
-        else:
-            default_states = ['CA', 'NY', 'TX', 'WA', 'MA']  # Common tech states as default
+        with col1:
+            # State filter - show all US states, not just those in data
+            all_us_states = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID',
+                            'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT',
+                            'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI',
+                            'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+            
+            # Get states that have data for default selection
+            if 'parsed_location_state' in df.columns:
+                states_with_data = sorted([s for s in df['parsed_location_state'].unique() if pd.notna(s)])
+                default_states = states_with_data if len(states_with_data) <= 10 else states_with_data[:10]
+            else:
+                default_states = ['CA', 'NY', 'TX', 'WA', 'MA']  # Common tech states as default
+            
+            selected_states = st.multiselect(
+                "Select States",
+                options=all_us_states,
+                default=default_states,
+                help="Select US states to filter jobs. All 50 states + DC available.",
+                key="state_filter"
+            )
         
-        selected_states = st.multiselect(
-            "Select States",
-            options=all_us_states,
-            default=default_states,
-            help="Select US states to filter jobs. All 50 states + DC available."
-        )
+        with col2:
+            # Text search
+            search_term = st.text_input(
+                "Search by Title or Company", 
+                placeholder="e.g. engineer, tech",
+                key="search_filter"
+            )
+        
+        # Search button
+        col1, col2, _ = st.columns([1, 1, 2])
+        with col2:
+            search_clicked = st.form_submit_button("🔍 Apply Filters", use_container_width=True)
     
-    with col2:
-        # Text search
-        search_term = st.text_input("Search by Title or Company", placeholder="e.g. engineer, tech")
-    
-    # Apply filters
+    # Apply filters only when search button is clicked or on initial load
     filtered_df = df.copy()
     
-    if selected_states and 'parsed_location_state' in df.columns:
-        filtered_df = filtered_df[filtered_df['parsed_location_state'].isin(selected_states)]
-    
-    if search_term:
-        mask = (
-            filtered_df['title'].str.contains(search_term, case=False, na=False) |
-            filtered_df['company'].str.contains(search_term, case=False, na=False)
-        )
-        filtered_df = filtered_df[mask]
+    # If search button was clicked or it's the initial load, apply filters
+    if search_clicked or 'filter_applied' not in st.session_state:
+        st.session_state.filter_applied = True
+        
+        if selected_states and 'parsed_location_state' in df.columns:
+            filtered_df = filtered_df[filtered_df['parsed_location_state'].isin(selected_states)]
+        
+        if search_term:
+            mask = (
+                filtered_df['title'].str.contains(search_term, case=False, na=False) |
+                filtered_df['company'].str.contains(search_term, case=False, na=False)
+            )
+            filtered_df = filtered_df[mask]
+        
+        # Store filtered results in session state
+        st.session_state.filtered_data = filtered_df
+    else:
+        # Use previously filtered data if available
+        if 'filtered_data' in st.session_state:
+            filtered_df = st.session_state.filtered_data
+        else:
+            # Fallback to applying current filters
+            if selected_states and 'parsed_location_state' in df.columns:
+                filtered_df = filtered_df[filtered_df['parsed_location_state'].isin(selected_states)]
+            
+            if search_term:
+                mask = (
+                    filtered_df['title'].str.contains(search_term, case=False, na=False) |
+                    filtered_df['company'].str.contains(search_term, case=False, na=False)
+                )
+                filtered_df = filtered_df[mask]
     
     # Show updated metrics for filtered data
     if len(filtered_df) != len(df):
