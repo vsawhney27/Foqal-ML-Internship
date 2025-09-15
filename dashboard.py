@@ -162,12 +162,21 @@ def create_company_opportunities_chart(company_insights):
         labels={'Job Count': 'Number of Open Positions', 'Opportunity Score': 'ML Opportunity Score (%)'}
     )
     fig.update_traces(
-        hovertemplate="<b>%{hovertext}</b><br>" +
-                      "Open Positions: %{x}<br>" +
-                      "Opportunity Score: %{y:.1f}%<br>" +
-                      "Business Insights: %{marker.size}<br>" +
-                      "Urgent Jobs: %{customdata[3]}<br>" +
+        hovertemplate="<b style='color:black; font-size:14px;'>%{hovertext}</b><br>" +
+                      "<span style='color:black; font-size:12px;'>Open Positions: %{x}</span><br>" +
+                      "<span style='color:black; font-size:12px;'>Opportunity Score: %{y:.1f}%</span><br>" +
+                      "<span style='color:black; font-size:12px;'>Business Insights: %{marker.size}</span><br>" +
+                      "<span style='color:black; font-size:12px;'>Urgent Jobs: %{customdata[3]}</span><br>" +
                       "<extra></extra>"
+    )
+    fig.update_layout(
+        hoverlabel=dict(
+            bgcolor="white",
+            bordercolor="black",
+            font_size=12,
+            font_family="Arial",
+            font_color="black"
+        )
     )
     return fig
 
@@ -195,10 +204,33 @@ def create_pain_points_chart(industry_trends):
         title="Most Common Technical Pain Points"
     )
     fig.update_traces(
-        hovertemplate="<b>%{label}</b><br>" +
-                      "Mentions: %{value}<br>" +
-                      "Percentage: %{percent}<br>" +
-                      "<extra></extra>"
+        hovertemplate="<b style='color:black; font-size:14px;'>%{label}</b><br>" +
+                      "<span style='color:black; font-size:12px;'>Mentions: %{value}</span><br>" +
+                      "<span style='color:black; font-size:12px;'>Percentage: %{percent}</span><br>" +
+                      "<extra></extra>",
+        textfont=dict(
+            color='white',
+            size=12,
+            family='Arial Black'
+        ),
+        textinfo='label+percent',
+        textposition='auto'
+    )
+    fig.update_layout(
+        hoverlabel=dict(
+            bgcolor="white",
+            bordercolor="black",
+            font_size=12,
+            font_family="Arial",
+            font_color="black"
+        ),
+        showlegend=True,
+        legend=dict(
+            font=dict(
+                color='black',
+                size=11
+            )
+        )
     )
     return fig
 

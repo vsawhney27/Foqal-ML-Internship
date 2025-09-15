@@ -146,7 +146,21 @@ def show_visualizations(df: pd.DataFrame):
                 orientation='h',
                 title="Top 10 States by Job Count"
             )
-            fig.update_layout(height=400)
+            fig.update_traces(
+                hovertemplate="<b style='color:black; font-size:14px;'>%{y}</b><br>" +
+                              "<span style='color:black; font-size:12px;'>Job Count: %{x}</span><br>" +
+                              "<extra></extra>"
+            )
+            fig.update_layout(
+                height=400,
+                hoverlabel=dict(
+                    bgcolor="white",
+                    bordercolor="black",
+                    font_size=12,
+                    font_family="Arial",
+                    font_color="black"
+                )
+            )
             st.plotly_chart(fig, use_container_width=True)
         else:
             st.info("No state data available for visualization")
@@ -169,9 +183,9 @@ def show_visualizations(df: pd.DataFrame):
                 title="Distribution by Company Size (Employee Count)"
             )
             fig.update_traces(
-                hovertemplate="<b>%{label}</b><br>" +
-                              "Companies: %{value}<br>" +
-                              "Percentage: %{percent}<br>" +
+                hovertemplate="<b style='color:black; font-size:14px;'>%{label}</b><br>" +
+                              "<span style='color:black; font-size:12px;'>Companies: %{value}</span><br>" +
+                              "<span style='color:black; font-size:12px;'>Percentage: %{percent}</span><br>" +
                               "<extra></extra>",
                 textinfo='label+percent',
                 textposition='auto',
@@ -182,6 +196,13 @@ def show_visualizations(df: pd.DataFrame):
                 )
             )
             fig.update_layout(
+                hoverlabel=dict(
+                    bgcolor="white",
+                    bordercolor="black",
+                    font_size=12,
+                    font_family="Arial",
+                    font_color="black"
+                ),
                 showlegend=True,
                 legend=dict(
                     orientation="v",
